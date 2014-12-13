@@ -6,10 +6,12 @@
 
 /* columns */
 .panel {
-	float: left;
-	margin-right: 10px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-right: 15px;
 	width: 300px;
 	min-height: 100px;
+	vertical-align: top;
 }
 
 #total-information {
@@ -34,32 +36,29 @@
 }
 
 
-#widget-container-2 {
-	&:after { .afterclear; }
-}
-
 .section {
-	border: 1px solid #eee;
 	padding-bottom: 10px;
 	border-radius: 2px;
-	box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+	overflow: hidden;
+	box-shadow: 0 2px 0 rgba(0,0,0,0.1);
 	background: #fff;
 
 	h3 {
 		background: @gray-l3;
 		height: 38px;
 		line-height: 38px;
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 		padding-left: 15px;
 		font-weight: normal;
 		border-radius: 2px 2px 0 0;
+		border-bottom: 2px solid @yellow-s1;
 	}
 
-	ol {
+	ol, ul {
 		li {
 			list-style: none;
 			border-bottom: 1px solid #eee;
-			padding: 3px 15px;
+			padding: 5px 15px;
 			
 			&:last-child {
 				border-bottom: none;
@@ -69,6 +68,10 @@
 	
 }
 
+/* hide tab bar */
+#widget-tabs-box {
+	display: none;
+}
 
 /* Default dashboard widget */
 
@@ -82,7 +85,9 @@
 	}
 
 	#shortcut-collection {
-		margin-bottom: 10px;
+		border-bottom: 2px solid @gray-l4;
+		padding: 0 15px 10px 15px;
+		margin: 5px 0;
 
 		h4 {
 			display: none;
@@ -93,6 +98,9 @@
 		}
 		li {
 			display: inline-block;
+			padding: 0;
+			border: none;
+
 			a {	
 				display: block;
 				background: @gray-l3;
@@ -114,6 +122,7 @@
 			margin: 0 -15px;
 			padding: 10px 15px 0 15px;
 			text-align: center;
+			display: none;
 		}
 		.posts-line, .visitors-line {
 			float: left;
@@ -121,7 +130,7 @@
 			border-collapse: collapse;
 			
 			caption {
-				background: @gray-l3;
+				background: @gray-l4;
 				height: 23px;
 				padding: 5px 0;
 				.border-box;
@@ -131,10 +140,15 @@
 				display: none;
 			}
 			td {
-				cellspacing: 0;
+				padding: 5px 0;
 			}
 			td.type {
 				text-align: left;
+				padding-left: 5px;
+			}
+			td.sum {
+				text-align: right;
+				padding-right: 5px;
 			}
 
 			tr:first-child td {
@@ -150,12 +164,13 @@
 	}
 
 	#myBlogInfo {
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		h4.caption {
 			text-align: center;
-			padding: 10px 0 0 0;
+			padding: 5px 0 0;
 			margin: 0;
 			height: 20px;
+			background: @gray-l4;
 		}
 
 		table.recent {
@@ -180,11 +195,14 @@
 	}
 
 	#textcube-notice {
+		margin-bottom: 15px;
+
 		h4.caption {
-			border-top: 1px solid @gray-l3;
-			margin: 0 -15px;
-			padding: 15px 15px 0 15px;	
+			margin: 0;
+			padding: 5px 15px 0 15px;	
 			text-align: center;
+			height: 20px;
+			background: @gray-l4;
 		}
 		tr:first-child td {
 			border-top: 2px solid @gray-l2;
@@ -192,6 +210,17 @@
 		.date {
 			width: 40px;
 		}
+		table {
+			margin: 0;
+		}
 	}
 
+}
+
+
+#widget-button-bottom {
+	margin-top: 10px;
+	padding: 10px 10px;
+	background: @gray-l5;
+	border-radius: 2px;
 }
