@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="menutick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" xml:space="preserve">
+
+<defs>
+  <filter id='inset-shadow'>
+    
+    <!-- Shadow Offset -->
+    <feOffset
+      dx='0'
+      dy='0'
+    />
+    
+    <!-- Shadow Blur -->
+    <feGaussianBlur
+      stdDeviation='30'
+      result='offset-blur'
+    />
+    
+    <!-- Invert the drop shadow
+         to create an inner shadow -->
+    <feComposite
+      operator='out'
+      in='SourceGraphic'
+      in2='offset-blur'
+      result='inverse'
+    />
+    
+    <!-- Color & Opacity -->
+    <feFlood
+      flood-color='black'
+      flood-opacity='1'
+      result='color'
+    />
+    
+    <!-- Clip color inside shadow -->
+    <feComposite
+      operator='in'
+      in='color'
+      in2='inverse'
+      result='shadow'
+    />
+    
+    <!-- Put shadow over original object -->
+    <feComposite
+      operator='over'
+      in='shadow'
+      in2='SourceGraphic'
+    />
+  </filter>
+</defs>
+
+<style>
+	#checkbox {
+		fill: #aaa;
+	}
+</style>
+<g>
+	<rect id="checkbox" x="0" y="0" width="16" height="16" rx="4" ry="4" fill-rule="evenodd" clip-rule="evenodd" style='filter: url(#inset-shadow);'/>
+</g>
+</svg>

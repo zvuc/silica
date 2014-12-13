@@ -1,0 +1,271 @@
+@charset "utf-8";
+@import "http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic,300italic,300";
+//@import "http://fonts.googleapis.com/css?family=Quicksand:400,700";
+@import (reference) "icomoon/iconfont.less";
+@import "mixin.less";
+
+
+/* ---------------- communication.less ---------------- */
+
+#communication-tabs-box {
+	display: none;
+}
+
+#category-form {
+	padding-top: 20px;
+}
+
+#category-form .section {
+	float: left;
+	margin: 0 20px 10px 20px;
+	height: 30px;
+	
+	select#category {
+		min-width: 100px; 
+		vertical-align: middle;
+		margin: 5px 0;
+	}
+
+}
+#delete-section-top {
+	text-align: right;
+	margin: 0 0 10px 0;
+	height: 30px;
+	vertical-align: middle;
+	line-height: 30px;
+}
+
+table.data-inbox {	
+	
+
+	a.unblock-icon {
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		padding: 3px;
+		border-radius: 2px;
+		position: relative;
+		margin: 0;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		span {
+			.sprite;
+			.sprite-block-gray;
+		}
+
+		&:hover span {
+			.sprite-block-red;
+		}
+	}
+
+
+	a.delete-button {
+		background-color: @gray-l4;
+		&:hover {
+			background-color: @red-l1;
+			span {
+				.sprite-delete-white;
+			}
+		}
+	}
+	
+	th {
+		&.ip {
+			text-transform: uppercase;
+		}
+	}
+
+	td {
+
+		&.name {
+
+			a {
+				vertical-align: middle;
+			}
+		}
+
+		&.content {
+			.entry-title {
+				font-weight: bold;
+			}
+			br { display: none !important; }
+			
+			.entryURL {
+				span.divider {
+					display: inline;
+					color: #aaa;
+				}
+			}
+			span.divider {
+				display: none; 
+
+			}
+			span.divider+a {
+				display: block;
+				width: 14px;
+				height: 14px;
+				padding: 3px;
+				border-radius: 2px;
+				position: relative;
+				margin: 5px 0 0 0;
+				float: right;
+				vertical-align: middle;
+
+				&:hover {
+					text-decoration: none;
+
+					span {
+						.sprite-pencil-brown;
+					}
+				}
+
+				span {
+					.sprite;
+					.sprite-pencil;
+				}
+
+			}
+
+		}
+
+		&.ip {
+			width: 100px;
+
+			a {
+				vertical-align: middle;
+			}
+		}
+
+		&.reply {
+
+			width: 30px;
+
+			a {
+				vertical-align: middle;
+			}
+
+			a {
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				padding: 3px;
+				border-radius: 2px;
+				position: relative;
+				margin: 0;
+				background: transparent;
+
+				&:hover {
+					background: @orange;
+					text-decoration: none;
+
+					span {
+						.sprite-reply-white;
+					}
+				}
+
+				span {
+					.sprite;
+					.sprite-reply;
+				}
+
+			}
+		}
+
+		&.delete {
+			width: 30px;
+
+			a {
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				background: @gray-l4;
+				padding: 3px;
+				border-radius: 2px;
+				position: relative;
+				margin: 0;
+
+				&:hover {
+					text-decoration: none;
+				}
+
+				span {
+					.sprite;
+					.sprite-delete;
+				}
+			}
+
+
+			a.delete-button {
+				background-color: @gray-l4;
+				&:hover {
+					background-color: @red-l1;
+					span {
+						.sprite-delete-white;
+					}
+				}
+			}
+
+		}
+	}	
+}
+
+.data-subbox {
+	#delete-section {
+		display: none;
+	}
+}
+
+
+#data-description {
+
+	padding: 10px 0;
+	text-align: right;
+	display: block;
+	width: 100%;
+	
+	height: 60px;
+
+	display: none;
+	
+	dl {
+		display: inline-block;
+		margin: 0 10px;
+		padding: 5px 0;
+	
+		dt {
+			.sprite;
+			border-radius: 2px;
+			text-align: left;
+			border: 2px solid @gray;
+			background-color: @gray;
+			display: inline-block;
+			margin-right: 5px;
+		}
+
+		&.ban-description dt {
+			border: 2px solid transparent;
+			background-color: transparent;
+			.sprite-block-red;	
+		}	
+		&.trash-description dt {
+			border: 2px solid @red-l1;
+			background-color: @red-l1;
+			.sprite-delete-white;
+		}
+		
+		dd {
+			display: inline-block;
+			height: 14px;
+			margin: 0;
+			padding: 0;
+			vertical-align: 4px;
+		}
+	}
+}
+
+
+
+
