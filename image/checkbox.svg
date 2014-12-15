@@ -1,61 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="menutick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" xml:space="preserve">
+<svg version="1.1" id="checkbox" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="100" viewBox="0 0 40 100" xml:space="preserve">
 
-<defs>
-  <filter id='inset-shadow'>
-    
-    <!-- Shadow Offset -->
-    <feOffset
-      dx='0'
-      dy='0'
-    />
-    
-    <!-- Shadow Blur -->
-    <feGaussianBlur
-      stdDeviation='30'
-      result='offset-blur'
-    />
-    
-    <!-- Invert the drop shadow
-         to create an inner shadow -->
-    <feComposite
-      operator='out'
-      in='SourceGraphic'
-      in2='offset-blur'
-      result='inverse'
-    />
-    
-    <!-- Color & Opacity -->
-    <feFlood
-      flood-color='black'
-      flood-opacity='1'
-      result='color'
-    />
-    
-    <!-- Clip color inside shadow -->
-    <feComposite
-      operator='in'
-      in='color'
-      in2='inverse'
-      result='shadow'
-    />
-    
-    <!-- Put shadow over original object -->
-    <feComposite
-      operator='over'
-      in='shadow'
-      in2='SourceGraphic'
-    />
-  </filter>
-</defs>
-
-<style>
-	#checkbox {
-		fill: #aaa;
-	}
-</style>
-<g>
-	<rect id="checkbox" x="0" y="0" width="16" height="16" rx="4" ry="4" fill-rule="evenodd" clip-rule="evenodd" style='filter: url(#inset-shadow);'/>
+<g id="checkbox">
+	<rect x="0" y="0" width="16" height="16" rx="2" ry="2" fill="#bbb"/>
+  <rect x="1" y="1" width="14" height="14" rx="1.25" ry="1.25" fill="#eee" />
+  <rect x="1" y="2" width="14" height="13" rx="1.25" ry="1.25" fill="#fff" />
 </g>
+
+<g id="checkbox-hover" transform="translate(0,20)">
+  <rect x="0" y="0" width="16" height="16" rx="2" ry="2" fill="#999"/>
+  <rect x="1" y="1" width="14" height="14" rx="1.25" ry="1.25" fill="#eee" />
+  <rect x="1" y="2" width="14" height="13" rx="1.25" ry="1.25" fill="#fff" />
+</g>
+
+<g id="checkbox-active" transform="translate(0,40)">
+  <rect x="0" y="0" width="16" height="16" rx="2" ry="2" fill="#999"/>
+  <g opacity="0.8">
+    <rect x="1" y="1" width="14" height="14" rx="1.25" ry="1.25" fill="#eee" />
+    <rect x="1" y="2" width="14" height="13" rx="1.25" ry="1.25" fill="#fff" />
+  </g>
+</g>
+
+<g id="checkbox-checked" transform="translate(0,60)">
+  <rect x="0" y="0" width="16" height="16" rx="2" ry="2" fill="#ffdd4d"/>
+  <g>
+    <rect x="2" y="2" width="12" height="12" rx="1.25" ry="1.25" fill="#eee" />
+    <rect x="2" y="3" width="12" height="11" rx="1.25" ry="1.25" fill="#fff" />
+  </g>
+  <path d="M15,5l-7,7l-2,2l-2-2L1,9l2-2l3,3l7-7L15,5z" fill="#ac2f3d"/>
+</g>
+
+<g id="checkbox-checked-active" transform="translate(0,80)">
+  <rect x="0" y="0" width="16" height="16" rx="2" ry="2" fill="#ffdd4d"/>
+  <g opacity="0.7">
+    <rect x="1" y="1" width="14" height="14" rx="1.25" ry="1.25" fill="#eee" />
+    <rect x="1" y="2" width="14" height="13" rx="1.25" ry="1.25" fill="#fff" />
+  </g>
+  <path d="M15,5l-7,7l-2,2l-2-2L1,9l2-2l3,3l7-7L15,5z" fill="#ac2f3d"/>
+</g>
+
+<g transform="translate(20,0)">
+  <g id="radio">
+    <circle cx="8" cy="8" r="8" fill="#bbb"/>
+    <circle cx="8" cy="8" r="7" fill="#eee"/>
+    <circle cx="8" cy="8" r="6" fill="#fff"/>
+  </g>
+
+  <g id="radio-hover" transform="translate(0,20)">
+    <circle cx="8" cy="8" r="8" fill="#999"/>
+    <circle cx="8" cy="8" r="7" fill="#eee"/>
+    <circle cx="8" cy="8" r="6" fill="#fff"/>
+  </g>
+
+  <g id="radio-active" transform="translate(0,40)">
+    <circle cx="8" cy="8" r="8" fill="#999"/>
+    <g opacity="0.8">
+      <circle cx="8" cy="8" r="7" fill="#eee"/>
+      <circle cx="8" cy="8" r="6" fill="#fff"/>
+    </g>
+  </g>
+
+  <g id="radio-checked" transform="translate(0,60)">
+    <circle cx="8" cy="8" r="8" fill="#ffdd4d"/>
+    <circle cx="8" cy="8" r="6" fill="#fff"/>
+    <circle cx="8" cy="8" r="4" fill="#ac2f3d"/>
+  </g>
+
+  <g id="radio-checked-active" transform="translate(0,80)">
+    <circle cx="8" cy="8" r="8" fill="#ffdd4d"/>
+    <circle cx="8" cy="8" r="6" fill="#fff" opacity="0.7"/>
+    <circle cx="8" cy="8" r="4" fill="#ac2f3d"/>
+  </g>
+</g>
+
 </svg>
+

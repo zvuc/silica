@@ -19,44 +19,66 @@ input.checkbox + label {
 		width: 16px;
 		height: 16px;
 		overflow: hidden;
-		background: #fff;
+		background-image: url('image/checkbox.svg');
+		background-position: 0 0;
+		background-repeat: no-repeat;
 		.border-box;
-		border-radius: 2px;
-		border: 1px solid #bbb;
-		box-shadow: 0 0 2px rgba(0,0,0,0.1) inset, 0 1px 0px rgba(0,0,0,0.05) inset;
 		z-index: 1;
-		
+		vertical-align: text-bottom;
+		margin-right: 3px;
 	}
 
 	&:hover:before {
-		border-color: #999;
+		background-position: 0 -20px;
 	}
-
-	&:after {
-		position: absolute;
-		top: 2px;
-		left: 1px;
-		.icon;
-		.icon-checkmark;
-		color: @red;
-		width: 0px;
-		//opacity: 0;
-		.transition(0.2s);
-		overflow: hidden;
-		text-align: left;
-		z-index: 2;
+	&:active:before {
+		background-position: 0 -40px;
 	}
 }
 input.checkbox:checked + label {
 	&:before {
-		background: #fff;
-		border-color: @yellow-s1-d1;
-		box-shadow: 0 0 2px rgba(0,0,0,0.2) inset, 0 1px 1px rgba(0,0,0,0.1) inset;
+		background-position: 0 -60px;
+	}
+	&:active:before {
+		background-position: 0 -80px;
+	}
+}
+
+input.radio {
+	display: none;
+}
+input.radio + label {
+	position: relative;
+
+	&:before {
+		content: " ";
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		overflow: hidden;
+		background-image: url('image/checkbox.svg');
+		background-position: -20px 0;
+		background-repeat: no-repeat;
+		.border-box;
+		z-index: 1;
+		vertical-align: text-bottom;
+		margin-right: 3px;
+		
 	}
 
-	&:after {
-		width: 14px;
-		//opacity: 1;
+	&:hover:before {
+		background-position: -20px -20px;
+	}
+	&:active:before {
+		background-position: -20px -40px;
+	}
+}
+input.radio:checked + label {
+	&:before {
+		background-position: -20px -60px;
+	}
+	&:active:before {
+		background-position: -20px -80px;
 	}
 }
 
