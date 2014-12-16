@@ -173,6 +173,13 @@ table {
 		height: 20px;
 		padding: 5px 10px;
 		border-bottom: 2px solid @gray-l2;
+
+		&:first-child {
+			border-top-left-radius: 2px;
+		}
+		&:last-child {
+			border-top-right-radius: 2px;
+		}
 	}
 	
 	td {
@@ -785,6 +792,7 @@ table {
 									transform: scaleY(0);
 									transform-origin: left top;
 									will-change: transform, opacity;
+									margin-bottom: 1px;
 								}
 
 								&:hover {
@@ -963,10 +971,14 @@ table {
 					border-radius: 50px;
 					padding: 5px 5px;
 					background: @gray-l1;
-					font-size: 0.9rem;
-					line-height: 15px;
+					font-size: 13px;
+					line-height: 14px;
 					font-weight: bold;
 					.border-box;
+
+					&:hover {
+						background: @gray-l2;
+					}
 
 					&.selected {
 						background: @red;

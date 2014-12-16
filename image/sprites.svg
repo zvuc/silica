@@ -88,7 +88,9 @@
 	<use xlink:href="#icon-star" transform="translate(160 20)"></use>
 	<use xlink:href="#icon-star-o" transform="translate(180 20)"></use>
 	<use xlink:href="#icon-star-large-o" transform="translate(21 64)"></use>
+</g>
 
+<g fill="#d2d5d9">
 	<use xlink:href="#icon-block" transform="translate(200 40)"></use>
 </g>
 

@@ -4,7 +4,7 @@
 		<name>Silica</name> 
 		<version>1.0</version>
 		<description><![CDATA[Silica Admin panel skin for TEXTCUBE 1.10]]></description>
-		<license><![CDATA[GPL]]></license>
+		<license><![CDATA[MIT]]></license>
 	</information> 
 	<author>
 		<name>zvuc</name>

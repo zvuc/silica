@@ -73,14 +73,20 @@ table.data-inbox {
 	}
 	
 	th {
+		&.name {
+			text-align: left;
+			text-indent: 20px;
+		}
 		&.ip {
 			text-transform: uppercase;
+			min-width: 130px;
 		}
 	}
 
 	td {
 
 		&.name {
+			text-align: left;
 
 			a {
 				vertical-align: middle;
@@ -88,15 +94,29 @@ table.data-inbox {
 		}
 
 		&.content {
-			.entry-title {
-				font-weight: bold;
-			}
+
 			br { display: none !important; }
 			
-			.entryURL {
+			a.entryURL {
+				border-bottom: 1px solid #eee;
+				display: inline-block;
+				margin-bottom: 4px;
+
+				.entry-title {				
+					font-weight: bold;
+				}
+
 				span.divider {
 					display: inline;
 					color: #aaa;
+				}
+				.explain {
+					color: #999;
+				}
+
+				&:hover {
+					text-decoration: none;
+					border-bottom-color: #aaa
 				}
 			}
 			span.divider {
@@ -133,6 +153,7 @@ table.data-inbox {
 
 		&.ip {
 			width: 100px;
+			text-align: left;
 
 			a {
 				vertical-align: middle;

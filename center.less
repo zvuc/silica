@@ -40,18 +40,23 @@
 	padding-bottom: 10px;
 	border-radius: 2px;
 	overflow: hidden;
-	box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+	box-shadow: 0 2px 0 @gray-l4 inset;
 	background: #fff;
 
 	h3 {
-		background: @gray-l3;
-		height: 38px;
-		line-height: 38px;
+		height: 40px;
+		line-height: 40px;
 		margin-bottom: 15px;
 		padding-left: 15px;
 		font-weight: normal;
-		border-radius: 2px 2px 0 0;
-		border-bottom: 2px solid @yellow-s1;
+
+		span {
+			border-bottom: 2px solid @yellow-s1;
+			display: block;
+			height: 34px;
+			margin: 0 0 0 -2px;
+			padding: 5px 0 0 2px;
+		}
 	}
 
 	ol, ul {
