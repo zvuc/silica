@@ -367,6 +367,7 @@ table.data-inbox td.delete a.delete-button:hover span {
 }
 table.data-inbox td.xfn-edit label {
   display: block;
+  text-align: left;
 }
 table.data-subbox {
   display: none;
