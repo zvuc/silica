@@ -7,6 +7,9 @@ The goal is to completely replace the legacy skin CSS code and build a clean, mo
 
 Currently work in progress: base framing, post list, editor pages are done. Other pages such as settings, plugins and deeper pages have yet to be coded.
 
+Always updated to work on the latest dev build of textcube.
+(Current: 1.10.1 beta 1)
+
 
 WIP screenshots
 ---------------
