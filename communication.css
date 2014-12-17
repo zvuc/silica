@@ -1,5 +1,5 @@
-@charset "utf-8";
 @import "http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic,300italic,300";
+@charset "utf-8";
 /* set icons */
 @font-face {
   font-family: 'icomoon';
@@ -232,6 +232,40 @@
   background-position: -240px -20px;
 }
 /* ---------------- communication.less ---------------- */
+input.checkbox {
+  display: none;
+}
+input.checkbox + label {
+  position: relative;
+}
+input.checkbox + label:before {
+  content: " ";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-image: url('image/checkbox.svg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  z-index: 1;
+  vertical-align: text-bottom;
+  margin-right: 3px;
+}
+input.checkbox + label:hover:before {
+  background-position: 0 -20px;
+}
+input.checkbox + label:active:before {
+  background-position: 0 -40px;
+}
+input.checkbox:checked + label:before {
+  background-position: 0 -60px;
+}
+input.checkbox:checked + label:active:before {
+  background-position: 0 -80px;
+}
 #communication-tabs-box {
   display: none;
 }
