@@ -33,12 +33,6 @@
   display: block;
   clear: both;
 }
-.buttonemphasis {
-  background: #ac2f3d;
-}
-.buttonemphasis:hover {
-  background: #d96275;
-}
 /* ---------------- colors ---------------- */
 /* ---------------- buttons, inputs ---------------- */
 .input-button {
@@ -80,6 +74,17 @@
   box-shadow: 0 2px #ac2f3d;
 }
 .input-button.apply-button:active {
+  box-shadow: none;
+}
+.buttonemphasis {
+  background: #ac2f3d;
+  box-shadow: 0 2px #681e2d;
+}
+.buttonemphasis:hover {
+  background: #d96275;
+  box-shadow: 0 2px #ac2f3d;
+}
+.buttonemphasis:active {
   box-shadow: none;
 }
 .input-text {

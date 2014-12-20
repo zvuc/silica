@@ -33,12 +33,6 @@
   display: block;
   clear: both;
 }
-.buttonemphasis {
-  background: #ac2f3d;
-}
-.buttonemphasis:hover {
-  background: #d96275;
-}
 /* ---------------- colors ---------------- */
 /* ---------------- buttons, inputs ---------------- */
 .input-button {
@@ -80,6 +74,17 @@
   box-shadow: 0 2px #ac2f3d;
 }
 .input-button.apply-button:active {
+  box-shadow: none;
+}
+.buttonemphasis {
+  background: #ac2f3d;
+  box-shadow: 0 2px #681e2d;
+}
+.buttonemphasis:hover {
+  background: #d96275;
+  box-shadow: 0 2px #ac2f3d;
+}
+.buttonemphasis:active {
   box-shadow: none;
 }
 .input-text {
@@ -689,12 +694,14 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 #editor #textarea-section .editorbox-container {
   width: 100%;
   height: 100%;
-  padding-bottom: 20px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   background: #6f7983;
   overflow: auto;
+}
+#editor #textarea-section .editorbox-container #property-section {
+  margin: 0;
 }
 #editor #textarea-section textarea#editWindow {
   margin: 0 auto;
@@ -798,7 +805,16 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   border-radius: 0;
   position: relative;
   border: none;
-  margin: 0 auto 40px auto;
+  margin: 10px auto 40px auto;
+  padding: 40px 30px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+#editor #textarea-section .mce-tinymce[style*="100%"] {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
 }
 #editor #textarea-section .mce-tinymce .mce-toolbar-grp {
   position: fixed;
@@ -915,11 +931,11 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   box-shadow: none !important;
   background: #d2d5d9 !important;
 }
-#editor #textarea-section .mce-tinymce .mce-toolbar-grp #mce_54 {
+#editor #textarea-section .mce-tinymce .mce-toolbar-grp #mceu_25 {
   display: none;
 }
-#editor #textarea-section .mce-tinymce .mce-toolbar-grp #mce_55 {
-  border-radius: 3px 0 0 3px;
+#editor #textarea-section .mce-tinymce .mce-container {
+  background: none;
 }
 #editor #textarea-section .mce-tinymce .mce-container-body {
   position: relative;
@@ -931,7 +947,10 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 #editor #textarea-section .mce-tinymce .mce-edit-area {
   width: 100%;
   height: auto;
-  border: none;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0;
+  padding: 0 !important;
 }
 #editor #textarea-section .mce-tinymce .mce-statusbar {
   position: fixed;
@@ -1004,7 +1023,7 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   z-index: 4;
   top: 0;
   right: 0;
-  background: #454b54;
+  background: #9aa0a6;
 }
 #editor #setting-section .section {
   background: #ebeff2;
@@ -1046,6 +1065,7 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 }
 #editor #setting-section #upload-section {
   display: block !important;
+  border: none;
   border-radius: 0;
   box-shadow: none;
   position: relative;
@@ -1075,7 +1095,8 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 }
 #editor #setting-section #upload-section #upload-container #previewSelected img {
   width: auto;
-  height: 100%;
+  height: auto;
+  max-height: 100%;
   max-width: 100%;
   margin: 0 auto !important;
 }
@@ -1088,8 +1109,14 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   width: 100%;
   overflow: hidden;
 }
+#editor #setting-section #upload-section #upload-container #uploaderNest object {
+  margin-left: -10px;
+}
 #editor #setting-section #upload-section #upload-container #insert-container {
   width: 170px;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 #editor #setting-section #upload-section #upload-container #insert-container a {
   display: inline-block;
@@ -1285,9 +1312,14 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 }
 #editor #save-section #saveAndReturnButton {
   background: #ac2f3d;
+  box-shadow: 0 2px #681e2d;
 }
 #editor #save-section #saveAndReturnButton:hover {
   background: #d96275;
+  box-shadow: 0 2px #ac2f3d;
+}
+#editor #save-section #saveAndReturnButton:active {
+  box-shadow: none;
 }
 #editor #save-section .list-button {
   display: none;
