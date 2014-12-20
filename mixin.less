@@ -50,15 +50,6 @@
 }
 
 
-.buttonemphasis {
-	background: @red;
-
-	&:hover {
-		background: @red-l1;
-	}
-}
-
-
 
 /* ---------------- colors ---------------- */ 
 
@@ -148,6 +139,22 @@
 		}
 	}
 }
+
+
+.buttonemphasis {
+	background: @red;
+	box-shadow: 0 2px @red-d2;
+
+	&:hover {
+		background: @red-l1;
+		box-shadow: 0 2px @red;
+	}
+	&:active {
+		box-shadow: none;
+	}
+}
+
+
 .input-text {
 	.border-box;
 	padding: 4px 5px 4px 5px;
@@ -176,6 +183,7 @@
 			0 0 0 2px fade(@yellow-s1, 100%);
 	}
 }
+
 
 /* ---------------- sprites ---------------- */ 
 .sprite {
