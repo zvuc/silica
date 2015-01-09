@@ -1,5 +1,5 @@
-@import "http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic,300italic,300";
 @charset "utf-8";
+@import "http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic,300italic,300";
 /* set icons */
 @font-face {
   font-family: 'icomoon';
@@ -49,11 +49,13 @@
   font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
   transition: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
   -moz-transition: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
-  -webkit-transition: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
+  -webkit-transition: 0.2s background-color, 0.1s box-shadow, 0.1s -webkit-transform;
   font-weight: bold;
   min-height: 24px;
   vertical-align: middle;
-  transform: translateY(-1px);
+  -webkit-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+          transform: translateY(-1px);
   will-change: transform, background-color, box-shadow;
   box-shadow: 0 2px #454b54;
 }
@@ -62,7 +64,9 @@
   box-shadow: 0 2px #6f7983;
 }
 .input-button:active {
-  transform: translateY(1px);
+  -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+          transform: translateY(1px);
   box-shadow: none;
 }
 .input-button.apply-button {
@@ -100,13 +104,15 @@
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 2px;
   font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
-  transition: border 0.5s;
+  -webkit-transition: border 0.5s;
+          transition: border 0.5s;
   box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(0, 0, 0, 0) inset, 0 0 0 10px rgba(255, 221, 77, 0);
 }
 .input-text:focus {
   border-color: rgba(0, 0, 0, 0.3);
   -webkit-appearance: none !important;
-  transition: border 0.2s, box-shadow ease-in 0.2s;
+  -webkit-transition: border 0.2s, box-shadow ease-in 0.2s;
+          transition: border 0.2s, box-shadow ease-in 0.2s;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0), 0 2px 0px rgba(0, 0, 0, 0.1) inset, 0 0 0 2px #ffdd4d;
 }
 /* ---------------- sprites ---------------- */
@@ -756,10 +762,14 @@ table td.content {
   left: 0;
   transition: 0.2s transform, 0.2s opacity;
   -moz-transition: 0.2s transform, 0.2s opacity;
-  -webkit-transition: 0.2s transform, 0.2s opacity;
+  -webkit-transition: 0.2s -webkit-transform, 0.2s opacity;
   opacity: 0;
-  transform: scaleY(0);
-  transform-origin: left top;
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
   will-change: transform, opacity;
 }
 #layout-header #main-menu-box ul#main-menu li a.menu-name span {
@@ -782,10 +792,12 @@ table td.content {
   bottom: 0;
   left: 0;
   opacity: 1;
-  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
   transition: 0.2s transform, 0.2s opacity;
   -moz-transition: 0.2s transform, 0.2s opacity;
-  -webkit-transition: 0.2s transform, 0.2s opacity;
+  -webkit-transition: 0.2s -webkit-transform, 0.2s opacity;
 }
 #layout-header #main-menu-box ul#main-menu li a.menu-name span:before {
   margin-left: 2px;
@@ -947,10 +959,14 @@ table td.content {
   z-index: 100;
   transition: 0.2s transform, 0.2s opacity;
   -moz-transition: 0.2s transform, 0.2s opacity;
-  -webkit-transition: 0.2s transform, 0.2s opacity;
+  -webkit-transition: 0.2s -webkit-transform, 0.2s opacity;
   opacity: 0;
-  transform: scaleY(0);
-  transform-origin: left top;
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
   will-change: transform, opacity;
 }
 #layout-header #main-menu-box ul#main-menu li ul.sub-menu li a:hover {
@@ -958,13 +974,15 @@ table td.content {
   color: #0e161f;
 }
 #layout-header #main-menu-box ul#main-menu li ul.sub-menu li a:hover:after {
-  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
   bottom: 0;
   left: 0px;
   opacity: 1;
   transition: 0.3s transform, 0.3s opacity;
   -moz-transition: 0.3s transform, 0.3s opacity;
-  -webkit-transition: 0.3s transform, 0.3s opacity;
+  -webkit-transition: 0.3s -webkit-transform, 0.3s opacity;
 }
 #layout-header #main-menu-box ul#main-menu li ul.sub-menu li a span {
   height: 30px;
@@ -1018,7 +1036,9 @@ table td.content {
   content: " ";
   background: url('image/menutick.svg') left center no-repeat transparent;
   background-size: 6px;
-  transform: none;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
 }
 #layout-header #main-menu-box ul#main-menu li.selected ul.sub-menu {
   display: block;
@@ -1078,10 +1098,14 @@ table td.content {
   z-index: 100;
   transition: 0.2s transform, 0.2s opacity;
   -moz-transition: 0.2s transform, 0.2s opacity;
-  -webkit-transition: 0.2s transform, 0.2s opacity;
+  -webkit-transition: 0.2s -webkit-transform, 0.2s opacity;
   opacity: 0;
-  transform: scaleY(0);
-  transform-origin: left top;
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
   will-change: transform, opacity;
   margin-bottom: 1px;
 }
@@ -1090,13 +1114,15 @@ table td.content {
   color: #0e161f;
 }
 #layout-header #main-menu-box ul#main-menu li.selected ul.sub-menu li a:hover:after {
-  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
   bottom: 0;
   left: 0px;
   opacity: 1;
   transition: 0.3s transform, 0.3s opacity;
   -moz-transition: 0.3s transform, 0.3s opacity;
-  -webkit-transition: 0.3s transform, 0.3s opacity;
+  -webkit-transition: 0.3s -webkit-transform, 0.3s opacity;
 }
 #layout-header #main-menu-box ul#main-menu li.selected ul.sub-menu li a span {
   height: 30px;
@@ -1289,3 +1315,4 @@ table td.content {
 #search-form .section label {
   margin-right: 5px;
 }
+/*# sourceMappingURL=basic.css.map */

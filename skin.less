@@ -1,0 +1,72 @@
+@charset "utf-8";
+@import (reference) "icomoon/iconfont.less";
+@import (reference) "mixin.less";
+
+
+/* ---------------- skin.less ---------------- */
+
+#part-skin-list {
+	background: red;
+
+	#iconview-box {
+		padding: 10px;
+	
+		.section {
+			display: inline-block;
+			padding: 20px 20px;
+			background: #fff;
+			margin: 0 10px 10px 0;
+			width: auto;
+		}
+
+		.preview {
+			margin: 0 0 10px 0;
+
+			img {
+				border: 1px solid #eee;
+			}
+		}
+
+		.information {
+			dl {
+				display: none;
+				margin: 0;
+				padding: 0;
+
+				dt {
+					display: none;
+				}
+
+				dd {
+					display: block;
+				}
+
+				&.title-line {
+					display: block;
+					width: 100%;
+
+					.skin-name {
+						font-weight: bold;
+						font-size: 0.9rem;
+					}
+
+					.version {
+						display: inline-block;
+						float: right;
+						color: #aaa;
+					}
+				}
+
+				&.maker-line {
+					display: block;
+
+				}
+			}
+		}
+
+		.button-box {
+			margin: 10px 0 0 0;
+		}
+	
+	}
+}
