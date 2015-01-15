@@ -142,8 +142,8 @@ p.explain a {
   width: 400px;
 }
 #part-skin-list #search-form #search-box {
-  margin: 0 10px 0 0;
-  padding: 10px 0;
+  margin: 10px;
+  padding: 0;
 }
 #part-skin-list #viewmode-box {
   border-radius: 2px;

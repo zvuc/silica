@@ -1020,18 +1020,41 @@ table {
 	padding: 5px 20px;
 
 	h2 {
-		display: inline-block;
+		display: none;
 		font-size: 0.8rem;
 		padding-right: 10px; 
-		border-right: 1px solid #aaa;
+		border-right: 1px solid #ddd;
 		margin-right: 5px;
 	}
 	
+
 	.section { 
 		display: inline-block;
+		position: relative;
+		padding: 0;
 
 		label {
+			display: none;
 			margin-right: 5px;
 		}
+	}
+
+	input#search {
+		padding-right: 20px;
+	}
+
+	input.search-button {
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin: 4px 6px 4px;
+		padding: 0;
+		background: url('./image/searchicon.svg') no-repeat center center;
+		text-indent: -9999px;
+		overflow: hidden;
+		box-shadow: none;
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 }
