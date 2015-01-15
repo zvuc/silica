@@ -1,20 +1,170 @@
 @charset "utf-8";
 /* ---------------- skin.less ---------------- */
-#part-skin-list {
-  background: red;
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  background: none;
+  background-color: #6f7983;
+  border: none;
+  -webkit-appearance: none;
+  border-radius: 2px 2px;
+  margin-top: -2px;
+  margin-bottom: 2px;
+  padding: 4px 10px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 1px;
+  text-decoration: none;
+  font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+  transition: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
+  -moz-transition: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
+  -webkit-transition: 0.2s background-color, 0.1s box-shadow, 0.1s -webkit-transform;
+  font-weight: normal;
+  min-height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+  -webkit-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+          transform: translateY(-1px);
+  will-change: transform, background-color, box-shadow;
+  box-shadow: 0 2px #454b54;
 }
-#part-skin-list #iconview-box {
-  padding: 10px;
+.button:hover {
+  background-color: #9aa0a6;
+  box-shadow: 0 2px #6f7983;
+  text-decoration: none;
+}
+.button:active {
+  -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+          transform: translateY(1px);
+  box-shadow: none;
+  text-decoration: none;
+}
+.button.apply-button {
+  background-color: #ac2f3d;
+  box-shadow: 0 2px #681e2d;
+}
+.button.apply-button:hover {
+  background-color: #d96275;
+  box-shadow: 0 2px #ac2f3d;
+}
+.button.apply-button:active {
+  box-shadow: none;
+}
+.button span {
+  color: #fff;
+}
+p.explain {
+  padding: 15px 20px;
+  background: #f5f8fa;
+  margin: 10px 0;
+  border: 1px solid #d2d5d9;
+}
+p.explain a {
+  color: #ac2f3d;
+}
+#part-skin-current {
+  background: #fff;
+  padding: 20px 0 20px 20px;
+  margin: 0 0 30px 0;
+  float: left;
+  width: 260px;
+  box-sizing: border-box;
+}
+#part-skin-current h2 {
+  display: block;
+}
+#part-skin-current #currentPreview {
+  margin-right: 20px;
+}
+#part-skin-current #currentPreview img {
+  border: 1px solid #eee;
+}
+#part-skin-current .information {
+  margin: 0;
+}
+#part-skin-current .information dl {
+  border-bottom: 1px solid #eee;
+  margin: 0;
+  padding: 7px 20px 7px 0;
+  font-size: 1em;
+}
+#part-skin-current .information dt {
+  float: left;
+  width: 70px;
+  font-weight: bold;
+  vertical-align: top;
+  margin: 0;
+}
+#part-skin-current .information dd {
+  display: block;
+  height: auto;
+  margin-left: 80px;
+  white-space: normal;
+}
+#part-skin-current .information dl.title-line dt {
+  display: none;
+}
+#part-skin-current .information dl.title-line dd {
+  margin-left: 0;
+}
+#part-skin-current .information dl.title-line dd .skin-name {
+  font-size: 2em;
+  font-weight: bold;
+}
+#part-skin-current .information dl.title-line dd .version {
+  color: #aaa;
+  margin-left: 5px;
+}
+#part-skin-current .button-box {
+  margin: 20px 0 0 0;
+}
+#part-skin-current .button-box .button {
+  font-size: 0.8rem;
+  font-weight: normal;
+  padding: 5px 20px;
+}
+#part-skin-list {
+  margin: 20px 0 20px 280px;
+  position: relative
+  /* icon-view */
+  /* list-view */
+}
+#part-skin-list #search-form {
+  position: relative;
+  top: inherit;
+  right: inherit;
+  float: right;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+}
+#part-skin-list #search-form #search-box {
+  margin: 0 10px 0 0;
+  padding: 10px 0;
+}
+#part-skin-list #viewmode-box {
+  border-radius: 2px;
+  margin: 0;
+  padding: 10px 10px;
+  margin: 0 0 10px 0;
+  background: #f5f8fa;
+}
+#part-skin-list .main-explain-box {
+  margin: 10px 0;
+  display: none;
 }
 #part-skin-list #iconview-box .section {
   display: inline-block;
-  padding: 20px 20px;
+  padding: 20px 0;
   background: #fff;
   margin: 0 10px 10px 0;
   width: auto;
 }
 #part-skin-list #iconview-box .preview {
-  margin: 0 0 10px 0;
+  margin: 0 20px 10px;
 }
 #part-skin-list #iconview-box .preview img {
   border: 1px solid #eee;
@@ -29,6 +179,7 @@
 }
 #part-skin-list #iconview-box .information dl dd {
   display: block;
+  margin: 0 20px;
 }
 #part-skin-list #iconview-box .information dl.title-line {
   display: block;
@@ -46,7 +197,85 @@
 #part-skin-list #iconview-box .information dl.maker-line {
   display: block;
 }
-#part-skin-list #iconview-box .button-box {
-  margin: 10px 0 0 0;
+#part-skin-list #iconview-box .information dl.maker-line .explain {
+  color: #aaa;
 }
+#part-skin-list #iconview-box .button-box {
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 10px 20px 0;
+  border-top: 1px solid #eee;
+}
+#part-skin-list #iconview-box .button-box .button {
+  display: inline-block;
+  width: 70px;
+  text-align: center;
+}
+#part-skin-list #iconview-box .button-box .button.apply-button {
+  margin-right: 0;
+}
+#part-skin-list #listview-box .section {
+  display: block;
+  padding: 20px 0;
+  background: #fff;
+  margin: 0 10px 10px 0;
+  width: 100%;
+}
+#part-skin-list #listview-box .preview {
+  float: left;
+  margin: 0 20px 10px;
+}
+#part-skin-list #listview-box .preview img {
+  border: 1px solid #eee;
+}
+#part-skin-list #listview-box .information {
+  margin-left: 190px;
+}
+#part-skin-list #listview-box .information dl {
+  border-bottom: 1px solid #eee;
+  margin: 0;
+  padding: 7px 20px 7px 0;
+  font-size: 1em;
+}
+#part-skin-list #listview-box .information dt {
+  float: left;
+  width: 70px;
+  font-weight: bold;
+  vertical-align: top;
+  margin: 0;
+}
+#part-skin-list #listview-box .information dd {
+  display: block;
+  height: auto;
+  margin-left: 80px;
+  white-space: normal;
+}
+#part-skin-list #listview-box .information dl.title-line dt {
+  display: none;
+}
+#part-skin-list #listview-box .information dl.title-line dd {
+  margin-left: 0;
+}
+#part-skin-list #listview-box .information dl.title-line dd .skin-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#part-skin-list #listview-box .information dl.title-line dd .version {
+  color: #aaa;
+  margin-left: 5px;
+}
+#part-skin-list #listview-box .button-box {
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+#part-skin-list #listview-box .button-box .button {
+  display: inline-block;
+  width: 70px;
+  text-align: center;
+}
+#part-skin-list #listview-box .button-box .button.apply-button {
+  margin-right: 0;
+}
+
 /*# sourceMappingURL=skin.css.map */

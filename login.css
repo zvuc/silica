@@ -142,7 +142,7 @@ body#body-login,
   right: 15px;
 }
 .field-box .button-box input {
-  background: #ac2f3d;
+  background-color: #ac2f3d;
   box-shadow: 0 2px #681e2d;
   width: 100px;
   font-size: 1.2em;
@@ -150,31 +150,29 @@ body#body-login,
 }
 .field-box .button-box input:hover {
   background: #d96275;
-  box-shadow: 0 2px #ac2f3d;
-}
-.field-box .button-box input:active {
-  box-shadow: none;
-}
-.field-box .button-box input:hover {
-  background: #d96275;
 }
 #basic-field-box .return-box a {
-  background: #6f7983;
+  display: inline-block;
+  text-align: center;
+  background: none;
+  background-color: #6f7983;
   border: none;
   -webkit-appearance: none;
   border-radius: 2px 2px;
   margin-top: -2px;
   margin-bottom: 2px;
-  padding: 2px 7px 2px;
+  padding: 4px 10px;
   color: #fff;
   cursor: pointer;
   margin: 0 1px;
+  text-decoration: none;
   font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
   transition: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
   -moz-transition: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
   -webkit-transition: 0.2s background-color, 0.1s box-shadow, 0.1s -webkit-transform;
-  font-weight: bold;
-  min-height: 24px;
+  font-weight: normal;
+  min-height: 18px;
+  line-height: 18px;
   vertical-align: middle;
   -webkit-transform: translateY(-1px);
       -ms-transform: translateY(-1px);
@@ -192,21 +190,23 @@ body#body-login,
   position: relative;
 }
 #basic-field-box .return-box a:hover {
-  background: #9aa0a6;
+  background-color: #9aa0a6;
   box-shadow: 0 2px #6f7983;
+  text-decoration: none;
 }
 #basic-field-box .return-box a:active {
   -webkit-transform: translateY(1px);
       -ms-transform: translateY(1px);
           transform: translateY(1px);
   box-shadow: none;
+  text-decoration: none;
 }
 #basic-field-box .return-box a.apply-button {
-  background: #ac2f3d;
+  background-color: #ac2f3d;
   box-shadow: 0 2px #681e2d;
 }
 #basic-field-box .return-box a.apply-button:hover {
-  background: #d96275;
+  background-color: #d96275;
   box-shadow: 0 2px #ac2f3d;
 }
 #basic-field-box .return-box a.apply-button:active {
@@ -252,4 +252,5 @@ body#body-login,
   border-radius: 3px;
   text-align: center;
 }
+
 /*# sourceMappingURL=login.css.map */

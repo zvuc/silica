@@ -2,25 +2,149 @@
 @import (reference) "icomoon/iconfont.less";
 @import (reference) "mixin.less";
 
-
 /* ---------------- skin.less ---------------- */
 
-#part-skin-list {
-	background: red;
+.button {
+	.input-button;
+}
 
+.button span {
+	color: #fff;
+}
+
+p.explain {
+	padding: 15px 20px;
+	background: @gray-l5;
+	margin: 10px 0;
+	border: 1px solid @gray-l3;
+
+	a {
+		color: @red;
+	}
+}
+
+
+#part-skin-current {
+	background: #fff;
+	padding: 20px 0 20px 20px;
+	margin: 0 0 30px 0;
+	float: left;
+	width: 260px;
+	box-sizing: border-box;
+
+	h2 {
+		display: block;
+	}
+
+	#currentPreview {
+		margin-right: 20px;
+
+		img {
+			border: 1px solid #eee;
+		}
+	}
+	
+	.information {
+		margin: 0;
+
+		dl {
+			border-bottom: 1px solid #eee;
+			margin: 0;
+			padding: 7px 20px 7px 0;
+			font-size: 1em;
+		}
+
+		dt {
+			float: left;
+			width: 70px;
+			font-weight: bold;
+			vertical-align: top;
+			margin: 0;
+		}
+
+		dd {
+			display: block;
+			height: auto;
+			margin-left: 80px;
+			white-space: normal;
+		}
+
+		dl.title-line {
+			dt {
+				display: none;
+			}
+			dd {
+				margin-left: 0;
+
+				.skin-name {
+					font-size: 2em;
+					font-weight: bold;
+				}
+
+				.version {
+					color: #aaa;
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+
+	.button-box {
+		margin: 20px 0 0 0;
+
+		.button {
+			font-size: 0.8rem;
+			font-weight: normal;
+			padding: 5px 20px;
+		}
+	}
+}
+
+#part-skin-list {
+	margin: 20px 0 20px 280px;
+	position: relative;
+
+	#search-form {
+		position: relative;
+		top: inherit;
+		right: inherit;
+		float: right;
+		margin: 0;
+		padding: 0;
+		width: 400px;
+
+		#search-box {
+			margin: 0 10px 0 0;
+			padding: 10px 0;
+		}
+	}
+
+	#viewmode-box {
+		border-radius: 2px;
+		margin: 0;
+		padding: 10px 10px;
+		margin: 0 0 10px 0;
+		background: @gray-l5;
+	}
+
+	.main-explain-box {
+		margin: 10px 0;
+		display: none;
+	}
+	/* icon-view */
 	#iconview-box {
-		padding: 10px;
+		//padding: 10px;
 	
 		.section {
 			display: inline-block;
-			padding: 20px 20px;
+			padding: 20px 0;
 			background: #fff;
 			margin: 0 10px 10px 0;
 			width: auto;
 		}
 
 		.preview {
-			margin: 0 0 10px 0;
+			margin: 0 20px 10px;
 
 			img {
 				border: 1px solid #eee;
@@ -39,6 +163,7 @@
 
 				dd {
 					display: block;
+					margin: 0 20px;
 				}
 
 				&.title-line {
@@ -60,12 +185,109 @@
 				&.maker-line {
 					display: block;
 
+					.explain { color: #aaa; }
 				}
 			}
 		}
 
 		.button-box {
+			width: 100%;
 			margin: 10px 0 0 0;
+			padding: 10px 20px 0;
+			border-top: 1px solid #eee;
+
+			.button {
+				display: inline-block;
+				width: 70px;
+				text-align: center;
+
+				&.apply-button {
+					margin-right: 0;
+				}
+			}
+		}
+	
+	}
+	/* list-view */
+	#listview-box {
+		//padding: 10px;
+	
+		.section {
+			display: block;
+			padding: 20px 0;
+			background: #fff;
+			margin: 0 10px 10px 0;
+			width: 100%;
+		}
+
+		.preview {
+			float: left;
+			margin: 0 20px 10px;
+
+			img {
+				border: 1px solid #eee;
+			}
+		}
+
+		.information {
+			margin-left: 190px;
+
+			dl {
+				border-bottom: 1px solid #eee;
+				margin: 0;
+				padding: 7px 20px 7px 0;
+				font-size: 1em;
+			}
+
+			dt {
+				float: left;
+				width: 70px;
+				font-weight: bold;
+				vertical-align: top;
+				margin: 0;
+			}
+
+			dd {
+				display: block;
+				height: auto;
+				margin-left: 80px;
+				white-space: normal;
+			}
+
+			dl.title-line {
+				dt {
+					display: none;
+				}
+				dd {
+					margin-left: 0;
+					
+					.skin-name {
+						font-size: 1.2em;
+						font-weight: bold;
+					}
+
+					.version {
+						color: #aaa;
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+
+		.button-box {
+			width: 100%;
+			margin: 10px 0 0 0;
+			padding: 0;
+
+			.button {
+				display: inline-block;
+				width: 70px;
+				text-align: center;
+
+				&.apply-button {
+					margin-right: 0;
+				}
+			}
 		}
 	
 	}

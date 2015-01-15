@@ -95,21 +95,27 @@
 /* ---------------- buttons, inputs ---------------- */
 
 .input-button {
-	background: @gray-l1;
+	display: inline-block;
+	box-sizing: border-box;
+	text-align: center;
+	background: none;
+	background-color: @gray-l1;
 	border: none;
 	-webkit-appearance: none;
 	border-radius: 2px 2px;
 	margin-top: -2px;
 	margin-bottom: 2px;
-	padding: 2px 7px 2px;
+	padding: 4px 10px;
 	color: #fff;
 	cursor: pointer;
 	margin: 0 1px;
+	text-decoration: none;
 	.font-family-Lato;
 	@args: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
 	.transition(@args);
-	font-weight: bold;
-	min-height: 24px;
+	font-weight: normal;
+	min-height: 18px;
+	line-height: 18px;
 	vertical-align: middle;
 	transform: translateY(-1px);
 	will-change: transform, background-color, box-shadow;
@@ -117,36 +123,38 @@
 	box-shadow: 0 2px @gray;
 
 	&:hover {
-		background: @gray-l2;
+		background-color: @gray-l2;
 		box-shadow: 0 2px @gray-l1;
+		text-decoration: none;
 	}
 	&:active {
 		transform: translateY(1px);
 		box-shadow: none;
+		text-decoration: none;
 	}
 
 	&.apply-button {
-		background: @red;
+		background-color: @red;
 		box-shadow: 0 2px @red-d2;
+	}
 
-		&:hover {
-			background: @red-l1;
+	&.apply-button:hover {
+			background-color: @red-l1;
 			box-shadow: 0 2px @red;
-		}
+	}
 
-		&:active {
+	&.apply-button:active {
 			box-shadow: none;
-		}
 	}
 }
 
 
 .buttonemphasis {
-	background: @red;
+	background-color: @red;
 	box-shadow: 0 2px @red-d2;
 
 	&:hover {
-		background: @red-l1;
+		background-color: @red-l1;
 		box-shadow: 0 2px @red;
 	}
 	&:active {

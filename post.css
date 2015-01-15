@@ -394,6 +394,7 @@ ul.tabs-box li.entry-all select optgroup {
   vertical-align: top;
   min-height: 22px;
   height: 22px;
+  line-height: 12px;
 }
 #part-post-list #change-section-top select,
 #part-post-list #change-section-bottom select {
@@ -655,4 +656,5 @@ ul.tabs-box li.entry-all select optgroup {
 #eolinDialog .button-box #close-button span {
   display: none;
 }
+
 /*# sourceMappingURL=post.css.map */
