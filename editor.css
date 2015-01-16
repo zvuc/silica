@@ -28,7 +28,7 @@ body#body-entry #editor {
 body#body-entry #layout-body {
   height: 100%;
   background: #1f2833;
-  padding: 30px 0 0 170px;
+  padding-left: 170px;
   position: relative;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -65,7 +65,6 @@ body#body-entry #eolinDialog {
 @media screen and (min-height: 700px) {
   body#body-entry #layout-header {
     height: auto;
-    position: relative;
     padding: 0 0 20 0;
   }
 }
@@ -137,7 +136,8 @@ body#body-entry .mce-window input.mce-textbox {
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 2px;
   font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
-  transition: border 0.5s;
+  -webkit-transition: border 0.5s;
+          transition: border 0.5s;
   box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(0, 0, 0, 0) inset, 0 0 0 10px rgba(255, 221, 77, 0);
   height: 27px !important;
   box-sizing: border-box;
@@ -147,7 +147,8 @@ body#body-entry .mce-window input.mce-textbox {
 body#body-entry .mce-window input.mce-textbox:focus {
   border-color: rgba(0, 0, 0, 0.3);
   -webkit-appearance: none !important;
-  transition: border 0.2s, box-shadow ease-in 0.2s;
+  -webkit-transition: border 0.2s, box-shadow ease-in 0.2s;
+          transition: border 0.2s, box-shadow ease-in 0.2s;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0), 0 2px 0px rgba(0, 0, 0, 0.1) inset, 0 0 0 2px #ffdd4d;
 }
 body#body-entry .mce-window .mce-foot {
@@ -393,7 +394,7 @@ body#body-entry .mce-window .mce-foot .mce-primary {
   position: absolute;
   bottom: 0;
   left: 0;
-  margin: 0
+  margin: 0;
   /* editor main container */
   /* floating property box */
   /* tinyMCE editor style */
@@ -525,7 +526,8 @@ body#body-entry .mce-window .mce-foot .mce-primary {
 }
 #editor #textarea-section .entry-editor-property .button {
   display: inline-block;
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
   text-align: center;
   background: none;
   background-color: #6f7983;
@@ -641,7 +643,7 @@ body#body-entry .mce-window .mce-foot .mce-primary {
   border-radius: 2px !important;
   transition: 0.1s;
   -moz-transition: 0.1s;
-  -webkit-transition: 0.1s
+  -webkit-transition: 0.1s;
   /* color buttons */
 }
 #editor #textarea-section .mce-tinymce .mce-toolbar-grp .mce-btn:hover {
@@ -1004,7 +1006,8 @@ body#body-entry .mce-window .mce-foot .mce-primary {
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 2px;
   font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
-  transition: border 0.5s;
+  -webkit-transition: border 0.5s;
+          transition: border 0.5s;
   box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(0, 0, 0, 0) inset, 0 0 0 10px rgba(255, 221, 77, 0);
   width: 100%;
   height: 25px;
@@ -1017,7 +1020,8 @@ body#body-entry .mce-window .mce-foot .mce-primary {
 #editor #setting-section #tag-location-container dd li.lastChild input:focus {
   border-color: rgba(0, 0, 0, 0.3);
   -webkit-appearance: none !important;
-  transition: border 0.2s, box-shadow ease-in 0.2s;
+  -webkit-transition: border 0.2s, box-shadow ease-in 0.2s;
+          transition: border 0.2s, box-shadow ease-in 0.2s;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0), 0 2px 0px rgba(0, 0, 0, 0.1) inset, 0 0 0 2px #ffdd4d;
 }
 #editor #setting-section #tag-location-container dd#location {
@@ -1119,5 +1123,4 @@ ul.tcSuggest li:last-child {
 ul.tcSuggest li:hover {
   background: #ffdd4d !important;
 }
-
 /*# sourceMappingURL=editor.css.map */
