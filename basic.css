@@ -37,7 +37,8 @@
 /* ---------------- buttons, inputs ---------------- */
 .input-button {
   display: inline-block;
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
   text-align: center;
   background: none;
   background-color: #6f7983;
@@ -112,13 +113,15 @@
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 2px;
   font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
-  transition: border 0.5s;
+  -webkit-transition: border 0.5s;
+          transition: border 0.5s;
   box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(0, 0, 0, 0) inset, 0 0 0 10px rgba(255, 221, 77, 0);
 }
 .input-text:focus {
   border-color: rgba(0, 0, 0, 0.3);
   -webkit-appearance: none !important;
-  transition: border 0.2s, box-shadow ease-in 0.2s;
+  -webkit-transition: border 0.2s, box-shadow ease-in 0.2s;
+          transition: border 0.2s, box-shadow ease-in 0.2s;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0), 0 2px 0px rgba(0, 0, 0, 0.1) inset, 0 0 0 2px #ffdd4d;
 }
 /* ---------------- sprites ---------------- */
@@ -271,6 +274,9 @@ body {
   width: 100%;
   background: #ebeff2;
 }
+#all-wrap {
+  padding: 30px 0 0 0;
+}
 a {
   color: #0e161f;
   text-decoration: none;
@@ -385,7 +391,7 @@ table {
   background: #fff;
   border-bottom: 2px solid #9aa0a6;
   border-radius: 2px;
-  border-collapse: collapse
+  border-collapse: collapse;
   /* th, td commons */
 }
 table tr td {
@@ -680,19 +686,19 @@ table td.content {
 }
 #layout-header #main-menu-box {
   position: relative;
-  z-index: 13
+  z-index: 13;
   /* ul#main-manu end */
 }
 #layout-header #main-menu-box ul#main-menu {
   margin: 0;
-  padding: 0
+  padding: 0;
   /* li end */
 }
 #layout-header #main-menu-box ul#main-menu li {
   list-style: none;
   position: relative;
   display: block;
-  width: 100%
+  width: 100%;
   /* TEXTCUBE main link */
   /* menu categories */
   /* menu icons */
@@ -1179,7 +1185,6 @@ table td.content {
   display: none;
   height: 25px;
   padding: 15px 20px 10px;
-  margin-top: 30px;
   background: #ebeff2;
   font-weight: normal;
   position: relative;
@@ -1341,5 +1346,4 @@ table td.content {
   top: 0;
   right: 0;
 }
-
 /*# sourceMappingURL=basic.css.map */

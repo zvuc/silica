@@ -8,9 +8,6 @@
   min-height: 100px;
   vertical-align: top;
 }
-#pseudo-box {
-  margin-top: 30px;
-}
 #independent-notice-line {
   display: none;
   position: absolute;
@@ -22,9 +19,9 @@
 }
 .section {
   padding-bottom: 10px;
-  border-radius: 2px;
   overflow: hidden;
-  box-shadow: 0 2px 0 #ebeff2 inset;
+  border-radius: 2px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   background: #fff;
 }
 .section h3 {
@@ -198,5 +195,4 @@
   background: #f5f8fa;
   border-radius: 2px;
 }
-
 /*# sourceMappingURL=center.css.map */
