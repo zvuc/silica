@@ -1,4 +1,5 @@
-colorpalette.psd
+node_modules
+build_temp
 reference
 config.codekit
 *.map
