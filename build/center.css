@@ -1,3 +1,13 @@
+/* 
+ * Silica admin dashboard skin for Textcube 1.10 
+ * by Hansol Kim (zvuc) (http://xenosium.com) 
+ * GitHub: https://github.com/zvuc/silica 
+ * 
+ * Compiled on 2015-12-07 11:44:57 
+ * 
+ * Copyright 2015 Hansol Kim; MIT License 
+ */
+
 @charset "utf-8";
 /* columns */
 .panel {
@@ -195,4 +205,3 @@
   background: #f5f8fa;
   border-radius: 2px;
 }
-/*# sourceMappingURL=center.css.map */
