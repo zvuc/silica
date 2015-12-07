@@ -3,13 +3,11 @@
  * by Hansol Kim (zvuc) (http://xenosium.com) 
  * GitHub: https://github.com/zvuc/silica 
  * 
- * Compiled on 2015-12-07 11:44:57 
- * 
  * Copyright 2015 Hansol Kim; MIT License 
  */
 
 @charset "utf-8";
-@import "http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic,300italic,300";
+@import "//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic,300italic,300";
 /* set icons */
 @font-face {
   font-family: 'icomoon';

@@ -15,8 +15,6 @@ module.exports = function(grunt) {
               ' * by Hansol Kim (zvuc) (http://xenosium.com) \n' +
               ' * GitHub: https://github.com/zvuc/silica \n' +
               ' * \n' +
-              ' * Compiled on <%= grunt.template.today("yyyy-mm-dd h:MM:ss") %> \n' +
-              ' * \n' +
               ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>; <%= pkg.license %> License \n' +
               ' */\n'
     },
