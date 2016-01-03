@@ -1,314 +1,504 @@
+/* 
+ * Silica admin dashboard skin for Textcube 1.10 
+ * by Hansol Kim (zvuc) (http://xenosium.com) 
+ * GitHub: https://github.com/zvuc/silica 
+ * 
+ * Copyright 2016 Hansol Kim; MIT License 
+ */
+
 @charset "utf-8";
-
-/* Common ****************************************************************************************/
-
-*
-{
-	margin                           : 0;
-	padding                          : 0;
+/* set icons */
+@font-face {
+  font-family: 'icomoon';
+  src: url('icomoon/fonts/icomoon.eot?sasl7o');
+  src: url('icomoon/fonts/icomoon.eot?#iefixsasl7o') format('embedded-opentype'), url('icomoon/fonts/icomoon.woff?sasl7o') format('woff'), url('icomoon/fonts/icomoon.ttf?sasl7o') format('truetype'), url('icomoon/fonts/icomoon.svg?sasl7o#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
-
-body
-{
-	background-color                 : #FFFFFF;
-	background-image                 : url('./image/bg_plugin_setting_header.png');
-	background-position              : top left;
-	background-repeat                : repeat-x;
-	font-size                        : small;
-	font-family                      : 'Helvetica Neue', 'Lucida Grande', Arial, '나눔고딕', 'NanumGothic', 'NanumGothicOTF', 'Malgun Gothic', '맑은 고딕', '굴림', Gulim, Tahoma, Verdana, sans-serif;
+/* ---------------- mixins ---------------- */
+.border-box {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
-
-.input-text, textarea {
-	border                           : 1px solid #ccc;
-	font-size                        : 1em;
-	padding: 2px 3px;
-	vertical-align                   : middle;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
+.transition-none {
+  transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
 }
-
+.hidden {
+  display: none;
+}
+.font-family-Lato {
+  font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+}
+.font-family-Quicksand {
+  font-family: "Quicksand", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+}
+.afterclear {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* ---------------- colors ---------------- */
+/* ---------------- buttons, inputs ---------------- */
+.input-button {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  background: none;
+  background-color: #6f7983;
+  border: none;
+  -webkit-appearance: none;
+  border-radius: 2px 2px;
+  margin-top: -2px;
+  margin-bottom: 2px;
+  padding: 4px 10px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 1px;
+  text-decoration: none;
+  font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+  transition: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
+  -moz-transition: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
+  -webkit-transition: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
+  font-weight: normal;
+  min-height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+  -webkit-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+          transform: translateY(-1px);
+  will-change: transform, background-color, box-shadow;
+  box-shadow: 0 2px #454b54;
+}
+.input-button:hover {
+  background-color: #9aa0a6;
+  box-shadow: 0 2px #6f7983;
+  text-decoration: none;
+}
+.input-button:active {
+  -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+          transform: translateY(1px);
+  box-shadow: none;
+  text-decoration: none;
+}
+.input-button.apply-button {
+  background-color: #ac2f3d;
+  box-shadow: 0 2px #681e2d;
+}
+.input-button.apply-button:hover {
+  background-color: #d96275;
+  box-shadow: 0 2px #ac2f3d;
+}
+.input-button.apply-button:active {
+  box-shadow: none;
+}
+.buttonemphasis {
+  background-color: #ac2f3d;
+  box-shadow: 0 2px #681e2d;
+}
+.buttonemphasis:hover {
+  background-color: #d96275;
+  box-shadow: 0 2px #ac2f3d;
+}
+.buttonemphasis:active {
+  box-shadow: none;
+}
+.input-text {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 4px 5px 4px 5px;
+  margin-right: 2px;
+  height: 24px;
+  vertical-align: middle;
+  -webkit-appearance: none !important;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+  transition: border 0.5s;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(0, 0, 0, 0) inset, 0 0 0 10px rgba(255, 221, 77, 0);
+}
+.input-text:focus {
+  border-color: rgba(0, 0, 0, 0.3);
+  -webkit-appearance: none !important;
+  transition: border 0.2s, box-shadow ease-in 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0), 0 2px 0px rgba(0, 0, 0, 0.1) inset, 0 0 0 2px #ffdd4d;
+}
+/* ---------------- sprites ---------------- */
+.sprite {
+  display: block;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+  background-image: url('image/sprites.svg');
+  background-repeat: no-repeat;
+}
+.sprite span {
+  display: none;
+}
+.sprite-lock-white {
+  background-position: 0 0px;
+}
+.sprite-lock {
+  background-position: 0 -20px;
+}
+.sprite-lock-colored {
+  background-position: 0 -40px;
+}
+.sprite-key-white {
+  background-position: -20px 0px;
+}
+.sprite-key {
+  background-position: -20px -20px;
+}
+.sprite-key-colored {
+  background-position: -20px -40px;
+}
+.sprite-unlock-white {
+  background-position: -40px 0px;
+}
+.sprite-unlock {
+  background-position: -40px -20px;
+}
+.sprite-unlock-colored {
+  background-position: -40px -40px;
+}
+.sprite-rss-white {
+  background-position: -60px 0px;
+}
+.sprite-rss {
+  background-position: -60px -20px;
+}
+.sprite-link-white {
+  background-position: -80px 0px;
+}
+.sprite-link {
+  background-position: -80px -20px;
+}
+.sprite-delete-white {
+  background-position: -100px 0px;
+}
+.sprite-delete {
+  background-position: -100px -20px;
+}
+.sprite-outlink-white {
+  background-position: -120px 0px;
+}
+.sprite-outlink {
+  background-position: -120px -20px;
+}
+.sprite-check-white {
+  background-position: -140px 0px;
+}
+.sprite-check {
+  background-position: -140px -20px;
+}
+.sprite-star-white {
+  background-position: -160px 0px;
+}
+.sprite-star {
+  background-position: -160px -20px;
+}
+.sprite-star-colored {
+  background-position: -160px -40px;
+}
+.sprite-star-o-white {
+  background-position: -180px 0px;
+}
+.sprite-star-o {
+  background-position: -180px -20px;
+}
+.sprite-star-o-colored {
+  background-position: -180px -40px;
+}
+.sprite-star-large {
+  width: 20px;
+  height: 20px;
+  background-position: 0px -60px;
+}
+.sprite-star-large-o {
+  width: 20px;
+  height: 20px;
+  background-position: -20px -60px;
+}
+.sprite-block-white {
+  background-position: -200px 0px;
+}
+.sprite-block {
+  background-position: -200px -20px;
+}
+.sprite-block-gray {
+  background-position: -200px -40px;
+}
+.sprite-block-red {
+  background-position: -200px -60px;
+}
+.sprite-pencil-white {
+  background-position: -220px 0px;
+}
+.sprite-pencil {
+  background-position: -220px -20px;
+}
+.sprite-pencil-brown {
+  background-position: -220px -40px;
+}
+.sprite-reply-white {
+  background-position: -240px 0px;
+}
+.sprite-reply {
+  background-position: -240px -20px;
+}
+/* ---------------- popup-comment.less ---------------- */
+html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-size: 75%;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+  color: #0e161f;
+  background-color: #FFFFFF;
+}
+body:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #1f2833;
+}
+.input-text,
+textarea {
+  border: 1px solid #ccc;
+  font-size: 1em;
+  padding: 2px 3px;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+/* Close button */
+a.close-button {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  background-image: url("image/btn_close.png");
+  background-size: 15px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+a.close-button span {
+  display: none;
+}
+dl {
+  margin: 0;
+}
+dd {
+  margin: 0;
+}
+ul {
+  padding: 0;
+}
 /* Ask whether edit or delete ********************************************************************/
-
-#comment-box
-{
-	background-image                 : url("./image/bg_plugin_setting_body.png");
-	background-position              : left top;
-	background-repeat                : repeat-x;
-	font-family                      : 'Lucida Grande', Arial, AppleSDGothic, '굴림', Gulim, Tahoma, Verdana, sans-serif;
-	font-size                        : 0.925em;
-	margin-top                       : 50px;
+#comment-box {
+  background-image: url("image/bg_plugin_setting_body.png");
+  background-position: left top;
+  background-repeat: repeat-x;
+  margin-top: 50px;
 }
-
-#comment-box img
-{
-	position                         : absolute;
-	top                              : 10px;
-	left                             : 12px;
+#comment-box > img {
+  display: none;
 }
-
-#original-reply-box
-{
-	border                           : 1px solid #ccc;
-	padding                          : 10px;
-	height                           : 150px;
-	width                            : 390px;
-	margin                           : 0 0 10px 20px;
-	overflow-x                       : hidden;
-	overflow-y                       : scroll;
+#comment-box:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 120px;
+  height: 30px;
+  background-image: url('image/tclogo-text.svg');
+  background-size: 120px 30px;
+  background-repeat: no-repeat;
+  background-position: top left;
 }
-
-#original-reply-box ul
-{
-	list-style                       : none;
+#original-reply-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 130px;
+  width: auto;
+  margin: 0 10px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
-
-#original-reply-box .name
-{
-	font-weight                      : bold;
-	color                            : #333;
-	float                            : left;
+#original-reply-box ul {
+  list-style: none;
 }
-
-#original-reply-box .date
-{
-	border-left                      : 1px solid #ddd;
-	padding-left                     : 5px;
-	margin-left                      : 5px;
-	clear                            : left;
+#original-reply-box .name {
+  font-weight: bold;
+  color: #333;
+  float: left;
 }
-
-#original-reply-box ul li ul
-{
-	background                       : url(image/icon_reply.gif) 20px 3px no-repeat;
-	padding-left                     : 50px;
-	margin-top                       : 10px;
+#original-reply-box .date {
+  border-left: 1px solid #ddd;
+  padding-left: 5px;
+  margin-left: 5px;
+  clear: left;
 }
-
-#comment-box #command-box
-{
-	margin                           : 0 10px;
-	padding                          : 60px 0;
-	text-align                       : center;
+#original-reply-box ul li ul {
+  background: url(image/icon_reply.gif) 20px 3px no-repeat;
+  padding-left: 50px;
+  margin-top: 10px;
 }
-
-#comment-box #command-box label
-{
-	cursor                           : pointer;
+#comment-box #command-box {
+  padding: 60px 10px;
+  margin: 0 10px;
+  text-align: center;
 }
-
+#comment-box #command-box label {
+  cursor: pointer;
+}
 #comment-box #command-box .edit-line,
-#comment-box #command-box .delete-line
-{
-	display                          : inline;
+#comment-box #command-box .delete-line {
+  display: inline;
 }
-
-#comment-box #command-box .radio
-{
-	vertical-align                   : middle;
+#comment-box #command-box .radio {
+  vertical-align: middle;
 }
-
-#comment-box #command-box .delete-line .radio
-{
-	margin                           : 0 0 0 10px;
+#comment-box #command-box .delete-line .radio {
+  margin: 0 0 0 10px;
 }
-
-#comment-box #command-box .password-line
-{
-	margin-top                       : 30px;
+#comment-box #command-box .password-line {
+  margin-top: 30px;
 }
-
-#comment-box #command-box .input-text
-{
-	border                           : 1px solid #BBBBBB;
-	padding                          : 3px;
-	vertical-align                   : middle;
+#comment-box #command-box .input-text {
+  vertical-align: middle;
 }
-
+#comment-box #command-box input#name {
+  width: 350px;
+}
 /* Edit ******************************************************************************************/
-
-#comment-reply-box
-{
-	background-image                 : url("./image/bg_plugin_setting_body.png");
-	background-position              : left top;
-	background-repeat                : repeat-x;
-	border                           : 1px solid #FFFFFF;
-	font-family                      : 'Lucida Grande', Arial, AppleSDGothic, '굴림', Gulim, Tahoma, Verdana, sans-serif;
-	font-size                        : 0.925em;
-	margin-top                       : 49px;
+#comment-reply-box {
+  background-image: url("image/bg_plugin_setting_body.png");
+  background-position: left top;
+  background-repeat: repeat-x;
+  border: 1px solid #FFFFFF;
+  margin-top: 48px;
 }
-
-#comment-reply-box img
-{
-	position                         : absolute;
-	top                              : 10px;
-	left                             : 12px;
+#comment-reply-box > img {
+  display: none;
 }
-
-#comment-reply-box .title
-{
-	background-image                 : url('./image/icon_popupbullet.jpg');
-	background-position              : left top;
-	background-repeat                : no-repeat;
-	font-weight                      : bold;
-	height                           : 20px;
-	margin                           : 14px 0 0 12px !important;
-	padding                          : 3px 0 0 18px;
+#comment-reply-box:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 120px;
+  height: 40px;
+  background-image: url('image/tclogo-text.svg');
+  background-size: 120px 30px;
+  background-repeat: no-repeat;
+  background-position: top left;
 }
-
-#comment-reply-box #command-box
-{
-	margin                           : 0 10px;
-	padding                          : 10px;
+#comment-reply-box .title {
+  background-image: url('image/icon_popupbullet.jpg');
+  background-position: left top;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  height: 20px;
+  margin: 14px 0 0 12px !important;
+  padding: 3px 0 0 18px;
 }
-
-#comment-reply-box #command-box dl
-{
-	clear                            : both;
-	float                            : none;
-	height                           : 2em;
-	padding-bottom                   : 2px;
+#comment-reply-box #command-box {
+  margin: 10px 10px;
 }
-
-#comment-reply-box #command-box dl dt
-{
-	float                            : left;
-	margin-right                     : 8px;
-	padding-top                      : 5px;
-	text-align                       : right;
-	width                            : 70px;
+#comment-reply-box #command-box dl {
+  clear: both;
+  float: none;
+  height: 2em;
+  padding-bottom: 2px;
 }
-
-#comment-reply-box #command-box dl dd
-{
-	float                            : left;
-	width                            : 250px;
+#comment-reply-box #command-box dl dt {
+  float: left;
+  margin-right: 8px;
+  padding-top: 5px;
+  text-align: right;
+  width: 70px;
 }
-
-#comment-reply-box #command-box label
-{
-	cursor                           : pointer;
+#comment-reply-box #command-box dl dd {
+  float: left;
+  width: 350px !important;
+  margin-bottom: 2px;
 }
-
-#comment-reply-box #command-box .input-text
-{
-
-	font-size                        : 1em;
-	width                            : 321px;
-	
-
+#comment-reply-box #command-box dl dd input:not(.checkbox) {
+  width: 100% !important;
 }
-
-#comment-reply-box #command-box .secret-line
-{
-	height                           : 1.2em;
-	margin                           : 4px 0 0 80px;
+#comment-reply-box #command-box label {
+  cursor: pointer;
 }
-
-#comment-reply-box #command-box .checkbox
-{
-	vertical-align                   : middle;
+#comment-reply-box #command-box .input-text {
+  font-size: 1em;
 }
-
-#comment-reply-box #command-box .content-line
-{
-	margin-top                       : 6px;
+#comment-reply-box #command-box .secret-line {
+  height: 1.2em;
+  margin: 4px 0 0 80px;
 }
-
-#comment-reply-box #command-box .content-line textarea
-{
-	border                           : 1px solid #ccc;
-	font-size                        : 1em;
-	height                           : 120px !important;
-	overflow                         : auto;
-	width                            : 328px;
+#comment-reply-box #command-box .checkbox {
+  vertical-align: middle;
+  display: inline;
 }
-
-#comment-reply-box #command-box .content-line
-{
-	height                           : 130px;
+#comment-reply-box #command-box .content-line {
+  height: 130px;
+  margin-top: 6px;
 }
-
-#comment-reply-box .button-box
-{
-	clear                            : both;
-	padding                          : 5px 2px 0 0;
-	text-align                       : right;
+#comment-reply-box #command-box .content-line textarea {
+  border: 1px solid #ccc;
+  font-size: 1em;
+  height: 120px !important;
+  overflow: auto;
+  resize: none;
+  width: 350px;
 }
-
-.input-button
-{
-	background-color                 : #fbfbfb;
-	background-position              : left bottom;
-	background-repeat                : repeat-x;
-	border                           : 1px solid #ccc;
-	cursor                           : pointer;
-	font-size                        : 1em;
-	height                           : 1.8em;
-	line-height                      : 1;
-	padding                          : 0px 5px 2px 5px !important;
-	vertical-align                   : bottom;
-	background-image : -moz-linear-gradient(top, #fff, #eee);
-	background-image : -webkit-linear-gradient(top, #fff, #eee);
-	background-image : linear-gradient(top, #fff, #eee);
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	color: #333;
-	text-shadow: 0 1px 0 #fff; 
-
-	margin-right: 2px;
-
+#comment-reply-box .button-box {
+  clear: both;
+  padding: 5px 2px 0 0;
+  text-align: right;
 }
-
-.input-button:hover
-{
-	background-color                 : #f2f2f2;
-/*	background-image                 : url("./image/bg_submenu_item_selected.gif");*/
-	border                           : 1px solid #bbb;
-
-	background-image : -moz-linear-gradient(top, #fbfbfb, #ddd);
-	background-image : -webkit-linear-gradient(top, #fbfbfb, #ddd);
-	background-image : linear-gradient(top, #fbfbfb, #ddd);
+#homepage {
+  font-family: "Courier New", "Courier", monospace;
+  font-size: 1em;
 }
-
-.input-button:active
-{
-	background-color                 : #ddd;
-	background-image : -moz-linear-gradient(bottom, #eee, #ddd);
-	background-image : -webkit-linear-gradient(bottom, #eee, #ddd);
-	background-image : linear-gradient(bottom, #eee, #ddd);
-	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3) inset;
-	padding                          : 1px 5px 1px 5px !important;
-}
-
-.input-button:active
-{
-	background-color                 : #ddd;
-	background-image: -webkit-gradient(linear, left 14, left bottom, to(#f8f8f8), from(#ddd));
-}
-
-#homepage
-{
-	font-family                      : "Courier New", "Courier", monospace;
-	font-size                        : 1em;
-}
-
 /* 관리자 댓글인 경우 */
-.admin-comment #comment-reply-box #command-box .content-line
-{
-	height                           : 235px;
+.admin-comment #comment-reply-box #command-box .content-line {
+  height: 205px;
+  margin-top: 10px;
 }
-
-.admin-comment #comment-reply-box #command-box .content-line dt
-{
-	display                          : none;
+.admin-comment #comment-reply-box #command-box .content-line dt {
+  display: none;
 }
-
-.admin-comment #comment-reply-box #command-box .content-line textarea
-{
-	border                           : 1px solid #ccc;
-	font-size                        : 1em;
-	height                           : 230px !important;
-	overflow                         : auto;
-	width                            : 410px;
+.admin-comment #comment-reply-box #command-box .content-line textarea {
+  border: 1px solid #ccc;
+  font-size: 1em;
+  height: 200px !important;
+  width: 430px !important;
+  overflow: auto;
 }

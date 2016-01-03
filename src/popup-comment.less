@@ -1,0 +1,302 @@
+@charset "utf-8";
+@import (reference) "icomoon/iconfont.less";
+@import "imports/_mixin.less";
+
+/* ---------------- popup-comment.less ---------------- */
+
+html {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+body {
+	font-size: 75%;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	.font-family-Lato;
+	color: @black;
+	background-color: #FFFFFF;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 50px;
+		background-color: @black-l1;
+	}
+}
+
+.input-text, textarea {
+	border: 1px solid #ccc;
+	font-size: 1em;
+	padding: 2px 3px;
+	vertical-align: middle;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+/* Close button */
+a.close-button {
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 15px;
+	right: 15px;
+	color: #fff;
+	background-image: url("./image/btn_close.png");
+	background-size: 15px 15px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+a.close-button span {
+	display:none;
+}
+
+// margin resets
+dl {
+	margin: 0;
+}
+dd {
+	margin: 0;
+}
+ul {
+	padding: 0;
+}
+
+/* Ask whether edit or delete ********************************************************************/
+
+#comment-box {
+	background-image: url("./image/bg_plugin_setting_body.png");
+	background-position: left top;
+	background-repeat: repeat-x;
+	margin-top: 50px;
+
+	& > img {
+		display: none;
+	}
+
+	&:before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		width: 120px;
+		height: 30px;
+		background-image: url('./image/tclogo-text.svg');
+		background-size: 120px 30px;
+		background-repeat: no-repeat;
+		background-position: top left;
+	}
+}
+
+#original-reply-box {
+	border: 1px solid #ccc;
+	padding: 10px;
+	height: 130px;
+	width: auto;
+	margin: 0 10px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	ul {
+		list-style: none;
+	}
+
+	.name {
+		font-weight: bold;
+		color: #333;
+		float: left;
+	}
+
+	.date {
+		border-left: 1px solid #ddd;
+		padding-left: 5px;
+		margin-left: 5px;
+		clear: left;
+	}
+
+	ul li ul {
+		background: url(image/icon_reply.gif) 20px 3px no-repeat;
+		padding-left: 50px;
+		margin-top: 10px;
+	}
+}
+
+#comment-box #command-box {
+	padding: 60px 10px;
+	margin: 0 10px;
+	text-align: center;
+
+	label {
+		cursor: pointer;
+	}
+
+	.edit-line,
+	.delete-line {
+		display: inline;
+	}
+
+	.radio {
+		vertical-align: middle;
+	}
+
+	.delete-line .radio {
+		margin: 0 0 0 10px;
+	}
+
+	.password-line {
+		margin-top: 30px;
+	}
+
+	.input-text {
+		vertical-align: middle;
+	}
+
+	input#name {
+			width:350px;
+	}
+}
+
+
+/* Edit ******************************************************************************************/
+
+#comment-reply-box {
+
+	background-image: url("./image/bg_plugin_setting_body.png");
+	background-position: left top;
+	background-repeat: repeat-x;
+	border: 1px solid #FFFFFF;
+	margin-top: 48px;
+
+	& > img {
+		display: none;
+	}
+
+	&:before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		width: 120px;
+		height: 40px;
+		background-image: url('./image/tclogo-text.svg');
+		background-size: 120px 30px;
+		background-repeat: no-repeat;
+		background-position: top left;
+	}
+
+	.title {
+		background-image: url('./image/icon_popupbullet.jpg');
+		background-position: left top;
+		background-repeat: no-repeat;
+		font-weight: bold;
+		height: 20px;
+		margin: 14px 0 0 12px !important;
+		padding: 3px 0 0 18px;
+	}
+
+	#command-box {
+		margin: 10px 10px;
+
+		dl {
+			clear: both;
+			float: none;
+			height: 2em;
+			padding-bottom: 2px;
+
+			dt {
+				float: left;
+				margin-right: 8px;
+				padding-top: 5px;
+				text-align: right;
+				width: 70px;
+			}
+
+			dd {
+				float: left;
+				width: 350px !important;
+				margin-bottom: 2px;
+			}
+
+			dd input:not(.checkbox) {
+				width:100% !important;
+			}
+		}
+
+		label {
+			cursor: pointer;
+		}
+
+		.input-text {
+			font-size: 1em;
+		}
+
+		.secret-line {
+			height: 1.2em;
+			margin: 4px 0 0 80px;
+		}
+
+		.checkbox {
+			vertical-align: middle;
+			display:inline;
+		}
+
+		.content-line {
+			height: 130px;
+			margin-top: 6px;
+
+			textarea {
+				border: 1px solid #ccc;
+				font-size: 1em;
+				height: 120px !important;
+				overflow: auto;
+				resize: none;
+				width: 350px;
+			}
+		}
+
+	}
+
+	.button-box {
+		clear: both;
+		padding: 5px 2px 0 0;
+		text-align: right;
+	}
+}
+
+#homepage {
+	font-family: "Courier New", "Courier", monospace;
+	font-size: 1em;
+}
+
+/* 관리자 댓글인 경우 */
+.admin-comment {
+	#comment-reply-box #command-box .content-line {
+		height: 205px;
+		margin-top:10px;
+	}
+
+	#comment-reply-box #command-box .content-line dt {
+		display: none;
+	}
+
+	#comment-reply-box #command-box .content-line textarea {
+		border: 1px solid #ccc;
+		font-size: 1em;
+		height: 200px !important;
+		width:430px !important;
+		overflow: auto;
+	}
+}
