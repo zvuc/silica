@@ -17,3 +17,9 @@ WIP screenshots
 ![alt text](https://github.com/zvuc/silica/blob/master/screenshots/posts.png)
 
 ![alt text](https://github.com/zvuc/silica/blob/master/screenshots/editor.png)
+
+
+License
+-------
+
+MIT License
