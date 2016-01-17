@@ -23,7 +23,7 @@
 </g>
 
 <g id="checkbox-checked" transform="translate(0,60)">
-  <rect x="0" y="0" width="16" height="16" rx="2" ry="2" fill="#ffdd4d"/>
+  <rect x="0" y="0" width="16" height="16" rx="2" ry="2" fill="#bbb"/>
   <g>
     <rect x="2" y="2" width="12" height="12" rx="1.25" ry="1.25" fill="#eee" />
     <rect x="2" y="3" width="12" height="11" rx="1.25" ry="1.25" fill="#fff" />
@@ -32,7 +32,7 @@
 </g>
 
 <g id="checkbox-checked-active" transform="translate(0,80)">
-  <rect x="0" y="0" width="16" height="16" rx="2" ry="2" fill="#ffdd4d"/>
+  <rect x="0" y="0" width="16" height="16" rx="2" ry="2" fill="#bbb"/>
   <g opacity="0.7">
     <rect x="1" y="1" width="14" height="14" rx="1.25" ry="1.25" fill="#eee" />
     <rect x="1" y="2" width="14" height="13" rx="1.25" ry="1.25" fill="#fff" />
@@ -62,13 +62,13 @@
   </g>
 
   <g id="radio-checked" transform="translate(0,60)">
-    <circle cx="8" cy="8" r="8" fill="#ffdd4d"/>
+    <circle cx="8" cy="8" r="8" fill="#bbb"/>
     <circle cx="8" cy="8" r="6" fill="#fff"/>
     <circle cx="8" cy="8" r="4" fill="#ac2f3d"/>
   </g>
 
   <g id="radio-checked-active" transform="translate(0,80)">
-    <circle cx="8" cy="8" r="8" fill="#ffdd4d"/>
+    <circle cx="8" cy="8" r="8" fill="#bbb"/>
     <circle cx="8" cy="8" r="6" fill="#fff" opacity="0.7"/>
     <circle cx="8" cy="8" r="4" fill="#ac2f3d"/>
   </g>

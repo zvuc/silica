@@ -25,17 +25,12 @@
   margin: 0 1px;
   text-decoration: none;
   font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
-  transition: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
-  -moz-transition: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
-  -webkit-transition: 0.2s background-color, 0.1s box-shadow, 0.1s transform;
+  transition-properties: background-color, box-shadow;
+  transition-duration: 0.2s;
   font-weight: normal;
   min-height: 18px;
   line-height: 18px;
   vertical-align: middle;
-  -webkit-transform: translateY(-1px);
-      -ms-transform: translateY(-1px);
-          transform: translateY(-1px);
-  will-change: transform, background-color, box-shadow;
   box-shadow: 0 2px #454b54;
 }
 .button:hover {
@@ -44,11 +39,10 @@
   text-decoration: none;
 }
 .button:active {
-  -webkit-transform: translateY(1px);
-      -ms-transform: translateY(1px);
-          transform: translateY(1px);
-  box-shadow: none;
+  background-color: #454b54;
+  box-shadow: 0 2px #1f2833;
   text-decoration: none;
+  transition-duration: 0s;
 }
 .button.apply-button {
   background-color: #ac2f3d;
@@ -59,7 +53,8 @@
   box-shadow: 0 2px #ac2f3d;
 }
 .button.apply-button:active {
-  box-shadow: none;
+  background-color: #7c202f;
+  box-shadow: 0 2px #681e2d;
 }
 .button span {
   color: #fff;
