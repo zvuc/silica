@@ -513,12 +513,11 @@ table td.content {
 }
 #layout-header #main-description-box span.text {
   width: auto;
-  direction: rtl;
-  text-indent: -9999px;
   display: block;
   position: relative;
   line-height: 30px;
   margin-right: 160px;
+  color: transparent;
 }
 #layout-header #main-description-box span.text em {
   position: absolute;
@@ -532,6 +531,7 @@ table td.content {
   background: #0e161f;
   padding: 0 15px 0 10px;
   white-space: nowrap;
+  color: #fff;
 }
 #layout-header #main-description-box span.text em:before {
   font-size: 1rem;
