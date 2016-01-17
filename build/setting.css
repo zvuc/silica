@@ -66,56 +66,71 @@
 }
 fieldset {
   background-image: none;
-  border-bottom: none !important;
-  border-top: none !important;
+  border-bottom: none;
+  border-top: none;
   margin: 0;
 }
 #sub-menu-blog {
   background-image: none !important;
 }
 .part {
-  margin-bottom: 10px;
+  background: #fff;
+  padding: 10px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
 }
 .part .container {
-  background: #eee;
+  margin: 0 0 10px 0;
+}
+.part .container legend {
+  margin: 0;
+  width: 100%;
+  padding: 5px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  letter-spacing: 1px;
 }
 .part .button-box {
   clear: both;
-  text-align: left !important;
-  margin-top: 10px;
+  margin: 0 0 20px 0;
 }
 .part .button-box .input-button {
   display: block;
+}
+.part dl {
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+.part dl dt {
+  width: 150px;
+  float: left;
+  padding: 5px 0;
+  font-weight: bold;
+  color: #666;
+}
+.part dl dd {
+  display: block;
+  height: auto;
+  margin-left: 160px;
+  padding: 5px 0;
 }
 /* Basic *****************************************************************************************/
 /* basic setting */
 #part-setting-basic {
   float: left;
-  width: 48%;
+  width: calc((100% - 10px)/2);
 }
 #part-setting-basic .data-inbox {
   width: 100%;
 }
-#part-setting-basic fieldset {
-  margin-bottom: 10px !important;
-}
-#part-setting-basic dl dt {
-  width: 100px;
-}
-#part-setting-basic dl dd {
-  margin-left: 120px;
-}
-#part-setting-basic dl dd .input-text {
-  width: 80%;
-}
-#part-setting-basic dl dd textarea {
-  width: 80%;
-}
-#part-setting-basic .button-box {
-  width: 460px;
-}
-#part-setting-basic .button-box .input-button {
-  margin: 0 auto 0 123px;
+#part-setting-basic .input-text,
+#part-setting-basic textarea {
+  width: 100%;
+  resize: vertical;
 }
 #multi-form {
   border-top: 1px solid #DDDDDD;
@@ -146,13 +161,10 @@ fieldset {
 /* profile setting */
 #part-setting-profile {
   float: right;
-  width: 50%;
+  width: calc((100% - 10px)/2);
 }
 #part-setting-profile .data-inbox {
   width: 100%;
-}
-#part-setting-profile dl {
-  border-bottom: 1px solid #DDDDDD;
 }
 #part-setting-profile dl dt {
   width: 100px;
@@ -170,9 +182,6 @@ fieldset {
   display: block;
   font-size: 1em;
 }
-#part-setting-profile .button-box .input-button {
-  margin: 0 auto 0 123px;
-}
 #blogicon-section fieldset {
   margin-bottom: 10px;
 }
@@ -181,7 +190,6 @@ fieldset {
 #part-setting-frontpage,
 #part-setting-rss {
   clear: both;
-  padding: 20px 0 60px 0 !important;
 }
 #part-setting-frontpage dl,
 #part-setting-rss dl {
@@ -193,9 +201,6 @@ fieldset {
 }
 #etc-section fieldset {
   margin-bottom: 10px;
-}
-#part-setting-rss .button-box .input-button {
-  margin: 0 auto;
 }
 /* Account ***************************************************************************************/
 /* account management */
@@ -235,10 +240,6 @@ fieldset {
 #part-setting-account em,
 #part-setting-openid em {
   color: #FF0000;
-}
-#part-setting-account .button-box,
-#part-setting-openid .button-box {
-  margin-bottom: 10px;
 }
 #part-setting-account .openid-account-help,
 #part-setting-openid .openid-account-help {
@@ -284,9 +285,6 @@ fieldset {
 }
 #letter-body textarea {
   width: 546px;
-}
-#letter-section .button-box {
-  margin: 10px 0 20px 0;
 }
 #letter-section .button-box .input-button {
   padding: 0 10px !important;
@@ -453,17 +451,6 @@ div.notification-box {
   padding: 20px 10px;
   text-align: center;
 }
-.part .dialog .message-body .selection .select-yes,
-.part .dialog .message-body .selection .select-no,
-#part-data-restore .dialog .selection #select-server,
-#part-data-restore .dialog .selection #select-upload,
-#part-data-restore .dialog .selection #select-web {
-  display: inline;
-}
-#part-data-restore .dialog .selection #select-correct {
-  margin-top: 5px;
-  text-align: center;
-}
 .part .dialog #uploadBackup,
 .part .dialog #remoteBackup,
 .part .dialog #admin-password {
@@ -495,6 +482,17 @@ div.notification-box {
   line-height: normal;
   padding: 10px 10px 8px 10px;
   vertical-align: middle;
+}
+.part .dialog .message-body .selection .select-yes,
+.part .dialog .message-body .selection .select-no,
+#part-data-restore .dialog .selection #select-server,
+#part-data-restore .dialog .selection #select-upload,
+#part-data-restore .dialog .selection #select-web {
+  display: inline;
+}
+#part-data-restore .dialog .selection #select-correct {
+  margin-top: 5px;
+  text-align: center;
 }
 /* system dialog --------------------------------------------------------------------------------*/
 .part .system-dialog {

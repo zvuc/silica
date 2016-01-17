@@ -129,6 +129,25 @@
   transition: border 0.2s, box-shadow ease-in 0.2s;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0), 0 2px 0px rgba(0, 0, 0, 0.1) inset, 0 0 0 2px #ffdd4d;
 }
+textarea {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 4px 5px 4px 5px;
+  -webkit-appearance: none !important;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+  transition: border 0.5s;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(0, 0, 0, 0) inset, 0 0 0 10px rgba(255, 221, 77, 0);
+}
+textarea:focus {
+  border-color: rgba(0, 0, 0, 0.3);
+  -webkit-appearance: none !important;
+  transition: border 0.2s, box-shadow ease-in 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0), 0 2px 0px rgba(0, 0, 0, 0.1) inset, 0 0 0 2px #ffdd4d;
+}
 /* ---------------- sprites ---------------- */
 .sprite {
   display: block;
@@ -308,29 +327,35 @@ li {
 .section {
   margin: 10px 0;
 }
-dl dt {
-  display: inline-block;
-}
-dl dd {
-  display: inline-block;
-}
 dl {
   display: block;
   margin: 0 10px;
   padding: 5px 0;
 }
 dl dt {
+  display: block;
   border-radius: 2px;
   text-align: left;
-  display: inline-block;
   margin-right: 5px;
 }
 dl dd {
-  display: inline-block;
-  height: 14px;
+  display: block;
   margin: 0;
   padding: 0;
   vertical-align: 4px;
+}
+legend {
+  padding: 0;
+  display: table;
+}
+fieldset {
+  border: 0;
+  padding: 0.01em 0 0 0;
+  margin: 0;
+  min-width: 0;
+}
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell;
 }
 /* ---------------- tabs ---------------- */
 ul.tabs-box {

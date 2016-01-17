@@ -12,11 +12,10 @@
 	color: #fff;
 }
 
-
 fieldset {
 	background-image: none;
-	border-bottom: none !important;
-	border-top: none !important;
+	border-bottom: none;
+	border-top: none;
 	margin: 0;
 }
 
@@ -25,19 +24,53 @@ fieldset {
 }
 
 .part {
-	margin-bottom: 10px;
-
+	background: #fff;
+	padding: 10px 20px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	border-radius: 2px;
+	border: none;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.05);
+	
 	.container {
-		background: #eee;
+		margin: 0 0 10px 0;
+
+		legend {
+			margin: 0;
+			width: 100%;
+			padding: 5px 0;
+			font-size: 1.3em;
+			font-weight: bold;
+			border-bottom: 1px solid #ddd;
+			letter-spacing: 1px;
+		}
 	}
 
 	.button-box {
 		clear: both;
-		text-align: left !important;
-		margin-top: 10px;
+		margin: 0 0 20px 0;
 
 		.input-button {
 			display: block;
+		}
+	}
+
+	dl {
+		margin: 0;
+		border-bottom: 1px solid #eee;
+
+		dt {
+			width: 150px;
+			float: left;
+			padding: 5px 0;
+			font-weight: bold;
+			color: #666;
+		}
+		dd {
+			display: block;
+			height: auto;
+			margin-left: 160px;
+			padding: 5px 0;
 		}
 	}
 }
@@ -47,40 +80,16 @@ fieldset {
 /* basic setting */
 #part-setting-basic {
 	float: left;
-	width: 48%;
+	width: ~'calc((100% - 10px)/2)';
 
 	.data-inbox {
 		width: 100%;
 	}
 
-	fieldset {
-		margin-bottom: 10px !important;
-	}
-
-	dl {
-		dt {
-			width: 100px;
-		}
-
-		dd {
-			margin-left: 120px;
-
-			.input-text {
-				width: 80%;
-			}
-
-			textarea {
-				width: 80%;
-			}
-		}
-	}
-
-	.button-box {
-		width: 460px;
-
-		.input-button {
-			margin: 0 auto 0 123px;
-		}
+	.input-text,
+	textarea {
+		width: 100%;
+		resize: vertical;
 	}
 }
 
@@ -118,14 +127,13 @@ fieldset {
 /* profile setting */
 #part-setting-profile {
 	float: right;
-	width: 50%;
+	width: ~'calc((100% - 10px)/2)';
 
 	.data-inbox {
 		width: 100%;
 	}
 
 	dl {
-		border-bottom: 1px solid #DDDDDD;
 	
 		dt {
 			width: 100px;
@@ -147,10 +155,6 @@ fieldset {
 			}
 		}
 	}
-
-	.button-box .input-button {
-		margin: 0 auto 0 123px;
-	}
 }
 
 #blogicon-section fieldset {
@@ -162,7 +166,6 @@ fieldset {
 #part-setting-frontpage,
 #part-setting-rss {
 	clear: both;
-	padding: 20px 0 60px 0 !important;
 
 	dl {
 		border-bottom: 1px solid #DDDDDD;
@@ -175,10 +178,6 @@ fieldset {
 
 #etc-section fieldset {
 	margin-bottom: 10px;
-}
-
-#part-setting-rss .button-box .input-button {
-	margin: 0 auto;
 }
 
 /* Account ***************************************************************************************/
@@ -222,10 +221,6 @@ fieldset {
 
 	em {
 		color: #FF0000;
-	}
-
-	.button-box {
-		margin-bottom: 10px;
 	}
 
 	.openid-account-help {
@@ -281,10 +276,6 @@ fieldset {
 
 #letter-body textarea {
 	width: 546px;
-}
-
-#letter-section .button-box {
-	margin: 10px 0 20px 0;
 }
 
 #letter-section .button-box .input-button {
@@ -474,6 +465,42 @@ div.notification-box {
 		text-align: center;
 	}
 
+	#uploadBackup,
+	#remoteBackup,
+	#admin-password {
+		margin-top: 5px;
+		padding: 5px;
+		text-align: center;
+	}
+
+	#remoteBackup input.input-text {
+		margin-bottom: 2px;
+		padding: 2px;
+		vertical-align: middle;
+		width: 350px;
+	}
+
+	#admin-password input.input-text {
+		margin-bottom: 2px;
+		padding: 2px;
+	}
+
+	.button-box {
+		padding: 20px 0;
+		text-align: center !important;
+
+		a {
+			background-color: #FFFFFF;
+			background-image: none;
+			border: 1px solid #BBBBBB;
+			color: #000000;
+			font-weight: bold;
+			height: auto;
+			line-height: normal;
+			padding: 10px 10px 8px 10px;
+			vertical-align: middle;
+		}
+	}
 }
 
 .part .dialog .message-body .selection .select-yes,
@@ -489,42 +516,6 @@ div.notification-box {
 	text-align: center;
 }
 
-.part .dialog #uploadBackup,
-.part .dialog #remoteBackup,
-.part .dialog #admin-password {
-	margin-top: 5px;
-	padding: 5px;
-	text-align: center;
-}
-
-.part .dialog #remoteBackup input.input-text {
-	margin-bottom: 2px;
-	padding: 2px;
-	vertical-align: middle;
-	width: 350px;
-}
-
-.part .dialog #admin-password input.input-text {
-	margin-bottom: 2px;
-	padding: 2px;
-}
-
-.part .dialog .button-box {
-	padding: 20px 0;
-	text-align: center !important;
-}
-
-.part .dialog .button-box a {
-	background-color: #FFFFFF;
-	background-image: none;
-	border: 1px solid #BBBBBB;
-	color: #000000;
-	font-weight: bold;
-	height: auto;
-	line-height: normal;
-	padding: 10px 10px 8px 10px;
-	vertical-align: middle;
-}
 
 /* system dialog --------------------------------------------------------------------------------*/
 .part .system-dialog {
@@ -605,12 +596,14 @@ div.notification-box {
 
 /* Etc *******************************************************************************************/
 
-#part-setting-resample .button-box,
-#part-setting-language .button-box,
-#part-setting-editor .button-box {
-	border-top: 1px solid #DDDDDD;
-	margin: 10px 0 20px 0;
-	padding-top: 15px;
+#part-setting-resample,
+#part-setting-language,
+#part-setting-editor {
+	.button-box {
+		border-top: 1px solid #DDDDDD;
+		margin: 10px 0 20px 0;
+		padding-top: 15px;
+	}
 }
 
 #part-setting-resample .section dl dd img {
