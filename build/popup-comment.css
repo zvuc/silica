@@ -35,11 +35,6 @@
 .font-family-Quicksand {
   font-family: "Quicksand", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
 }
-.afterclear {
-  content: " ";
-  display: block;
-  clear: both;
-}
 /* ---------------- colors ---------------- */
 /* ---------------- buttons, inputs ---------------- */
 .input-button {

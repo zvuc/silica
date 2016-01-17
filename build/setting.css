@@ -98,6 +98,11 @@ fieldset {
   clear: both;
   margin: 0 0 20px 0;
 }
+.part .button-box:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
 .part .button-box .input-button {
   display: block;
 }

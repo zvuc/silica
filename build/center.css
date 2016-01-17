@@ -97,6 +97,11 @@
   color: #fff;
   text-decoration: none;
 }
+#defaultDashboardWidget #total-information:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
 #defaultDashboardWidget #total-information h4.caption {
   border-top: 1px solid #d2d5d9;
   margin: 0 -15px;
@@ -144,11 +149,6 @@
 }
 #defaultDashboardWidget #total-information .posts-line {
   margin-right: 2px;
-}
-#defaultDashboardWidget #total-information:after {
-  content: " ";
-  display: block;
-  clear: both;
 }
 #defaultDashboardWidget #myBlogInfo {
   margin-bottom: 10px;
