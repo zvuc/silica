@@ -3,7 +3,7 @@
  * by Hansol Kim (zvuc) (http://xenosium.com) 
  * GitHub: https://github.com/zvuc/silica 
  * 
- * Copyright 2016 Hansol Kim; MIT License 
+ * Copyright 2017 Hansol Kim; MIT License 
  */
 
 @charset "utf-8";
@@ -793,12 +793,10 @@ table td.content {
   -moz-transition: 0.2s transform, 0.2s opacity;
   -webkit-transition: 0.2s transform, 0.2s opacity;
   opacity: 0;
-  -webkit-transform: scaleY(0);
-      -ms-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transform-origin: left top;
-      -ms-transform-origin: left top;
-          transform-origin: left top;
+  -ms-transform: scaleY(0);
+      transform: scaleY(0);
+  -ms-transform-origin: left top;
+      transform-origin: left top;
   will-change: transform, opacity;
 }
 #layout-header #main-menu-box ul#main-menu li a.menu-name span {
@@ -821,9 +819,8 @@ table td.content {
   bottom: 0;
   left: 0;
   opacity: 1;
-  -webkit-transform: scaleY(1);
-      -ms-transform: scaleY(1);
-          transform: scaleY(1);
+  -ms-transform: scaleY(1);
+      transform: scaleY(1);
   transition: 0.2s transform, 0.2s opacity;
   -moz-transition: 0.2s transform, 0.2s opacity;
   -webkit-transition: 0.2s transform, 0.2s opacity;
@@ -990,12 +987,10 @@ table td.content {
   -moz-transition: 0.2s transform, 0.2s opacity;
   -webkit-transition: 0.2s transform, 0.2s opacity;
   opacity: 0;
-  -webkit-transform: scaleY(0);
-      -ms-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transform-origin: left top;
-      -ms-transform-origin: left top;
-          transform-origin: left top;
+  -ms-transform: scaleY(0);
+      transform: scaleY(0);
+  -ms-transform-origin: left top;
+      transform-origin: left top;
   will-change: transform, opacity;
 }
 #layout-header #main-menu-box ul#main-menu li ul.sub-menu li a:hover {
@@ -1003,9 +998,8 @@ table td.content {
   color: #0e161f;
 }
 #layout-header #main-menu-box ul#main-menu li ul.sub-menu li a:hover:after {
-  -webkit-transform: scaleY(1);
-      -ms-transform: scaleY(1);
-          transform: scaleY(1);
+  -ms-transform: scaleY(1);
+      transform: scaleY(1);
   bottom: 0;
   left: 0px;
   opacity: 1;
@@ -1065,9 +1059,8 @@ table td.content {
   content: " ";
   background: url('image/menutick.svg') left center no-repeat transparent;
   background-size: 6px;
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
+  -ms-transform: none;
+      transform: none;
 }
 #layout-header #main-menu-box ul#main-menu li.selected ul.sub-menu {
   display: block;
@@ -1129,12 +1122,10 @@ table td.content {
   -moz-transition: 0.2s transform, 0.2s opacity;
   -webkit-transition: 0.2s transform, 0.2s opacity;
   opacity: 0;
-  -webkit-transform: scaleY(0);
-      -ms-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transform-origin: left top;
-      -ms-transform-origin: left top;
-          transform-origin: left top;
+  -ms-transform: scaleY(0);
+      transform: scaleY(0);
+  -ms-transform-origin: left top;
+      transform-origin: left top;
   will-change: transform, opacity;
   margin-bottom: 1px;
 }
@@ -1143,9 +1134,8 @@ table td.content {
   color: #0e161f;
 }
 #layout-header #main-menu-box ul#main-menu li.selected ul.sub-menu li a:hover:after {
-  -webkit-transform: scaleY(1);
-      -ms-transform: scaleY(1);
-          transform: scaleY(1);
+  -ms-transform: scaleY(1);
+      transform: scaleY(1);
   bottom: 0;
   left: 0px;
   opacity: 1;
