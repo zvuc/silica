@@ -14,7 +14,7 @@ html {
 	height: 100%;
 }
 body {
-	font-size: 75%;
+	font-size: 80%;
 	padding: 0;
 	margin: 0;
 	width: 100%;
@@ -510,7 +510,7 @@ table {
 					.border-box;
 					overflow: hidden;
 
-					&:after {
+					&:before {
 						display: block;
 						height: 100%;
 						width: 100%;
@@ -542,7 +542,7 @@ table {
 				&:hover a.menu-name {
 					background: @black;
 
-					&:after {
+					&:before {
 						bottom: 0;
 						left: 0;
 						opacity: 1;
@@ -617,7 +617,6 @@ table {
 					li {
 						display: block;
 						width: @sidebar-width;
-						height: 30px;
 						margin: 1px 0 0 0;
 						padding: 0;
 						background: @gray;
@@ -639,13 +638,13 @@ table {
 							background: @gray;
 							padding-left: 0;
 							margin-bottom: 0;
-							height: 30px;
+							height: auto;
 							.border-box;
 							@args: 0.2s background, 0.2s color;
 							.transition(@args);
 							will-change: background, color;
 
-							&:after {
+							&:before {
 								display: block;
 								height: 100%;
 								width: 100%;
@@ -654,7 +653,6 @@ table {
 								position: absolute;
 								bottom: 0;
 								left: 0px;
-								z-index: 100;
 								@args: 0.2s transform, 0.2s opacity;
 								.transition(@args);
 								opacity: 0;
@@ -667,7 +665,7 @@ table {
 								background: @black;
 								color: @black;
 
-								&:after {
+								&:before {
 									transform: scaleY(1);
 									bottom: 0;
 									left: 0px;
@@ -678,13 +676,10 @@ table {
 							}
 
 							span {
-								height: 30px;
-								width: 140px;
-								position: absolute;
-								top: 0;
-								left: 15px;
-								line-height: 29px;
-								z-index: 101;
+								display: block;
+								position: relative;
+								padding: 7px 0 7px 15px;
+								z-index: 1;
 							}
 						}
 					}
@@ -724,7 +719,7 @@ table {
 						background: @red-d1;
 						z-index: 98;
 
-						&:after {
+						&:before {
 							display: block;
 							position: absolute;
 							right: -10px;
@@ -761,7 +756,6 @@ table {
 						li {
 							background: @black;
 							overflow: hidden;
-							margin-top: 0;
 
 							&.divider {
 								height: 3px;
@@ -772,56 +766,13 @@ table {
 							a {
 								width: 100%;
 								background: @gray;
-								border-bottom: 1px solid @black;
-								padding-left: 0;
-								margin-bottom: 0;
-								height: 30px;
 								.border-box;
 								@args: 0.2s background, 0.2s color;
 								.transition(@args);
 								will-change: background, color;
 
-								&:after {
-									display: block;
-									height: 100%;
-									width: 100%;
-									content: " ";
-									background: @yellow;
-									position: absolute;
-									bottom: 0;
-									left: 0px;
-									z-index: 100;
-									@args: 0.2s transform, 0.2s opacity;
-									.transition(@args);
-									opacity: 0;
-									transform: scaleY(0);
-									transform-origin: left top;
-									will-change: transform, opacity;
-									margin-bottom: 1px;
-								}
-
-								&:hover {
-									background: @black;
-									color: @black;
-
-									&:after {
-										transform: scaleY(1);
-										bottom: 0;
-										left: 0px;
-										opacity: 1;
-										@args: 0.3s transform, 0.3s opacity;
-										.transition(@args);
-									}
-								}
-
 								span {
-									height: 30px;
-									width: 140px;
-									position: absolute;
-									top: 0;
-									left: 27px;
-									line-height: 29px;
-									z-index: 101;
+									padding-left: 27px;
 								}
 							}
 
@@ -832,10 +783,9 @@ table {
 							&.selected a {
 								font-weight: bold;
 								color: @black;
-								border-bottom: 1px solid @black;
 								background: @yellow;
 
-								&:after {
+								&:before {
 									display: none;
 								}
 							}
