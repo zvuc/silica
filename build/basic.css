@@ -116,7 +116,7 @@ textarea:focus {
   transition: border-color 0.2s, box-shadow ease-in 0.2s;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0), 0 2px 0px rgba(0, 0, 0, 0.1) inset, 0 0 0 2px #ffdd4d;
 }
-select {
+select:not([multiple]) {
   padding: 5px 30px 5px 10px;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -132,10 +132,10 @@ select {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(0, 0, 0, 0) inset, 0 0 0 10px rgba(255, 221, 77, 0);
   cursor: pointer;
 }
-select:hover {
+select:not([multiple]):hover {
   border-color: rgba(0, 0, 0, 0.3);
 }
-select:focus {
+select:not([multiple]):focus {
   outline: none;
   border-color: rgba(0, 0, 0, 0.3);
   -webkit-appearance: none !important;
@@ -302,6 +302,9 @@ fieldset {
 }
 body:not(:-moz-handler-blocked) fieldset {
   display: table-cell;
+}
+samp {
+  font-family: Menlo, Monaco, Consolas, monospace;
 }
 /* ---------------- tabs ---------------- */
 ul.tabs-box {

@@ -231,7 +231,7 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   width: 100%;
   position: relative;
   z-index: 3;
-  padding: 5px 240px 5px 10px;
+  padding: 5px 210px 5px 10px;
   height: 40px;
   margin: 5px 0 0 0;
   border-bottom: 1px solid #d2d5d9;
@@ -259,6 +259,8 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 }
 #editor #title-section dl#title-line dd .star-icon a {
   display: inline-block;
+}
+#editor #title-section dl#title-line dd .star-icon a:before {
   content: "";
   display: block;
   width: 14px;
@@ -271,8 +273,13 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   height: 20px;
   background-position: 0px -60px;
 }
+#editor #title-section dl#title-line dd .star-icon a span {
+  display: none;
+}
 #editor #title-section dl#title-line dd .unstar-icon a {
   display: inline-block;
+}
+#editor #title-section dl#title-line dd .unstar-icon a:before {
   content: "";
   display: block;
   width: 14px;
@@ -284,6 +291,9 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   width: 20px;
   height: 20px;
   background-position: -20px -60px;
+}
+#editor #title-section dl#title-line dd .unstar-icon a span {
+  display: none;
 }
 #editor #title-section dl#title-line dd #title.input-text {
   display: inline-block;
@@ -345,6 +355,8 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 }
 #editor #category-section dl dd .entrytype-post select {
   margin-left: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   min-width: 150px;
 }
 #editor #textarea-section {
@@ -397,19 +409,21 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 }
 #editor #textarea-section dl.editoroption dd select {
   margin-left: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   min-width: 80px;
 }
 #editor #textarea-section #formatbox-container {
   min-width: 700px;
   width: 100%;
-  height: 63px;
+  height: 66px;
   background: #f5f8fa;
   position: fixed;
   top: 109px;
   left: 0;
   z-index: 3;
   border-top: 2px solid #d2d5d9;
-  border-bottom: 1px solid #9aa0a6;
+  box-shadow: 0 1px 1px 0 rgba(69, 75, 84, 0.5);
 }
 @media screen and (max-width: 1284px) {
   #editor #textarea-section #formatbox-container {
@@ -423,6 +437,10 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   overflow: auto;
 }
 #editor #textarea-section .editorbox-container #property-section {
+  margin: 0;
+}
+#editor #textarea-section .editorbox-container .container {
+  padding: 0;
   margin: 0;
 }
 #editor #textarea-section textarea#editWindow {
@@ -532,7 +550,7 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 #editor #textarea-section .mce-tinymce .mce-toolbar-grp {
   position: fixed;
   min-width: 700px;
-  width: 100%;
+  width: auto;
   top: 112px;
   left: 0;
   padding: 0 310px 0 180px;
@@ -824,19 +842,29 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   margin-left: -10px;
 }
 #editor #setting-section #upload-section #upload-container #insert-container {
-  width: 170px;
+  width: 100%;
   position: relative;
   top: 0;
   left: 0;
 }
 #editor #setting-section #upload-section #upload-container #insert-container a {
   display: inline-block;
-  width: 27px;
-  height: 25px;
+  width: auto;
+  height: auto;
+  padding: 2px;
   overflow: hidden;
   background: #fff;
   border: 1px solid #9aa0a6;
-  text-indent: -9999px;
+  border-radius: 2px;
+}
+#editor #setting-section #upload-section #upload-container #insert-container a span {
+  display: none;
+}
+#editor #setting-section #upload-section #upload-container #insert-container a:before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 26px;
   background-image: url('image/imageplacementicons.svg');
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -845,34 +873,34 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   background-color: #ebeff2;
   border-color: #6f7983;
 }
-#editor #setting-section #upload-section #upload-container #insert-container a.image-left {
+#editor #setting-section #upload-section #upload-container #insert-container a.image-left:before {
   background-position: 0px 0px;
 }
-#editor #setting-section #upload-section #upload-container #insert-container a.image-center {
+#editor #setting-section #upload-section #upload-container #insert-container a.image-center:before {
   background-position: -30px 0px;
 }
-#editor #setting-section #upload-section #upload-container #insert-container a.image-right {
+#editor #setting-section #upload-section #upload-container #insert-container a.image-right:before {
   background-position: -60px 0px;
 }
-#editor #setting-section #upload-section #upload-container #insert-container a.image-2center {
+#editor #setting-section #upload-section #upload-container #insert-container a.image-2center:before {
   background-position: -90px 0px;
 }
-#editor #setting-section #upload-section #upload-container #insert-container a.image-3center {
+#editor #setting-section #upload-section #upload-container #insert-container a.image-3center:before {
   background-position: -120px 0px;
 }
-#editor #setting-section #upload-section #upload-container #insert-container a.image-free {
+#editor #setting-section #upload-section #upload-container #insert-container a.image-free:before {
   background-position: -150px 0px;
 }
-#editor #setting-section #upload-section #upload-container #insert-container a.image-imazing {
+#editor #setting-section #upload-section #upload-container #insert-container a.image-imazing:before {
   background-position: -180px 0px;
 }
-#editor #setting-section #upload-section #upload-container #insert-container a.image-sequence {
+#editor #setting-section #upload-section #upload-container #insert-container a.image-sequence:before {
   background-position: -210px 0px;
 }
-#editor #setting-section #upload-section #upload-container #insert-container a.image-mp3 {
+#editor #setting-section #upload-section #upload-container #insert-container a.image-mp3:before {
   background-position: -240px 0px;
 }
-#editor #setting-section #upload-section #upload-container #insert-container a.image-podcast {
+#editor #setting-section #upload-section #upload-container #insert-container a.image-podcast:before {
   background-position: -270px 0px;
 }
 #editor #setting-section #tag-location-container dd {
@@ -1003,9 +1031,15 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   z-index: 5;
   padding: 7px 10px;
 }
+#editor #save-section .button-box {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 #editor #save-section .input-button {
-  font-size: 0.9rem;
-  height: 25px !important;
+  font-size: 1em;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 #editor #save-section #saveButton {
   display: none;
