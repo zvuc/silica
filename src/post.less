@@ -72,8 +72,8 @@ ul.tabs-box {
 		.status {
 			padding-left: 5px;
 			padding-right: 5px;
-			width: 70px;
-			min-width: 70px;
+			width: 80px;
+			min-width: 80px;
 		}
 		.selection {
 			width: 20px;
@@ -149,18 +149,21 @@ ul.tabs-box {
 				
 				span {
 					display: inline-block;
-					width: 14px;
-					height: 14px;
-					background: #ccc;
+					width: 20px;
+					height: 20px;
+					background-color: #ccc;
 					padding: 3px;
 					border-radius: 2px;
 					position: relative;
 					margin: 0;
+					cursor: pointer;
+
+					&:before {
+						.sprite;
+					}
 
 					span.text {
-						.sprite;
-						cursor: pointer;
-						background-color: transparent;
+						display: none;
 					}
 
 					
@@ -186,13 +189,13 @@ ul.tabs-box {
 					}
 
 					&.private-on-icon, &.private-off-icon {
-						span.text { .sprite-lock-white; }
+						&:before { .sprite-lock-white; }
 					}
 					&.protected-on-icon, &.protected-off-icon {
-						span.text { .sprite-key-white; }
+						&:before { .sprite-key-white; }
 					}
 					&.public-on-icon, &.public-off-icon {
-						span.text { .sprite-unlock-white; }
+						&:before { .sprite-unlock-white; }
 					}
 
 				}
@@ -201,27 +204,31 @@ ul.tabs-box {
 			&.syndicate {
 				a {
 					display: inline-block;
-					width: 14px;
-					height: 14px;
+					width: 20px;
+					height: 20px;
 					background: #ccc;
 					padding: 3px;
 					border-radius: 2px;
 					position: relative;
 					margin: 0;
 
-					&:hover {
-						text-decoration: none;
-					}
-
-					span {
+					&:before {
 						.sprite;
 						.sprite-rss-white;
 					}
-				}
 
+					span.text {
+						display: none;
+					}
+				
+					&:hover {
+						text-decoration: none;
+					}
+				}
 
 				.syndicated-off-icon a {
 					background-color: #ccc;
+
 					&:hover {
 						background-color: @orange-l1;
 					}
@@ -236,8 +243,8 @@ ul.tabs-box {
 			&.trackback {
 				a {
 					display: inline-block;
-					width: 14px;
-					height: 14px;
+					width: 20px;
+					height: 20px;
 					background: @gray-l4;
 					padding: 3px;
 					border-radius: 2px;
@@ -285,30 +292,36 @@ ul.tabs-box {
 			&.delete {
 				a {
 					display: inline-block;
-					width: 14px;
-					height: 14px;
+					width: 20px;
+					height: 20px;
 					background: @gray-l4;
 					padding: 3px;
 					border-radius: 2px;
 					position: relative;
 					margin: 0;
 
+					&:before {
+						.sprite;
+						.sprite-delete;
+					}
+
 					&:hover {
 						text-decoration: none;
 					}
 
-					span {
-						.sprite;
-						.sprite-delete;
+					span.text {
+						display: none;
 					}
 				}
 
 
 				a.delete-button {
 					background-color: @gray-l4;
+
 					&:hover {
 						background-color: @red-l1;
-						span {
+
+						&:before {
 							.sprite-delete-white;
 						}
 					}
@@ -406,41 +419,57 @@ ul.tabs-box {
 				padding: 5px 0;
 			
 				dt {
-					.sprite;
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					padding: 3px;
 					border-radius: 2px;
 					text-align: left;
-					border: 2px solid @gray;
 					background-color: @gray;
-					display: inline-block;
 					margin-right: 5px;
+					text-indent: -9999px;
+					overflow: hidden;
+					vertical-align: middle;
+					
+					&:before {
+						.sprite;
+					}
 				}
 
 				&.starred-description dt {
-					border: 2px solid @yellow-s1;
 					background-color: @yellow-s1;
-					.sprite-star-white;	
+
+					&:before {
+						.sprite-star-white;	
+					}
 				}	
 				&.eolin-description dt {
-					border: 2px solid @orange;
 					background-color: @orange;
-					.sprite-rss-white;
+					
+					&:before {
+						.sprite-rss-white;
+					}
 				}
 				&.trackback-description dt {
-					border: 2px solid @gray;
 					background-color: @gray;
-					.sprite-link-white;
+					
+					&:before {
+						.sprite-link-white;
+					}
 				}
 				&.protect-description dt {
-					border: 2px solid @yellow-s1-d1;
 					background-color: @yellow-s1-d1;
-					.sprite-key-white;
+					
+					&:before {
+						.sprite-key-white;
+					}
 				}		
 				dd {
 					display: inline-block;
-					height: 14px;
+					height: auto;
 					margin: 0;
 					padding: 0;
-					vertical-align: 4px;
+					vertical-align: middle;
 				}
 			}
 		}

@@ -88,8 +88,6 @@
 	border: none;
 	-webkit-appearance: none;
 	border-radius: 2px 2px;
-	margin-top: -2px;
-	margin-bottom: 2px;
 	padding: 4px 10px;
 	color: #fff;
 	cursor: pointer;
@@ -102,31 +100,25 @@
 	min-height: 18px;
 	line-height: 18px;
 	vertical-align: middle;
-	box-shadow: 0 2px @gray;
 
 	&:hover {
 		background-color: @gray-l2;
-		box-shadow: 0 2px @gray-l1;
 		text-decoration: none;
 	}
 	&:active {
 		background-color: @gray;
-		box-shadow: 0 2px @black-l1;
 		text-decoration: none;
 		transition-duration: 0s;
 	}
 
 	&.apply-button {
 		background-color: @red;
-		box-shadow: 0 2px @red-d2;
 
 		&:hover {
 			background-color: @red-l1;
-			box-shadow: 0 2px @red;
 		}
 		&:active {
 			background-color: @red-d1;
-			box-shadow: 0 2px @red-d2;
 		}
 	}
 }
@@ -134,22 +126,18 @@
 
 .buttonemphasis {
 	background-color: @red;
-	box-shadow: 0 2px @red-d2;
 
 	&:hover {
 		background-color: @red-l1;
-		box-shadow: 0 2px @red;
 	}
 	&:active {
-		box-shadow: none;
 	}
 }
 
 // text input
 .input-text {
-	padding: 4px 5px 4px 5px;
+	padding: 7px 10px 7px 10px;
 	margin-right: 2px;
-	height: 24px;
 	vertical-align: middle;
 	-webkit-appearance: none !important;
 	outline: none;
@@ -279,145 +267,140 @@ textarea {
 
 
 /* ---------------- sprites ---------------- */ 
-.sprite {
+.sprite() {
+	content: "";
 	display: block;
 	width: 14px;
 	height: 14px;
 	padding: 0;
 	margin: 0;
-	overflow: hidden;
-	text-indent: -9999px;
 	background-image: url('image/sprites.svg');
 	background-repeat: no-repeat;
-
-	span { 
-		display: none;
-	}
 }
-.sprite-lock-white {
+.sprite-lock-white() {
 	background-position: 0 0px;
 }
-.sprite-lock {
+.sprite-lock() {
 	background-position: 0 -20px;
 }
-.sprite-lock-colored {
+.sprite-lock-colored() {
 	background-position: 0 -40px;
 }
 
-.sprite-key-white {
+.sprite-key-white() {
 	background-position: -20px 0px;
 }
-.sprite-key {
+.sprite-key() {
 	background-position: -20px -20px;
 }
-.sprite-key-colored {
+.sprite-key-colored() {
 	background-position: -20px -40px;
 }
 
-.sprite-unlock-white {
+.sprite-unlock-white() {
 	background-position: -40px 0px;
 }
-.sprite-unlock {
+.sprite-unlock() {
 	background-position: -40px -20px;
 }
-.sprite-unlock-colored {
+.sprite-unlock-colored() {
 	background-position: -40px -40px;
 }
 
-.sprite-rss-white {
+.sprite-rss-white() {
 	background-position: -60px 0px;
 }
-.sprite-rss {
+.sprite-rss() {
 	background-position: -60px -20px;
 }
 
 
-.sprite-link-white {
+.sprite-link-white() {
 	background-position: -80px 0px;
 }
-.sprite-link {
+.sprite-link() {
 	background-position: -80px -20px;
 }
 
-.sprite-delete-white {
+.sprite-delete-white() {
 	background-position: -100px 0px;
 }
-.sprite-delete {
+.sprite-delete() {
 	background-position: -100px -20px;
 }
 
-.sprite-outlink-white {
+.sprite-outlink-white() {
 	background-position: -120px 0px;
 }
-.sprite-outlink {
+.sprite-outlink() {
 	background-position: -120px -20px;
 }
 
-.sprite-check-white {
+.sprite-check-white() {
 	background-position: -140px 0px;
 }
-.sprite-check {
+.sprite-check() {
 	background-position: -140px -20px;
 }
 
-.sprite-star-white {
+.sprite-star-white() {
 	background-position: -160px 0px;
 }
-.sprite-star {
+.sprite-star() {
 	background-position: -160px -20px;
 }
-.sprite-star-colored {
+.sprite-star-colored() {
 	background-position: -160px -40px;
 }
 
-.sprite-star-o-white {
+.sprite-star-o-white() {
 	background-position: -180px 0px;
 }
-.sprite-star-o {
+.sprite-star-o() {
 	background-position: -180px -20px;
 }
-.sprite-star-o-colored {
+.sprite-star-o-colored() {
 	background-position: -180px -40px;
 }
 
-.sprite-star-large {
+.sprite-star-large() {
 	width: 20px;
 	height: 20px;
 	background-position: -0px -60px;
 }
-.sprite-star-large-o {
+.sprite-star-large-o() {
 	width: 20px;
 	height: 20px;
 	background-position: -20px -60px;
 }
 
-.sprite-block-white {
+.sprite-block-white() {
 	background-position: -200px 0px;
 }
-.sprite-block {
+.sprite-block() {
 	background-position: -200px -20px;
 }
-.sprite-block-gray {
+.sprite-block-gray() {
 	background-position: -200px -40px;
 }
-.sprite-block-red {
+.sprite-block-red() {
 	background-position: -200px -60px;
 }
 
-.sprite-pencil-white {
+.sprite-pencil-white() {
 	background-position: -220px 0px;
 }
-.sprite-pencil {
+.sprite-pencil() {
 	background-position: -220px -20px;
 }
-.sprite-pencil-brown {
+.sprite-pencil-brown() {
 	background-position: -220px -40px;
 }
 
-.sprite-reply-white {
+.sprite-reply-white() {
 	background-position: -240px 0px;
 }
-.sprite-reply {
+.sprite-reply() {
 	background-position: -240px -20px;
 }
 
