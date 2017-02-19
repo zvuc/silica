@@ -179,6 +179,8 @@ table {
 		height: 20px;
 		padding: 7px 10px;
 		border-bottom: 2px solid @gray-l2;
+		word-break: keep-all;
+		word-wrap: break-word;
 
 		&:first-child {
 			border-top-left-radius: 2px;
@@ -807,7 +809,7 @@ table {
 
 		#sub-menu li {
 			display: none;
-			height: 25px;
+			height: 60px;
 			padding: 15px 20px 10px;
 			background: @gray-l4;
 			font-weight: normal;
@@ -989,5 +991,47 @@ table {
 		position: absolute;
 		top: 0;
 		right: 0;
+	}
+}
+
+// Common data-description
+#data-description {
+	display: block;
+	padding: 5px 0;
+	text-align: right;
+	width: 100%;
+	background-color: #fff;
+	border-radius: 2px;
+	
+	dl {
+		display: inline-block;
+		margin: 0 10px;
+		padding: 5px 0;
+	
+		dt {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			padding: 3px;
+			border-radius: 2px;
+			text-align: left;
+			background-color: @gray;
+			margin-right: 5px;
+			text-indent: -9999px;
+			overflow: hidden;
+			vertical-align: middle;
+			
+			&:before {
+				.sprite;
+			}
+		}
+		
+		dd {
+			display: inline-block;
+			height: auto;
+			vertical-align: middle;
+			margin: 0;
+			padding: 0;
+		}
 	}
 }

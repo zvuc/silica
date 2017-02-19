@@ -51,12 +51,16 @@ table.data-inbox {
 			text-decoration: none;
 		}
 
-		span {
+		span.text {
+			display: none;
+		}
+
+		&:before {
 			.sprite;
 			.sprite-block-gray;
 		}
 
-		&:hover span {
+		&:hover:before {
 			.sprite-block-red;
 		}
 	}
@@ -66,7 +70,7 @@ table.data-inbox {
 		background-color: @gray-l4;
 		&:hover {
 			background-color: @red-l1;
-			span {
+			&:before {
 				.sprite-delete-white;
 			}
 		}
@@ -137,14 +141,18 @@ table.data-inbox {
 				&:hover {
 					text-decoration: none;
 
-					span {
+					&:before {
 						.sprite-pencil-brown;
 					}
 				}
 
-				span {
+				&:before {
 					.sprite;
 					.sprite-pencil;
+				}
+
+				span.text {
+					display: none;
 				}
 
 			}
@@ -182,14 +190,18 @@ table.data-inbox {
 					background: @orange;
 					text-decoration: none;
 
-					span {
+					&:before {
 						.sprite-reply-white;
 					}
 				}
 
-				span {
+				&:before {
 					.sprite;
 					.sprite-reply;
+				}
+
+				span.text {
+					display: none;
 				}
 
 			}
@@ -212,9 +224,13 @@ table.data-inbox {
 					text-decoration: none;
 				}
 
-				span {
+				&:before {
 					.sprite;
 					.sprite-delete;
+				}
+
+				span.text {
+					display: none;
 				}
 			}
 
@@ -223,7 +239,7 @@ table.data-inbox {
 				background-color: @gray-l4;
 				&:hover {
 					background-color: @red-l1;
-					span {
+					&:before {
 						.sprite-delete-white;
 					}
 				}
@@ -241,52 +257,19 @@ table.data-inbox {
 
 
 #data-description {
-
-	padding: 10px 0;
-	text-align: right;
-	display: block;
-	width: 100%;
-	
-	height: 60px;
-
-	display: none;
-	
-	dl {
-		display: inline-block;
-		margin: 0 10px;
-		padding: 5px 0;
-	
-		dt {
-			.sprite;
-			border-radius: 2px;
-			text-align: left;
-			border: 2px solid @gray;
-			background-color: @gray;
-			display: inline-block;
-			margin-right: 5px;
-		}
-
-		&.ban-description dt {
-			border: 2px solid transparent;
-			background-color: transparent;
-			.sprite-block-red;	
-		}	
-		&.trash-description dt {
-			border: 2px solid @red-l1;
-			background-color: @red-l1;
-			.sprite-delete-white;
-		}
+	dl.ban-description dt {
+		background-color: transparent;
 		
-		dd {
-			display: inline-block;
-			height: 14px;
-			margin: 0;
-			padding: 0;
-			vertical-align: 4px;
+		&:before {
+			.sprite-block-red;	
+		}
+	}
+
+	dl.trash-description dt {
+		background-color: @red-l1;
+		
+		&:before {
+			.sprite-delete-white;
 		}
 	}
 }
-
-
-
-
