@@ -10,6 +10,15 @@
 #part-center-quilt {
   display: block;
   padding: 15px 0;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+#part-center-quilt > h2.caption {
+  display: none;
 }
 .panel {
   display: inline-block;
@@ -190,6 +199,96 @@
   margin-top: 20px;
   padding: 10px 10px;
   background: #f5f8fa;
+  border-top: none;
   border-radius: 2px;
   clear: both;
+}
+#part-center-about:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+#part-center-about > h2.caption {
+  display: none;
+}
+#part-center-about > h3 {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  font-size: 2em;
+  font-weight: normal;
+  border-bottom: 2px solid #ffdd4d;
+}
+#part-center-about .main-explain-box {
+  margin-bottom: 30px;
+}
+#part-center-about .main-explain-box:before {
+  content: "";
+  width: 400px;
+  height: 100px;
+  display: inline-block;
+  margin-right: 20px;
+  background-image: url('image/tclogo-text-b.svg');
+  background-size: 400px auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#part-center-about .main-explain-box #copyright {
+  float: left;
+}
+#part-center-about .main-explain-box #XHTML-ValidIcon,
+#part-center-about .main-explain-box #Needlworks-Icon {
+  float: right;
+  margin-left: 10px;
+}
+#part-center-about .main-explain-box .clear:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+#part-center-about .section {
+  box-shadow: none;
+}
+#part-center-about .section h3 {
+  padding-left: 0;
+  font-size: 1.4em;
+}
+#part-center-about .section .container {
+  margin: 15px 0;
+}
+#part-center-about .section#developer-description {
+  float: left;
+  width: 50%;
+}
+#part-center-about .section#supporter-description {
+  margin-left: 50%;
+  padding-left: 20px;
+}
+#part-center-about .section table {
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #d2d5d9;
+  font-size: 1.1em;
+}
+#part-center-about .section table thead {
+  display: none;
+}
+#part-center-about .section table td {
+  text-align: left;
+  padding: 7px 0;
+}
+#part-center-about .section table .name {
+  width: 200px;
+  font-weight: bold;
+}
+#part-center-about .section h4 {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 7px 0;
+  border-bottom: 2px solid #d2d5d9;
+  margin: 10px 0 0 0;
+}
+#part-center-about .section p {
+  line-height: 1.6;
+  margin-top: 10px;
 }

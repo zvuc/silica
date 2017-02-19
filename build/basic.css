@@ -1273,6 +1273,14 @@ table tr.empty-list td:hover {
 .ajaxMessage.ajaxErrorMessage {
   background-color: rgba(102, 220, 96, 0.95) !important;
 }
+#optimizingDialogBox {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
 #optimizingDialogBox #optimizingDataDialog {
   position: fixed !important;
   z-index: 1000 !important;
