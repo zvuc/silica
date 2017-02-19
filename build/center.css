@@ -7,14 +7,21 @@
  */
 
 @charset "utf-8";
-/* columns */
+#part-center-quilt {
+  display: block;
+  padding: 15px 0;
+}
 .panel {
   display: inline-block;
-  margin-top: 10px;
+  float: left;
+  width: calc((100% - 30px)/3);
   margin-right: 15px;
-  width: 300px;
+  min-width: 300px;
   min-height: 100px;
   vertical-align: top;
+}
+.panel#widget-container-2 {
+  margin-right: 0;
 }
 #independent-notice-line {
   display: none;
@@ -26,6 +33,7 @@
   display: none;
 }
 .section {
+  margin: 0 0 10px 0;
   padding-bottom: 10px;
   overflow: hidden;
   border-radius: 2px;
@@ -33,18 +41,16 @@
   background: #fff;
 }
 .section h3 {
-  height: 40px;
-  line-height: 40px;
   margin-bottom: 15px;
-  padding-left: 15px;
-  font-weight: normal;
+  padding: 10px 0 0 15px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
 }
 .section h3 span {
   border-bottom: 2px solid #ffdd4d;
   display: block;
-  height: 34px;
-  margin: 0 0 0 -2px;
-  padding: 5px 0 0 2px;
+  margin: 0;
+  padding: 5px 0;
 }
 .section ol li,
 .section ul li {
@@ -61,6 +67,12 @@
   display: none;
 }
 /* Default dashboard widget */
+#defaultDashboardWidget h4.caption {
+  text-align: center;
+  padding: 5px 0;
+  margin: 0;
+  background: #ebeff2;
+}
 #defaultDashboardWidget #shortcut-collection,
 #defaultDashboardWidget #total-information,
 #defaultDashboardWidget #myBlogInfo,
@@ -103,35 +115,23 @@
   clear: both;
 }
 #defaultDashboardWidget #total-information h4.caption {
-  border-top: 1px solid #d2d5d9;
-  margin: 0 -15px;
-  padding: 10px 15px 0 15px;
-  text-align: center;
   display: none;
 }
 #defaultDashboardWidget #total-information .posts-line,
 #defaultDashboardWidget #total-information .visitors-line {
   float: left;
-  width: 49.5%;
+  width: calc((100% - 4px)/2);
   border-collapse: collapse;
 }
 #defaultDashboardWidget #total-information .posts-line caption,
 #defaultDashboardWidget #total-information .visitors-line caption {
   background: #ebeff2;
-  height: 23px;
   padding: 5px 0;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   font-weight: bold;
 }
 #defaultDashboardWidget #total-information .posts-line thead,
 #defaultDashboardWidget #total-information .visitors-line thead {
   display: none;
-}
-#defaultDashboardWidget #total-information .posts-line td,
-#defaultDashboardWidget #total-information .visitors-line td {
-  padding: 5px 0;
 }
 #defaultDashboardWidget #total-information .posts-line td.type,
 #defaultDashboardWidget #total-information .visitors-line td.type {
@@ -148,17 +148,10 @@
   border-top: 2px solid #9aa0a6;
 }
 #defaultDashboardWidget #total-information .posts-line {
-  margin-right: 2px;
+  margin-right: 4px;
 }
 #defaultDashboardWidget #myBlogInfo {
   margin-bottom: 10px;
-}
-#defaultDashboardWidget #myBlogInfo h4.caption {
-  text-align: center;
-  padding: 5px 0 0;
-  margin: 0;
-  height: 20px;
-  background: #ebeff2;
 }
 #defaultDashboardWidget #myBlogInfo table.recent {
   margin: 0;
@@ -176,17 +169,13 @@
   width: 50px;
 }
 #defaultDashboardWidget #myBlogInfo table.recent .category {
-  width: 40px;
+  width: 50px;
+}
+#defaultDashboardWidget #myBlogInfo table.recent .title {
+  text-align: left;
 }
 #defaultDashboardWidget #textcube-notice {
   margin-bottom: 15px;
-}
-#defaultDashboardWidget #textcube-notice h4.caption {
-  margin: 0;
-  padding: 5px 15px 0 15px;
-  text-align: center;
-  height: 20px;
-  background: #ebeff2;
 }
 #defaultDashboardWidget #textcube-notice tr:first-child td {
   border-top: 2px solid #9aa0a6;
@@ -198,8 +187,9 @@
   margin: 0;
 }
 #widget-button-bottom {
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 10px 10px;
   background: #f5f8fa;
   border-radius: 2px;
+  clear: both;
 }

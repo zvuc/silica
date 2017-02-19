@@ -3,7 +3,7 @@
  * by Hansol Kim (zvuc) (http://xenosium.com) 
  * GitHub: https://github.com/zvuc/silica 
  * 
- * Copyright 2016 Hansol Kim; MIT License 
+ * Copyright 2017 Hansol Kim; MIT License 
  */
 
 @charset "utf-8";
@@ -29,18 +29,12 @@ body#body-entry #part-editor,
 body#body-entry #editor {
   height: 100%;
   width: 100%;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 body#body-entry #layout-body {
   height: 100%;
   background: #1f2833;
   padding-left: 170px;
   position: relative;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 body#body-entry #pseudo-box {
   min-width: 1000px;
@@ -50,9 +44,6 @@ body#body-entry #pseudo-box {
   padding: 0;
   overflow: hidden;
   position: relative;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 body#body-entry #pseudo-box #data-outbox {
   width: 100%;
@@ -135,54 +126,44 @@ body#body-entry .mce-window .mce-panel .mce-tabs .mce-tab {
   min-width: 30px;
 }
 body#body-entry .mce-window input.mce-textbox {
-  padding: 4px 5px 4px 5px;
-  margin-right: 2px;
-  height: 24px;
+  display: inline-block;
+  padding: 6px 10px 6px 10px;
   vertical-align: middle;
   -webkit-appearance: none !important;
   outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
-  transition: border 0.5s;
-  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(0, 0, 0, 0) inset, 0 0 0 10px rgba(255, 221, 77, 0);
+  font-size: 1em;
+  transition: border-color 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(0, 0, 0, 0) inset, 0 0 0 10px rgba(255, 221, 77, 0);
   height: 27px !important;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 body#body-entry .mce-window input.mce-textbox:focus {
   border-color: rgba(0, 0, 0, 0.3);
   -webkit-appearance: none !important;
-  transition: border 0.2s, box-shadow ease-in 0.2s;
+  transition: border-color 0.2s, box-shadow ease-in 0.2s;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0), 0 2px 0px rgba(0, 0, 0, 0.1) inset, 0 0 0 2px #ffdd4d;
 }
 body#body-entry .mce-window .mce-foot {
   border-radius: 0;
   background: #d2d5d9;
   height: 52px !important;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 body#body-entry .mce-window .mce-foot .mce-container-body {
   width: 100% !important;
   padding: 10px 20px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 body#body-entry .mce-window .mce-foot .mce-btn {
   box-shadow: none;
+  box-sizing: border-box;
   text-align: center;
   background: none;
   background-color: #6f7983;
   border: none;
   -webkit-appearance: none;
   border-radius: 2px 2px;
-  margin-top: -2px;
-  margin-bottom: 2px;
-  padding: 4px 10px;
+  padding: 5px 10px;
   color: #fff;
   cursor: pointer;
   margin: 0 1px;
@@ -190,11 +171,10 @@ body#body-entry .mce-window .mce-foot .mce-btn {
   font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
   transition-properties: background-color, box-shadow;
   transition-duration: 0.2s;
-  font-weight: normal;
+  font-weight: bold;
   min-height: 18px;
   line-height: 18px;
   vertical-align: middle;
-  box-shadow: 0 2px #454b54;
   left: inherit !important;
   top: inherit !important;
   position: relative;
@@ -202,32 +182,27 @@ body#body-entry .mce-window .mce-foot .mce-btn {
   float: right;
   margin-left: 5px;
   border-radius: 2px !important;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 body#body-entry .mce-window .mce-foot .mce-btn:hover {
-  background-color: #9aa0a6;
-  box-shadow: 0 2px #6f7983;
+  background-color: #454b54;
   text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 body#body-entry .mce-window .mce-foot .mce-btn:active {
-  background-color: #454b54;
-  box-shadow: 0 2px #1f2833;
+  background-color: #393f46;
   text-decoration: none;
   transition-duration: 0s;
+  color: #fff;
 }
 body#body-entry .mce-window .mce-foot .mce-btn.apply-button {
   background-color: #ac2f3d;
-  box-shadow: 0 2px #681e2d;
 }
 body#body-entry .mce-window .mce-foot .mce-btn.apply-button:hover {
   background-color: #d96275;
-  box-shadow: 0 2px #ac2f3d;
 }
 body#body-entry .mce-window .mce-foot .mce-btn.apply-button:active {
   background-color: #7c202f;
-  box-shadow: 0 2px #681e2d;
 }
 body#body-entry .mce-window .mce-foot .mce-btn button {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -238,15 +213,12 @@ body#body-entry .mce-window .mce-foot .mce-btn button {
 }
 body#body-entry .mce-window .mce-foot .mce-primary {
   background-color: #ac2f3d;
-  box-shadow: 0 2px #681e2d;
 }
 body#body-entry .mce-window .mce-foot .mce-primary:hover {
   background-color: #d96275;
-  box-shadow: 0 2px #ac2f3d;
 }
 body#body-entry .mce-window .mce-foot .mce-primary:active {
   background-color: #7c202f;
-  box-shadow: 0 2px #681e2d;
 }
 #editor {
   position: absolute;
@@ -262,9 +234,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   padding: 5px 240px 5px 10px;
   height: 40px;
   margin: 5px 0 0 0;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   border-bottom: 1px solid #d2d5d9;
 }
 #editor #title-section h3 {
@@ -290,48 +259,37 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 }
 #editor #title-section dl#title-line dd .star-icon a {
   display: inline-block;
+  content: "";
   display: block;
   width: 14px;
   height: 14px;
   padding: 0;
   margin: 0;
-  overflow: hidden;
-  text-indent: -9999px;
   background-image: url('image/sprites.svg');
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
   background-position: 0px -60px;
 }
-#editor #title-section dl#title-line dd .star-icon a span {
-  display: none;
-}
 #editor #title-section dl#title-line dd .unstar-icon a {
   display: inline-block;
+  content: "";
   display: block;
   width: 14px;
   height: 14px;
   padding: 0;
   margin: 0;
-  overflow: hidden;
-  text-indent: -9999px;
   background-image: url('image/sprites.svg');
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
   background-position: -20px -60px;
 }
-#editor #title-section dl#title-line dd .unstar-icon a span {
-  display: none;
-}
 #editor #title-section dl#title-line dd #title.input-text {
   display: inline-block;
   width: 100%;
   height: 27px;
   padding: 0 10px 0 10px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   font-size: 1rem;
   margin: 0;
 }
@@ -344,9 +302,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   width: 100%;
   height: 34px;
   border-bottom: 1px solid #9aa0a6;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 #editor #category-section h3 {
   display: block;
@@ -397,9 +352,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   height: 100%;
   padding: 145px 300px 30px 0;
   overflow: hidden;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -422,9 +374,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   height: 31px;
   margin: 10px 0;
   padding: 0 10px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   position: absolute;
   z-index: 3;
   top: 37px;
@@ -470,9 +419,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 #editor #textarea-section .editorbox-container {
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   background: #6f7983;
   overflow: auto;
 }
@@ -484,9 +430,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   min-width: 100%;
   width: 100%;
   max-width: 100%;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   height: 100% !important;
   padding: 10px 20px;
   border: none;
@@ -522,9 +465,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 #editor #textarea-section .entry-editor-property dl dd select {
   width: 100%;
   height: 25px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 #editor #textarea-section .entry-editor-property .button-box {
   margin: 7px 0;
@@ -542,9 +482,7 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   border: none;
   -webkit-appearance: none;
   border-radius: 2px 2px;
-  margin-top: -2px;
-  margin-bottom: 2px;
-  padding: 4px 10px;
+  padding: 5px 10px;
   color: #fff;
   cursor: pointer;
   margin: 0 1px;
@@ -552,34 +490,31 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
   transition-properties: background-color, box-shadow;
   transition-duration: 0.2s;
-  font-weight: normal;
+  font-weight: bold;
   min-height: 18px;
   line-height: 18px;
   vertical-align: middle;
-  box-shadow: 0 2px #454b54;
 }
 #editor #textarea-section .entry-editor-property .button:hover {
-  background-color: #9aa0a6;
-  box-shadow: 0 2px #6f7983;
+  background-color: #454b54;
   text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 #editor #textarea-section .entry-editor-property .button:active {
-  background-color: #454b54;
-  box-shadow: 0 2px #1f2833;
+  background-color: #393f46;
   text-decoration: none;
   transition-duration: 0s;
+  color: #fff;
 }
 #editor #textarea-section .entry-editor-property .button.apply-button {
   background-color: #ac2f3d;
-  box-shadow: 0 2px #681e2d;
 }
 #editor #textarea-section .entry-editor-property .button.apply-button:hover {
   background-color: #d96275;
-  box-shadow: 0 2px #ac2f3d;
 }
 #editor #textarea-section .entry-editor-property .button.apply-button:active {
   background-color: #7c202f;
-  box-shadow: 0 2px #681e2d;
 }
 #editor #textarea-section .entry-editor-property#tinyMCEpropertyHyperLink {
   display: none !important;
@@ -588,15 +523,10 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   border-radius: 0;
   position: relative;
   border: none;
-  margin: 10px auto 40px auto;
-  padding: 40px 30px;
-  background: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  padding: 0;
 }
 #editor #textarea-section .mce-tinymce[style*="100%"] {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   margin: 0;
 }
 #editor #textarea-section .mce-tinymce .mce-toolbar-grp {
@@ -606,9 +536,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   top: 112px;
   left: 0;
   padding: 0 310px 0 180px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   background: none !important;
   z-index: 4;
 }
@@ -644,9 +571,7 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   border: 1px solid transparent !important;
   margin: 0 1px 0 0;
   border-radius: 2px !important;
-  transition: 0.1s;
-  -moz-transition: 0.1s;
-  -webkit-transition: 0.1s;
+  transition: background-color 0.1s;
   /* color buttons */
 }
 #editor #textarea-section .mce-tinymce .mce-toolbar-grp .mce-btn:hover {
@@ -720,27 +645,24 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 #editor #textarea-section .mce-tinymce .mce-container {
   background: none;
 }
-#editor #textarea-section .mce-tinymce .mce-container-body {
+#editor #textarea-section .mce-tinymce > .mce-container-body {
   position: relative;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  background: none !important;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 #editor #textarea-section .mce-tinymce .mce-edit-area {
   width: 100%;
   height: auto;
   border: none !important;
   box-shadow: none !important;
-  margin: 0;
-  padding: 0 !important;
+  margin: 30px 0;
+  padding: 40px 0 !important;
 }
 #editor #textarea-section .mce-tinymce .mce-statusbar {
   position: fixed;
   padding: 0 300px 0 170px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   min-width: 700px;
   width: 100%;
   bottom: 0;
@@ -754,9 +676,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   padding: 0 5px;
   height: 30px;
   background: #d2d5d9;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   border-top: 1px solid #9aa0a6;
 }
 #editor #textarea-section .mce-tinymce .mce-statusbar .mce-container-body .mce-flow-layout-item {
@@ -778,14 +697,32 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   text-shadow: none;
 }
 #editor #textarea-section .mce-tinymce .mce-statusbar .mce-container-body .mce-path-item {
-  border-radius: 2px;
   padding: 2px 5px;
   color: #0e161f;
+  font-family: Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+  background-color: #eee;
+  border-radius: 2px;
 }
 #editor #textarea-section .mce-tinymce .mce-statusbar .mce-container-body .mce-path-item:hover {
   background: #9aa0a6;
   color: #fff;
   text-decoration: none;
+}
+#editor #textarea-section #codeMirrorEditor {
+  display: block;
+  height: calc(100% - 30px);
+  padding-bottom: 30px;
+}
+#editor #textarea-section #CodeMirrorInstruction {
+  margin-top: -30px;
+  padding: 5px 10px;
+  height: 30px;
+  background: #d2d5d9;
+  border-top: 1px solid #9aa0a6;
+}
+#editor #textarea-section #CodeMirrorInstruction table {
+  margin: 0;
 }
 #editor #textarea-section #status-container {
   display: none;
@@ -797,9 +734,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   height: 100%;
   width: 300px;
   overflow-y: scroll;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   padding: 0;
   border-left: 1px solid #d2d5d9;
   position: absolute;
@@ -830,9 +764,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   width: 100%;
   height: 25px;
   padding: 2px 10px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   color: #0e161f;
 }
 #editor #setting-section h3 a:hover {
@@ -859,9 +790,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 }
 #editor #setting-section #upload-section #upload-container #previewSelected {
   display: block;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   width: 100% !important;
   height: 200px !important;
   background: #fff;
@@ -957,9 +885,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 #editor #setting-section #tag-location-container dd ul {
   width: 100%;
   display: block;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 #editor #setting-section #tag-location-container dd li {
   background: #9aa0a6;
@@ -987,9 +912,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 }
 #editor #setting-section #tag-location-container dd li.lastChild {
   width: 100%;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   display: block;
   float: left;
   margin: 2px 0;
@@ -1000,29 +922,26 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   cursor: inherit;
 }
 #editor #setting-section #tag-location-container dd li.lastChild input {
-  padding: 4px 5px 4px 5px;
-  margin-right: 2px;
-  height: 24px;
+  display: inline-block;
+  padding: 6px 10px 6px 10px;
   vertical-align: middle;
   -webkit-appearance: none !important;
   outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
-  transition: border 0.5s;
-  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(0, 0, 0, 0) inset, 0 0 0 10px rgba(255, 221, 77, 0);
+  font-size: 1em;
+  transition: border-color 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(0, 0, 0, 0) inset, 0 0 0 10px rgba(255, 221, 77, 0);
   width: 100%;
   height: 25px;
   margin: 0;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-shadow: none;
 }
 #editor #setting-section #tag-location-container dd li.lastChild input:focus {
   border-color: rgba(0, 0, 0, 0.3);
   -webkit-appearance: none !important;
-  transition: border 0.2s, box-shadow ease-in 0.2s;
+  transition: border-color 0.2s, box-shadow ease-in 0.2s;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0), 0 2px 0px rgba(0, 0, 0, 0.1) inset, 0 0 0 2px #ffdd4d;
 }
 #editor #setting-section #tag-location-container dd#location {
@@ -1075,9 +994,6 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
   width: 100%;
   height: 25px;
   margin: 0;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 #editor #save-section {
   position: absolute !important;
@@ -1096,14 +1012,9 @@ body#body-entry .mce-window .mce-foot .mce-primary:active {
 }
 #editor #save-section #saveAndReturnButton {
   background-color: #ac2f3d;
-  box-shadow: 0 2px #681e2d;
 }
 #editor #save-section #saveAndReturnButton:hover {
   background-color: #d96275;
-  box-shadow: 0 2px #ac2f3d;
-}
-#editor #save-section #saveAndReturnButton:active {
-  box-shadow: none;
 }
 #editor #save-section .list-button {
   display: none;

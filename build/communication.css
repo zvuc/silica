@@ -23,9 +23,6 @@ input.checkbox + label:before {
   background-image: url('image/checkbox.svg');
   background-position: 0 0;
   background-repeat: no-repeat;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   z-index: 1;
   vertical-align: text-bottom;
   margin-right: 3px;
@@ -42,33 +39,46 @@ input.checkbox:checked + label:before {
 input.checkbox:checked + label:active:before {
   background-position: 0 -80px;
 }
+#part-post-comment,
+#part-post-trackback,
+#part-post-notify {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+#part-post-comment > h2.caption,
+#part-post-trackback > h2.caption,
+#part-post-notify > h2.caption {
+  display: none;
+}
 #communication-tabs-box {
   display: none;
 }
 #category-form {
-  padding-top: 20px;
+  float: left;
 }
 #category-form .section {
-  float: left;
-  margin: 0 20px 10px 20px;
+  margin: 0;
   height: 30px;
 }
 #category-form .section select#category {
   min-width: 100px;
   vertical-align: middle;
-  margin: 5px 0;
 }
 #delete-section-top {
   text-align: right;
-  margin: 0 0 10px 0;
+  margin: 5px 0 15px 0;
   height: 30px;
   vertical-align: middle;
   line-height: 30px;
 }
 table.data-inbox a.unblock-icon {
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   padding: 3px;
   border-radius: 2px;
   position: relative;
@@ -77,22 +87,21 @@ table.data-inbox a.unblock-icon {
 table.data-inbox a.unblock-icon:hover {
   text-decoration: none;
 }
-table.data-inbox a.unblock-icon span {
+table.data-inbox a.unblock-icon span.text {
+  display: none;
+}
+table.data-inbox a.unblock-icon:before {
+  content: "";
   display: block;
   width: 14px;
   height: 14px;
   padding: 0;
   margin: 0;
-  overflow: hidden;
-  text-indent: -9999px;
   background-image: url('image/sprites.svg');
   background-repeat: no-repeat;
   background-position: -200px -40px;
 }
-table.data-inbox a.unblock-icon span span {
-  display: none;
-}
-table.data-inbox a.unblock-icon:hover span {
+table.data-inbox a.unblock-icon:hover:before {
   background-position: -200px -60px;
 }
 table.data-inbox a.delete-button {
@@ -101,7 +110,7 @@ table.data-inbox a.delete-button {
 table.data-inbox a.delete-button:hover {
   background-color: #d96275;
 }
-table.data-inbox a.delete-button:hover span {
+table.data-inbox a.delete-button:hover:before {
   background-position: -100px 0px;
 }
 table.data-inbox th.name {
@@ -145,8 +154,8 @@ table.data-inbox td.content span.divider {
 }
 table.data-inbox td.content span.divider + a {
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   padding: 3px;
   border-radius: 2px;
   position: relative;
@@ -157,22 +166,21 @@ table.data-inbox td.content span.divider + a {
 table.data-inbox td.content span.divider + a:hover {
   text-decoration: none;
 }
-table.data-inbox td.content span.divider + a:hover span {
+table.data-inbox td.content span.divider + a:hover:before {
   background-position: -220px -40px;
 }
-table.data-inbox td.content span.divider + a span {
+table.data-inbox td.content span.divider + a:before {
+  content: "";
   display: block;
   width: 14px;
   height: 14px;
   padding: 0;
   margin: 0;
-  overflow: hidden;
-  text-indent: -9999px;
   background-image: url('image/sprites.svg');
   background-repeat: no-repeat;
   background-position: -220px -20px;
 }
-table.data-inbox td.content span.divider + a span span {
+table.data-inbox td.content span.divider + a span.text {
   display: none;
 }
 table.data-inbox td.ip {
@@ -190,8 +198,8 @@ table.data-inbox td.reply a {
 }
 table.data-inbox td.reply a {
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   padding: 3px;
   border-radius: 2px;
   position: relative;
@@ -202,22 +210,21 @@ table.data-inbox td.reply a:hover {
   background: #ff984d;
   text-decoration: none;
 }
-table.data-inbox td.reply a:hover span {
+table.data-inbox td.reply a:hover:before {
   background-position: -240px 0px;
 }
-table.data-inbox td.reply a span {
+table.data-inbox td.reply a:before {
+  content: "";
   display: block;
   width: 14px;
   height: 14px;
   padding: 0;
   margin: 0;
-  overflow: hidden;
-  text-indent: -9999px;
   background-image: url('image/sprites.svg');
   background-repeat: no-repeat;
   background-position: -240px -20px;
 }
-table.data-inbox td.reply a span span {
+table.data-inbox td.reply a span.text {
   display: none;
 }
 table.data-inbox td.delete {
@@ -225,8 +232,8 @@ table.data-inbox td.delete {
 }
 table.data-inbox td.delete a {
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   background: #ebeff2;
   padding: 3px;
   border-radius: 2px;
@@ -236,19 +243,18 @@ table.data-inbox td.delete a {
 table.data-inbox td.delete a:hover {
   text-decoration: none;
 }
-table.data-inbox td.delete a span {
+table.data-inbox td.delete a:before {
+  content: "";
   display: block;
   width: 14px;
   height: 14px;
   padding: 0;
   margin: 0;
-  overflow: hidden;
-  text-indent: -9999px;
   background-image: url('image/sprites.svg');
   background-repeat: no-repeat;
   background-position: -100px -20px;
 }
-table.data-inbox td.delete a span span {
+table.data-inbox td.delete a span.text {
   display: none;
 }
 table.data-inbox td.delete a.delete-button {
@@ -257,59 +263,21 @@ table.data-inbox td.delete a.delete-button {
 table.data-inbox td.delete a.delete-button:hover {
   background-color: #d96275;
 }
-table.data-inbox td.delete a.delete-button:hover span {
+table.data-inbox td.delete a.delete-button:hover:before {
   background-position: -100px 0px;
 }
 .data-subbox #delete-section {
   display: none;
 }
-#data-description {
-  padding: 10px 0;
-  text-align: right;
-  display: block;
-  width: 100%;
-  height: 60px;
-  display: none;
-}
-#data-description dl {
-  display: inline-block;
-  margin: 0 10px;
-  padding: 5px 0;
-}
-#data-description dl dt {
-  display: block;
-  width: 14px;
-  height: 14px;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  text-indent: -9999px;
-  background-image: url('image/sprites.svg');
-  background-repeat: no-repeat;
-  border-radius: 2px;
-  text-align: left;
-  border: 2px solid #454b54;
-  background-color: #454b54;
-  display: inline-block;
-  margin-right: 5px;
-}
-#data-description dl dt span {
-  display: none;
-}
 #data-description dl.ban-description dt {
-  border: 2px solid transparent;
   background-color: transparent;
+}
+#data-description dl.ban-description dt:before {
   background-position: -200px -60px;
 }
 #data-description dl.trash-description dt {
-  border: 2px solid #d96275;
   background-color: #d96275;
-  background-position: -100px 0px;
 }
-#data-description dl dd {
-  display: inline-block;
-  height: 14px;
-  margin: 0;
-  padding: 0;
-  vertical-align: 4px;
+#data-description dl.trash-description dt:before {
+  background-position: -100px 0px;
 }

@@ -17,9 +17,7 @@
   border: none;
   -webkit-appearance: none;
   border-radius: 2px 2px;
-  margin-top: -2px;
-  margin-bottom: 2px;
-  padding: 4px 10px;
+  padding: 5px 10px;
   color: #fff;
   cursor: pointer;
   margin: 0 1px;
@@ -27,34 +25,31 @@
   font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
   transition-properties: background-color, box-shadow;
   transition-duration: 0.2s;
-  font-weight: normal;
+  font-weight: bold;
   min-height: 18px;
   line-height: 18px;
   vertical-align: middle;
-  box-shadow: 0 2px #454b54;
 }
 .button:hover {
-  background-color: #9aa0a6;
-  box-shadow: 0 2px #6f7983;
+  background-color: #454b54;
   text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 .button:active {
-  background-color: #454b54;
-  box-shadow: 0 2px #1f2833;
+  background-color: #393f46;
   text-decoration: none;
   transition-duration: 0s;
+  color: #fff;
 }
 .button.apply-button {
   background-color: #ac2f3d;
-  box-shadow: 0 2px #681e2d;
 }
 .button.apply-button:hover {
   background-color: #d96275;
-  box-shadow: 0 2px #ac2f3d;
 }
 .button.apply-button:active {
   background-color: #7c202f;
-  box-shadow: 0 2px #681e2d;
 }
 .button span {
   color: #fff;
@@ -70,13 +65,13 @@ p.explain a {
 }
 #part-skin-current {
   background: #fff;
-  padding: 20px 0 20px 20px;
+  border-radius: 2px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 0 20px;
   margin: 0 0 30px 0;
   float: left;
   width: 260px;
-  box-sizing: border-box;
-  border-radius: 2px;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
 #part-skin-current h2 {
   display: block;
@@ -132,10 +127,19 @@ p.explain a {
   padding: 5px 20px;
 }
 #part-skin-list {
-  margin: 20px 0 20px 280px;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
   position: relative;
+  margin: 0 0 20px 280px;
   /* icon-view */
   /* list-view */
+}
+#part-skin-list > h2.caption {
+  display: none;
 }
 #part-skin-list #search-form {
   position: relative;
@@ -147,13 +151,13 @@ p.explain a {
   width: 400px;
 }
 #part-skin-list #search-form #search-box {
-  margin: 10px;
+  margin: 7px 10px;
   padding: 0;
 }
 #part-skin-list #viewmode-box {
   border-radius: 2px;
   margin: 0;
-  padding: 10px 10px;
+  padding: 15px 10px;
   margin: 0 0 10px 0;
   background: #f5f8fa;
 }
@@ -174,6 +178,8 @@ p.explain a {
   margin: 0 20px 10px;
 }
 #part-skin-list #iconview-box .preview img {
+  width: 150px;
+  height: 150px;
   border: 1px solid #eee;
 }
 #part-skin-list #iconview-box .information dl {
@@ -222,13 +228,13 @@ p.explain a {
   margin-right: 0;
 }
 #part-skin-list #listview-box .section {
-  display: block;
-  padding: 20px 0;
   background: #fff;
-  margin: 0 10px 10px 0;
-  width: 100%;
   border-radius: 2px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  display: block;
+  padding: 20px 0;
+  margin: 0 10px 10px 0;
+  width: 100%;
 }
 #part-skin-list #listview-box .preview {
   float: left;
@@ -285,4 +291,55 @@ p.explain a {
 }
 #part-skin-list #listview-box .button-box .button.apply-button {
   margin-right: 0;
+}
+#part-skin-more {
+  clear: both;
+}
+#part-skin-edit .section ul {
+  display: block;
+  float: left;
+  width: 300px;
+  height: 500px;
+  list-style: none;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+#part-skin-edit .section ul li {
+  display: block;
+  margin-bottom: 3px;
+}
+#part-skin-edit .section ul li a {
+  display: block;
+  line-height: 24px;
+  padding: 5px;
+}
+#part-skin-edit .section ul li img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+#part-skin-edit .section ul li:hover a {
+  text-decoration: none;
+}
+#part-skin-edit .section ul li.selected {
+  background-color: #eee;
+}
+#part-skin-edit .section #html-container,
+#part-skin-edit .section #style-box {
+  margin-left: 320px;
+}
+#part-skin-edit .section #html-container textarea,
+#part-skin-edit .section #style-box textarea {
+  width: 100%;
+  min-height: 500px;
+  font-family: Menlo, Monaco, Consolas, monospace;
+  resize: vertical;
+}
+#part-skin-edit .section .button-box {
+  border-top: 1px solid #eee;
+  margin: 20px -10px 0 -10px;
+  padding: 15px;
 }

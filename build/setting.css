@@ -17,9 +17,7 @@
   border: none;
   -webkit-appearance: none;
   border-radius: 2px 2px;
-  margin-top: -2px;
-  margin-bottom: 2px;
-  padding: 4px 10px;
+  padding: 5px 10px;
   color: #fff;
   cursor: pointer;
   margin: 0 1px;
@@ -27,34 +25,31 @@
   font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
   transition-properties: background-color, box-shadow;
   transition-duration: 0.2s;
-  font-weight: normal;
+  font-weight: bold;
   min-height: 18px;
   line-height: 18px;
   vertical-align: middle;
-  box-shadow: 0 2px #454b54;
 }
 .button:hover {
-  background-color: #9aa0a6;
-  box-shadow: 0 2px #6f7983;
+  background-color: #454b54;
   text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 .button:active {
-  background-color: #454b54;
-  box-shadow: 0 2px #1f2833;
+  background-color: #393f46;
   text-decoration: none;
   transition-duration: 0s;
+  color: #fff;
 }
 .button.apply-button {
   background-color: #ac2f3d;
-  box-shadow: 0 2px #681e2d;
 }
 .button.apply-button:hover {
   background-color: #d96275;
-  box-shadow: 0 2px #ac2f3d;
 }
 .button.apply-button:active {
   background-color: #7c202f;
-  box-shadow: 0 2px #681e2d;
 }
 .button span {
   color: #fff;
@@ -68,62 +63,19 @@ fieldset {
 #sub-menu-blog {
   background-image: none !important;
 }
-.part {
-  background: #fff;
-  padding: 10px 20px;
-  margin: 10px 0;
-  box-sizing: border-box;
-  border-radius: 2px;
-  border: none;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+#body-setting #pseudo-box #data-outbox {
+  padding-top: 15px;
+  -moz-columns: 2;
+       columns: 2;
 }
-.part .container {
-  margin: 0 0 10px 0;
-}
-.part .container legend {
-  margin: 0;
+#body-setting #pseudo-box #data-outbox .part {
+  display: inline-block;
   width: 100%;
-  padding: 5px 0;
-  font-size: 1.3em;
-  font-weight: bold;
-  border-bottom: 1px solid #ddd;
-  letter-spacing: 1px;
-}
-.part .button-box {
-  clear: both;
-  margin: 0 0 20px 0;
-}
-.part .button-box:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-.part .button-box .input-button {
-  display: block;
-}
-.part dl {
-  margin: 0;
-  border-bottom: 1px solid #eee;
-}
-.part dl dt {
-  width: 150px;
-  float: left;
-  padding: 5px 0;
-  font-weight: bold;
-  color: #666;
-}
-.part dl dd {
-  display: block;
-  height: auto;
-  margin-left: 160px;
-  padding: 5px 0;
+  page-break-inside: avoid;
+       break-inside: avoid;
 }
 /* Basic *****************************************************************************************/
 /* basic setting */
-#part-setting-basic {
-  float: left;
-  width: calc((100% - 10px)/2);
-}
 #part-setting-basic .data-inbox {
   width: 100%;
 }
@@ -133,11 +85,9 @@ fieldset {
   resize: vertical;
 }
 #multi-form {
-  border-top: 1px solid #DDDDDD;
   margin-top: 20px;
 }
 #multi-form dl dd .input-text {
-  margin: 0 2px;
   width: 100px !important;
 }
 #open-type-line dd,
@@ -159,10 +109,6 @@ fieldset {
   vertical-align: middle;
 }
 /* profile setting */
-#part-setting-profile {
-  float: right;
-  width: calc((100% - 10px)/2);
-}
 #part-setting-profile .data-inbox {
   width: 100%;
 }
@@ -191,22 +137,11 @@ fieldset {
 #part-setting-rss {
   clear: both;
 }
-#part-setting-frontpage dl,
-#part-setting-rss dl {
-  border-bottom: 1px solid #DDDDDD;
-}
-#part-setting-frontpage dl dd,
-#part-setting-rss dl dd {
-  padding-bottom: 8px;
-}
 #etc-section fieldset {
   margin-bottom: 10px;
 }
 /* Account ***************************************************************************************/
 /* account management */
-#part-setting-openid {
-  margin-top: 50px;
-}
 #part-setting-account em,
 #part-setting-openid em {
   color: #FF0000;
@@ -217,40 +152,30 @@ fieldset {
   font-size: 0.9em;
 }
 /* invite letter */
-#part-setting-invite {
-  margin-top: 20px;
-}
-#letter {
-  width: 550px;
-}
-#letter-head label,
-#letter-body label,
-#letter-foot label {
+#part-setting-invite #letter label {
   display: block;
-  font-family: '돋움', Dotum, sans-serif;
-  font-size: 0.9em;
   margin: 3px 0 1px 0;
   text-align: left;
 }
-#letter-head .line {
+#part-setting-invite #letter #letter-head .line {
   margin-bottom: 8px;
   text-align: right;
 }
-#invitation_receiver,
-#invitation_sender {
+#part-setting-invite #letter #invitation_receiver,
+#part-setting-invite #letter #invitation_sender {
   font-size: inherit;
-  width: 550px;
 }
-#invitation_identify {
-  font-family: "Courier New", Courier, monospace;
+#part-setting-invite #letter #invitation_identify {
+  font-family: Menlo, Monaco, Consolas, monospace;
   margin-left: 2px;
   width: 150px;
 }
-.inter-word {
-  font-family: "Courier New", Courier, monospace;
+#part-setting-invite #letter .inter-word {
+  font-family: Menlo, Monaco, Consolas, monospace;
 }
-#letter-body textarea {
-  width: 546px;
+#part-setting-invite #letter #letter-body textarea {
+  width: 100%;
+  resize: vertical;
 }
 /* Data ******************************************************************************************/
 #part-data-correct {
@@ -517,13 +442,6 @@ div.notification-box {
   margin-bottom: 30px;
 }
 /* Etc *******************************************************************************************/
-#part-setting-resample .button-box,
-#part-setting-language .button-box,
-#part-setting-editor .button-box {
-  border-top: 1px solid #DDDDDD;
-  margin: 10px 0 20px 0;
-  padding-top: 15px;
-}
 #part-setting-resample .section dl dd img {
   margin-top: 8px;
 }

@@ -1,507 +1,465 @@
+/* 
+ * Silica admin dashboard skin for Textcube 1.10 
+ * by Hansol Kim (zvuc) (http://xenosium.com) 
+ * GitHub: https://github.com/zvuc/silica 
+ * 
+ * Copyright 2017 Hansol Kim; MIT License 
+ */
+
 @charset "utf-8";
-/* Common ****************************************************************************************/
-
-.part .caption
-{
-	margin-bottom                    : 10px;
-}
-
-#sub-menu-plugin
-{
-	background-image                 : none !important;
-}
-
-/* Setting ***************************************************************************************/
-
-#plugin-tabs-box
-{
-/*	position                         : fixed;*/
-	position                         : relative;
-	top                              : 0;
-	margin                           : 0 200px 20px 0;
-	padding-left                     : 0;
-	z-index                          : 20;
-	background-color                 : transparent !important;
-
-}
-
-#part-plugin-list
-{
-	font-size                        : 1em;
-	padding-bottom                   : 50px;
-	position                         : relative;
-}
-
-#part-plugin-list .main-explain-box p
-{
-	margin-bottom                    : 20px;
-}
-
-#part-plugin-list fieldset
-{
-	background-image                 : none;
-	border                           : 0;
-	float: left;
-	padding-left                     : 10px;
-	width                            : 200px;
-}
-
-#part-plugin-list fieldset dl
-{
-	position                         : static;
-}
-
-#part-plugin-list fieldset dl dt
-{
-	background-color                 : #F9F9F9;
-	padding-left                     : 10px;
-	position                         : static;
-}
-
-#part-plugin-list fieldset dl dd
-{
-	border                           : 1px solid #EFEFEF;
-	margin                           : 3px 0 10px 0;
-	padding                          : 5px 10px;
-	position                         : static;
-}
-
-#part-plugin-list .line .checkbox,
-#part-plugin-list .line .radio
-{
-	margin-left                      : 5px;
-}
-
-#none-scope-label
-{
-	border-right                     : none !important;
-}
-
-#scope-line
-{
-	margin                           : 0 !important;
-}
-
-#sorting-line,
-#viewmode-line
-{
-	position                         : static;
-}
-
-#sorting-line-status, #viewmode-line-status
-{
-	padding-left                     : 10px;
-}
-
-#sorting-line-status label,
-#viewmode-line-status label
-{
-	border                           : none !important;
-	display                          : block;
-	padding                          : 0;
-}
-
-#sorting-line-align
-{
-	border                           : none !important;
-	right                            : 20px;
-	padding                          : 0 !important;
-	position                         : absolute !important;
-	text-align: right;
-	top                              : 10em;
-	width                            : 400px;
-}
-
-#viewmode-line-align
-{
-	border                           : none !important;
-	right                            : 15px;
-	padding                          : 0 !important;
-	position                         : absolute !important;
-	text-align: right;
-	top                              : 5px;
-	width                            : 400px;
-}
-
-#direct-link-line dt
-{
-	display: none;
-}
-
-#direct-link-line dd
-{
-	border                           : 3px solid #47B5D3 !important;
-}
-
-#direct-link-line dd .button
-{
-	background-image                 : url('./image/img_link_bullet2.jpg');
-	background-position              : left center;
-	background-repeat                : no-repeat;
-	padding-left                     : 15px;
-}
-
-/* plugin list - icon view ------------------------------------- */
-#iconview-box
-{
-	font-size: 1em;
-	margin-left                      : 225px;
-	min-height                       : 15em;
-	padding-top: 10px;
-	width                            : auto;
-}
-
-#part-plugin-list ol.data-inbox
-{
-	margin                           : 0;
-	width                            : 100%;
-}
-
-#part-plugin-list #iconview-box ol.data-inbox li
-{
-	float                            : left;
-	margin                           : 2px !important;
-	width                            : 140px;
-}
-
-#part-plugin-list #iconview-box ol.data-inbox li .plugin-box
-{
-	/*background-image: url('./image/bg_plugin_box.jpg');*/
-	border                           : 1px solid #F4F4F4;
-	padding                          : 25px 0 0 0;
-	text-align                       : center;
-	vertical-align                   : middle;
-}
-
-#part-plugin-list #iconview-box ol.data-inbox li.active-class .plugin-box
-{
-	background-color                 : #EFF6FF;
-	border                           : 1px solid #C6DFFF;
-}
-
-#part-plugin-list #iconview-box ol.data-inbox li .plugin-box .plugin-icon
-{
-	background-position              : center center;
-	cursor                           : pointer;
-	height                           : 90px;
-	margin                           : 0 auto 25px auto;
-	width                            : 90px;
-}
-
-#part-plugin-list #iconview-box ol.data-inbox li .plugin-box .plugin-disabled-icon
-{
-	cursor                           : default;
-}
-
-#part-plugin-list #iconview-box ol.data-inbox li .plugin-box .plugin-icon img
-{
-	display                          : none;
-}
-
-#part-plugin-list #iconview-box ol.data-inbox li .summary
-{
-	height                           : 3em;
-	margin-bottom                    : 7px;
-	overflow                         : hidden;
-	padding-top                      : 0.5em;
-	text-align                       : center;
-}
-
-#part-plugin-list #iconview-box ol.data-inbox li .summary .plugin-buttons
-{
-	font-family                      : 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
-	font-size                        : 0.9em;
-	padding-right: 5px;
-}
-
-#part-plugin-list #iconview-box ol.data-inbox li .summary .plugin-buttons .disabled,
-#part-plugin-list #iconview-box ol.data-inbox li .summary .plugin-buttons .dimmed
-{
-	color                            : #BBBBBB;
-}
-
-#part-plugin-list #iconview-box .plugin-description
-{
-	display                          : none;
-}
-
-/* plugin list - list view ------------------------------------- */
-#listview-box
-{
-	font-size: 1em;
-	float: left;
-	margin: 10px 0 0 13px;
-	min-height                       : 5em;
-	width                            : 720px;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li
-{
-	clear: both;
-	margin                           : 2px !important;
-	min-height: 102px;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li .plugin-box
-{
-	border                           : 1px solid #F4F4F4;
-	float: left;
-	padding                          : 5px;
-	text-align                       : left;
-	width                            : 90px;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li.active-class
-{
-	background-color                 : #EFF6FF;
-	border                           : 1px solid #C6DFFF;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li.inactive-class
-{
-	border                           : 1px solid #fff;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li .plugin-box .plugin-icon
-{
-	background-position              : center center;
-	cursor                           : pointer;
-	height                           : 90px;
-	margin                           : 0 auto;
-	vertical-align: top;
-	width                            : 90px;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li .plugin-box .plugin-disabled-icon
-{
-	cursor                           : default;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li .plugin-box .plugin-icon img
-{
-	display                          : none;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li .summary
-{
-	
-	margin-left: 120px;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li .summary .plugin-title
-{
-	font-weight: bold;
-	padding-top: 5px;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li .summary ul li
-{
-	clear: none;
-	margin                           : 0 !important;
-	min-height: 0;
-	width                            : auto;
-	height                           : auto;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li .summary ul li.description
-{
-	margin-top: 5px !important;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li .summary ul li.description .label
-{
-	display: none;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li .summary .plugin-buttons
-{
-	font-family                      : 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
-	font-size                        : 0.9em;
-	padding-right: 5px;
-	text-align: right;
-}
-
-#part-plugin-list #listview-box ol.data-inbox li .summary .plugin-buttons .disabled,
-#part-plugin-list #listview-box ol.data-inbox li .summary .plugin-buttons .dimmed
-{
-	color                            : #BBBBBB;
-}
-
-/* introduction of textcube plugin download page */
-
-#part-plugin-more
-{
-	clear: both;
-	margin                           : 0 0 100px 0;
-	padding-top: 40px;
-}
-
-/* Update notifier *******************************************************************************/
-
-/* common ---------------------------------------------------------------------------------------*/
-#part-plugin-update-blog
-{
-	padding-bottom                   : 20px;
-	margin                           : 0;
-}
-
-#plugin-update-main
-{
-	margin                           : 0 0 0 10px;
-}
-
-#part-plugin-update-blog .data-inbox
-{
-	width                            : 700px !important;
-}
-
-/* information box  -----------------------------------------------------------------------------*/
-#plugin-update-info-inbox
-{
-	float                            : left;
-	background-color                 : #EFEFEF;
-	padding                          : 10px 10px 10px 10px;
-	width                            : 210px;
-}
-
-#plugin-update-info-inbox .title
-{
-	background-color                 : #ddd;
-	margin-bottom                    : 8px;
-	padding                          : 7px 0 5px 0; 
-	text-align                       : center;
-}
-
-#plugin-update-info-inbox table
-{
-}
-
-#plugin-update-info-inbox .tr
-{
-	height                           : 20px;
-}
-
-#plugin-update-info-inbox th
-{
-	text-align                       : right;
-	font-weight                      : bold;
-}
-
-#plugin-update-info-inbox #yearSelect
-{
-	width                            : 130px;
-}
-
-#plugin-update-info-inbox #monthSelect
-{
-	width                            : 77px;
-}
-
-#plugin-update-info-inbox .label
-{
-	display                          : block;
-	font-weight                      : bold;
-	text-align                       : center;
-}
-
-#plugin-update-info-inbox .divider
-{
-	display                          : none;
-}
-
-#plugin-update-info-inbox .button
-{
-	background-color                 : #FFFFFF;
-	border                           : 1px solid #999999;
-    display                          : block;
-    line-height                      : 2em;
-	margin                           : 0 auto;
-	padding                          : 3px 5px;
-	width                            : 36px;
-}
-
-/* update list  ----------------------------------------------------------------------------------*/
-#plugin-update-list
-{
-	float                            : left;
-}
-
-#plugin-update-list table
-{
-	margin                           : 1px 0 15px 10px;
-}
-
-#plugin-update-list td
-{
-	margin                           : 0;
-	padding                          : 0;
-}
-#plugin-update-list span.update
-{
-	color                            :#4444FF;
-}
-
-#plugin-update-list table.data-inbox tbody tr.active-class td.status
-{
-	background-image                 : url("./image/icon_plugin_on.gif");
-	background-position              : left center;
-	background-repeat                : no-repeat;
-	cursor                           : pointer;
-	margin                           : 0 auto;
-	color                            : #5A8FC9;
-}
-
-#plugin-update-list table.data-inbox tbody tr.inactive-class td.status
-{
-	background-image                 : url("./image/icon_plugin_off.gif");
-	background-position              : left center;
-	background-repeat                : no-repeat;
-	cursor                           : pointer;
-	margin                           : 0 auto;
-}
-
-#plugin-search-form
-{
-    background-color                 : transparent;
-    border                           : none;
-    margin                           : 0;
-    position                         : absolute;
-    right                            : 25px;
-    text-align                       : right;
-    top                              : 20px;
-    width                            : 120px !important;
-    z-index                          : 1;
-}
-
-#plugin-search-form .input-text
-{
-	width                            : 150px;
-}
-
-#plugin-search-form label
-{
-    display                          : none;
-}
-
-/* Data Management *******************************************************************************/
-
-#part-plugin-table-list table thead tr th.delete span
-{
-	display                          : none;
-}
-
-#part-plugin-table-list table tbody tr td.title
-{
-	background-position              : right bottom;
-}
-
-#part-plugin-table-list table tbody tr td.tablename
-{
-	font-family                      : "Courier New", "Courier", monospace;
-	text-align                       : left;
-}
-
-#part-plugin-table-list table tbody tr td.delete
-{
-	width                            : 12px;
+/* ---------------- skin.less ---------------- */
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  background: none;
+  background-color: #6f7983;
+  border: none;
+  -webkit-appearance: none;
+  border-radius: 2px 2px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 1px;
+  text-decoration: none;
+  font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+  transition-properties: background-color, box-shadow;
+  transition-duration: 0.2s;
+  font-weight: bold;
+  min-height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+}
+.button:hover {
+  background-color: #454b54;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+.button:active {
+  background-color: #393f46;
+  text-decoration: none;
+  transition-duration: 0s;
+  color: #fff;
+}
+.button.apply-button {
+  background-color: #ac2f3d;
+}
+.button.apply-button:hover {
+  background-color: #d96275;
+}
+.button.apply-button:active {
+  background-color: #7c202f;
+}
+.button span {
+  color: #fff;
+}
+#part-plugin-list {
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  /* icon-view */
+  /* list-view */
+}
+#part-plugin-list > h2.caption {
+  display: none;
+}
+#part-plugin-list #plugin-display-box {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  margin: 0 0 30px 0;
+  float: left;
+  width: 260px;
+}
+#part-plugin-list #plugin-display-box legend {
+  display: none;
+}
+#part-plugin-list #plugin-display-box dl {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 7px 0;
+  font-size: 1em;
+}
+#part-plugin-list #plugin-display-box dt {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  padding: 5px 0;
+  margin: 5px 0;
+}
+#part-plugin-list #plugin-display-box dd {
+  display: block;
+  height: auto;
+  margin: 0;
+  white-space: normal;
+}
+#part-plugin-list #plugin-display-box .button-box {
+  margin: 20px 0 0 0;
+}
+#part-plugin-list #plugin-display-box .button-box .button {
+  font-size: 0.8rem;
+  font-weight: normal;
+  padding: 5px 20px;
+}
+#part-plugin-list #viewmode-box {
+  border-radius: 2px;
+  margin: 0;
+  padding: 15px 10px;
+  margin: 0 0 10px 0;
+  background: #f5f8fa;
+}
+#part-plugin-list #iconview-box {
+  margin: 0 0 20px 280px;
+}
+#part-plugin-list #iconview-box > ol > li {
+  position: relative;
+  display: inline-block;
+  padding: 20px 0;
+  background: #fff;
+  margin: 0 10px 10px 0;
+  width: 200px;
+  border-radius: 2px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+#part-plugin-list #iconview-box > ol > li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #eee;
+  border-radius: 50px;
+  padding: 3px 7px;
+}
+#part-plugin-list #iconview-box > ol > li.inactive-class:before {
+  content: "OFF";
+  color: #6f7983;
+}
+#part-plugin-list #iconview-box > ol > li.active-class:before {
+  content: "ON";
+  color: #fff;
+  background-color: #7ae075;
+}
+#part-plugin-list #iconview-box .plugin-box {
+  margin: 0 20px 10px;
+}
+#part-plugin-list #iconview-box .plugin-box img {
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+}
+#part-plugin-list #iconview-box .summary .plugin-title {
+  display: block;
+  width: 100%;
+  padding: 5px 15px;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#part-plugin-list #iconview-box .summary .plugin-description {
+  padding: 5px 15px;
+}
+#part-plugin-list #iconview-box .summary .plugin-description .author {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#part-plugin-list #iconview-box .summary .plugin-description .author span.label {
+  display: none;
+}
+#part-plugin-list #iconview-box .summary .plugin-description .version {
+  display: block;
+  color: #aaa;
+}
+#part-plugin-list #iconview-box .summary .plugin-description .version span.label {
+  display: none;
+}
+#part-plugin-list #iconview-box .summary .plugin-description .description {
+  display: none;
+}
+#part-plugin-list #iconview-box .plugin-buttons {
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 10px 15px 0;
+  border-top: 1px solid #eee;
+}
+#part-plugin-list #iconview-box .plugin-buttons a {
+  box-sizing: border-box;
+  background: none;
+  background-color: #6f7983;
+  border: none;
+  -webkit-appearance: none;
+  border-radius: 2px 2px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 1px;
+  text-decoration: none;
+  font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+  transition-properties: background-color, box-shadow;
+  transition-duration: 0.2s;
+  font-weight: bold;
+  min-height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+  display: inline-block;
+  text-align: center;
+}
+#part-plugin-list #iconview-box .plugin-buttons a:hover {
+  background-color: #454b54;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+#part-plugin-list #iconview-box .plugin-buttons a:active {
+  background-color: #393f46;
+  text-decoration: none;
+  transition-duration: 0s;
+  color: #fff;
+}
+#part-plugin-list #iconview-box .plugin-buttons a.apply-button {
+  background-color: #ac2f3d;
+}
+#part-plugin-list #iconview-box .plugin-buttons a.apply-button:hover {
+  background-color: #d96275;
+}
+#part-plugin-list #iconview-box .plugin-buttons a.apply-button:active {
+  background-color: #7c202f;
+}
+#part-plugin-list #iconview-box .plugin-buttons span.dimmed {
+  display: none;
+}
+#part-plugin-list #iconview-box .plugin-buttons span.disabled {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  background: none;
+  background-color: #6f7983;
+  border: none;
+  -webkit-appearance: none;
+  border-radius: 2px 2px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 1px;
+  text-decoration: none;
+  font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+  transition-properties: background-color, box-shadow;
+  transition-duration: 0.2s;
+  font-weight: bold;
+  min-height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+  pointer-events: none;
+  opacity: 0.5;
+}
+#part-plugin-list #iconview-box .plugin-buttons span.disabled:hover {
+  background-color: #454b54;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+#part-plugin-list #iconview-box .plugin-buttons span.disabled:active {
+  background-color: #393f46;
+  text-decoration: none;
+  transition-duration: 0s;
+  color: #fff;
+}
+#part-plugin-list #iconview-box .plugin-buttons span.disabled.apply-button {
+  background-color: #ac2f3d;
+}
+#part-plugin-list #iconview-box .plugin-buttons span.disabled.apply-button:hover {
+  background-color: #d96275;
+}
+#part-plugin-list #iconview-box .plugin-buttons span.disabled.apply-button:active {
+  background-color: #7c202f;
+}
+#part-plugin-list #iconview-box .plugin-buttons .divider {
+  display: none;
+}
+#part-plugin-list #listview-box {
+  margin: 0 0 20px 280px;
+}
+#part-plugin-list #listview-box > ol > li {
+  position: relative;
+  display: block;
+  padding: 20px 0;
+  background: #fff;
+  margin: 0 10px 10px 0;
+  border-radius: 2px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+#part-plugin-list #listview-box > ol > li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #eee;
+  border-radius: 50px;
+  padding: 3px 7px;
+}
+#part-plugin-list #listview-box > ol > li.inactive-class:before {
+  content: "OFF";
+  color: #6f7983;
+}
+#part-plugin-list #listview-box > ol > li.active-class:before {
+  content: "ON";
+  color: #fff;
+  background-color: #7ae075;
+}
+#part-plugin-list #listview-box .plugin-box {
+  float: left;
+  width: 100px;
+  margin: 0 20px 10px;
+}
+#part-plugin-list #listview-box .plugin-box img {
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+}
+#part-plugin-list #listview-box .summary {
+  margin-left: 140px;
+}
+#part-plugin-list #listview-box .summary .plugin-title {
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+#part-plugin-list #listview-box .summary .plugin-description {
+  padding: 5px 0;
+}
+#part-plugin-list #listview-box .summary .plugin-description .author {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#part-plugin-list #listview-box .summary .plugin-description .version {
+  display: block;
+  color: #aaa;
+}
+#part-plugin-list #listview-box .summary .plugin-description .description {
+  padding: 5px 0;
+}
+#part-plugin-list #listview-box .plugin-buttons {
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+}
+#part-plugin-list #listview-box .plugin-buttons a {
+  box-sizing: border-box;
+  background: none;
+  background-color: #6f7983;
+  border: none;
+  -webkit-appearance: none;
+  border-radius: 2px 2px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 1px;
+  text-decoration: none;
+  font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+  transition-properties: background-color, box-shadow;
+  transition-duration: 0.2s;
+  font-weight: bold;
+  min-height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+  display: inline-block;
+  text-align: center;
+}
+#part-plugin-list #listview-box .plugin-buttons a:hover {
+  background-color: #454b54;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+#part-plugin-list #listview-box .plugin-buttons a:active {
+  background-color: #393f46;
+  text-decoration: none;
+  transition-duration: 0s;
+  color: #fff;
+}
+#part-plugin-list #listview-box .plugin-buttons a.apply-button {
+  background-color: #ac2f3d;
+}
+#part-plugin-list #listview-box .plugin-buttons a.apply-button:hover {
+  background-color: #d96275;
+}
+#part-plugin-list #listview-box .plugin-buttons a.apply-button:active {
+  background-color: #7c202f;
+}
+#part-plugin-list #listview-box .plugin-buttons span.dimmed {
+  display: none;
+}
+#part-plugin-list #listview-box .plugin-buttons span.disabled {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  background: none;
+  background-color: #6f7983;
+  border: none;
+  -webkit-appearance: none;
+  border-radius: 2px 2px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 1px;
+  text-decoration: none;
+  font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+  transition-properties: background-color, box-shadow;
+  transition-duration: 0.2s;
+  font-weight: bold;
+  min-height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+  pointer-events: none;
+  opacity: 0.5;
+}
+#part-plugin-list #listview-box .plugin-buttons span.disabled:hover {
+  background-color: #454b54;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+#part-plugin-list #listview-box .plugin-buttons span.disabled:active {
+  background-color: #393f46;
+  text-decoration: none;
+  transition-duration: 0s;
+  color: #fff;
+}
+#part-plugin-list #listview-box .plugin-buttons span.disabled.apply-button {
+  background-color: #ac2f3d;
+}
+#part-plugin-list #listview-box .plugin-buttons span.disabled.apply-button:hover {
+  background-color: #d96275;
+}
+#part-plugin-list #listview-box .plugin-buttons span.disabled.apply-button:active {
+  background-color: #7c202f;
+}
+#part-plugin-list #listview-box .plugin-buttons .divider {
+  display: none;
+}
+#part-skin-more {
+  clear: both;
 }
