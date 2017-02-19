@@ -7,29 +7,37 @@
 
 .checkbox-style();
 
+#part-post-comment,
+#part-post-trackback,
+#part-post-notify {
+	.part-reset();
+
+	& > h2.caption {
+		display: none;
+	}
+}
+
 #communication-tabs-box {
 	display: none;
 }
 
 #category-form {
-	padding-top: 20px;
-}
-
-#category-form .section {
 	float: left;
-	margin: 0 20px 10px 20px;
-	height: 30px;
 	
-	select#category {
-		min-width: 100px; 
-		vertical-align: middle;
-		margin: 5px 0;
+	.section {
+		margin: 0;
+		height: 30px;
+		
+		select#category {
+			min-width: 100px; 
+			vertical-align: middle;
+		}
 	}
-
 }
+
 #delete-section-top {
 	text-align: right;
-	margin: 0 0 10px 0;
+	margin: 5px 0 15px 0;
 	height: 30px;
 	vertical-align: middle;
 	line-height: 30px;
@@ -40,8 +48,8 @@ table.data-inbox {
 
 	a.unblock-icon {
 		display: inline-block;
-		width: 14px;
-		height: 14px;
+		width: 20px;
+		height: 20px;
 		padding: 3px;
 		border-radius: 2px;
 		position: relative;
@@ -129,8 +137,8 @@ table.data-inbox {
 			}
 			span.divider+a {
 				display: block;
-				width: 14px;
-				height: 14px;
+				width: 20px;
+				height: 20px;
 				padding: 3px;
 				border-radius: 2px;
 				position: relative;
@@ -178,8 +186,8 @@ table.data-inbox {
 
 			a {
 				display: inline-block;
-				width: 14px;
-				height: 14px;
+				width: 20px;
+				height: 20px;
 				padding: 3px;
 				border-radius: 2px;
 				position: relative;
@@ -212,8 +220,8 @@ table.data-inbox {
 
 			a {
 				display: inline-block;
-				width: 14px;
-				height: 14px;
+				width: 20px;
+				height: 20px;
 				background: @gray-l4;
 				padding: 3px;
 				border-radius: 2px;

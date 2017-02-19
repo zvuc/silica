@@ -12,22 +12,12 @@
 	color: #fff;
 }
 
-p.explain {
-	padding: 15px 20px;
-	background: @gray-l5;
-	margin: 10px 0;
-	border: 1px solid @gray-l3;
-
-	a {
-		color: @red;
-	}
-}
-
-
 #part-plugin-list {
 	position: relative;
 
-	h2.caption {
+	.part-reset();
+
+	& > h2.caption {
 		display: none;
 	}
 
@@ -63,6 +53,7 @@ p.explain {
 		dd {
 			display: block;
 			height: auto;
+			margin: 0;
 			white-space: normal;
 		}
 
@@ -85,10 +76,6 @@ p.explain {
 		padding: 15px 10px;
 		margin: 0 0 10px 0;
 		background: @gray-l5;
-	}
-
-	.main-explain-box {
-		margin: 10px 0;
 	}
 
 	/* icon-view */
