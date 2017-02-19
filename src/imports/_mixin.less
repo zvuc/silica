@@ -15,12 +15,6 @@
 
 /* ---------------- mixins ---------------- */
 
-.border-box {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
 .transition(@arg) {
 	-moz-transition: @arg;
 	-webkit-transition: @arg;
@@ -164,7 +158,6 @@
 
 // text input
 .input-text {
-	.border-box;
 	padding: 4px 5px 4px 5px;
 	margin-right: 2px;
 	height: 24px;
@@ -193,7 +186,6 @@
 }
 
 textarea {
-	.border-box;
 	padding: 4px 5px 4px 5px;
 	-webkit-appearance: none !important;
 	outline: none;
@@ -235,7 +227,6 @@ textarea {
 			background-image: url('image/checkbox.svg');
 			background-position: 0 0;
 			background-repeat: no-repeat;
-			.border-box;
 			z-index: 1;
 			vertical-align: text-bottom;
 			margin-right: 3px;
@@ -274,7 +265,6 @@ textarea {
 			background-image: url('image/checkbox.svg');
 			background-position: -20px 0;
 			background-repeat: no-repeat;
-			.border-box;
 			z-index: 1;
 			vertical-align: text-bottom;
 			margin-right: 3px;
