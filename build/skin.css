@@ -282,6 +282,7 @@ p.explain a {
 #part-skin-list #listview-box .button-box {
   width: 100%;
   margin: 10px 0 0 0;
+  border-top: 0;
   padding: 0;
 }
 #part-skin-list #listview-box .button-box .button {

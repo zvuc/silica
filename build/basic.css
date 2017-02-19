@@ -176,15 +176,9 @@ select:not([multiple]):focus {
   letter-spacing: 0.1em;
 }
 .part .button-box {
-  clear: both;
   border-top: 1px solid #ddd;
   margin: 20px 0 0 0;
   padding: 15px 0;
-}
-.part .button-box:after {
-  content: " ";
-  display: block;
-  clear: both;
 }
 .part .button-box .input-button.save-button {
   background-color: #ac2f3d;
