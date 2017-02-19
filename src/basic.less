@@ -112,8 +112,7 @@ ul.tabs-box {
 		text-align: center;
 		font-size: 0.8rem;
 		padding: 4px 0 0 0;
-		@args: 0.2s background-color;
-		.transition(@args);
+		transition: 0.2s background-color;
 
 
 		a {
@@ -164,8 +163,7 @@ table {
 	border-collapse: collapse;
 
 	tr td {
-		@args: 0.2s background-color;
-		.transition(@args);
+		transition: 0.2s background-color;
 	}
 	tr:hover td {
 		background: @gray-l5;
@@ -357,7 +355,7 @@ table {
 					text-align: center;
 					font-weight: bold;
 					font-size: 1rem;
-					.transition(0.2s);
+					transition: background-color 0.2s;
 
 					background: @black;
 
@@ -471,7 +469,7 @@ table {
 						background-repeat: no-repeat;
 						background-size: 140px auto;
 
-						.transition(0.2s background);
+						transition: background-color 0.2s;
 
 						&:hover {
 							//background-color: @gray;
@@ -514,8 +512,7 @@ table {
 						position: absolute;
 						bottom: 0;
 						left: 0;
-						@args: 0.2s transform, 0.2s opacity;
-						.transition(@args);
+						transition: 0.2s transform, 0.2s opacity;
 						opacity: 0;
 						transform: scaleY(0);
 						transform-origin: left top;
@@ -541,8 +538,7 @@ table {
 						left: 0;
 						opacity: 1;
 						transform: scaleY(1);
-						@args: 0.2s transform, 0.2s opacity;
-						.transition(@args);
+						transition: 0.2s transform, 0.2s opacity;
 					}
 
 				}
@@ -596,7 +592,7 @@ table {
 					overflow: hidden;
 					position: absolute;
 					top: 0;
-					left: @sidebar-width;
+					left: 100%;
 					width: 0px;
 					background: @black-l1;
 					padding: 4px 0 5px 0;
@@ -604,9 +600,8 @@ table {
 					box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 					z-index: 102;
 					border-radius: 0 2px 2px 0;
-					.transition(0.2s);
-
-
+					transition-property: opacity, width;
+					transition-duration: 0.3s;
 
 					li {
 						display: block;
@@ -632,8 +627,7 @@ table {
 							padding-left: 0;
 							margin-bottom: 0;
 							height: auto;
-							@args: 0.2s background, 0.2s color;
-							.transition(@args);
+							transition: 0.2s background, 0.2s color;
 							will-change: background, color;
 
 							&:before {
@@ -645,8 +639,7 @@ table {
 								position: absolute;
 								bottom: 0;
 								left: 0px;
-								@args: 0.2s transform, 0.2s opacity;
-								.transition(@args);
+								transition: 0.2s transform, 0.2s opacity;
 								opacity: 0;
 								transform: scaleY(0);
 								transform-origin: left top;
@@ -662,8 +655,7 @@ table {
 									bottom: 0;
 									left: 0px;
 									opacity: 1;
-									@args: 0.3s transform, 0.3s opacity;
-									.transition(@args);
+									transition: 0.3s transform, 0.3s opacity;
 								}
 							}
 
@@ -680,7 +672,6 @@ table {
 				&:hover ul.sub-menu {
 					width: 150px;
 					opacity: 1;
-					.transition(0.3s);
 				}
 
 				/* pull up menus when screen height is small */
@@ -757,8 +748,7 @@ table {
 							a {
 								width: 100%;
 								background: @gray;
-								@args: 0.2s background, 0.2s color;
-								.transition(@args);
+								transition: 0.2s background, 0.2s color;
 								will-change: background, color;
 
 								span {
