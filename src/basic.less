@@ -1035,3 +1035,36 @@ table {
 		}
 	}
 }
+
+// ajaxmessage
+.ajaxMessage {
+	position: fixed !important;
+	z-index: 1000;
+	left: 0 !important;
+	right: 0;
+	top: auto !important;
+	bottom: 0 !important;
+	padding: 20px;
+	background-color: fadeout(@gray-l2,5%);
+	font-size: 1.3em;
+	font-weight: bold;
+	text-align: center;
+
+	&.ajaxSuccessMessage {
+		background-color: fadeout(darken(@green,10%),5%) !important;
+	}
+	&.ajaxErrorMessage {
+		background-color: fadeout(darken(@green,10%),5%) !important;
+	}
+}
+
+// optimizing message 
+#optimizingDialogBox {
+	#optimizingDataDialog {
+		position: fixed !important;
+		z-index: 1000 !important;
+		background-color: #fff;
+		padding: 20px;
+		box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	}
+}
