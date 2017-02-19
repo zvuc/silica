@@ -22,8 +22,13 @@
 .font-family-Lato {
 	font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
 }
+
 .font-family-Quicksand {
 	font-family: "Quicksand", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+}
+
+.font-family-monospace {
+	font-family: Menlo, Monaco, Consolas, monospace;
 }
 
 .cf() {
@@ -40,7 +45,12 @@
 	box-shadow: 0px 1px 2px rgba(0,0,0,0.05);
 }
 
-
+.fill() {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
 
 /* ---------------- colors ---------------- */ 
 
@@ -306,6 +316,89 @@ select {
 		box-shadow: 
 			0 2px 3px rgba(0,0,0,0.2),
 			0 0 0 2px fade(@yellow-s1, 100%);
+	}
+}
+
+// Common setting block
+.setting-block() {
+	background: #fff;
+	padding: 10px 20px;
+	margin: 0 0 10px 0;
+	box-sizing: border-box;
+	border-radius: 2px;
+	border: none;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.05);
+
+	h2.caption {
+		margin: 0 -20px 20px -20px;
+		padding: 10px 0 0 20px;
+		font-weight: normal;
+
+		span {
+			border-bottom: 2px solid @yellow-s1;
+			display: block;
+			margin: 0;
+			padding: 5px 0;
+		}
+	}
+	
+	.container {
+		margin: 0 0 10px 0;
+
+		legend {
+			margin: 0;
+			width: 100%;
+			padding: 5px 0;
+			font-size: 1.2em;
+			font-weight: bold;
+			border-bottom: 2px solid #ddd;
+			letter-spacing: 0.1em;
+		}
+	}
+
+	.button-box {
+		clear: both;
+		border-top: 1px solid #ddd;
+		margin: 20px 0 0 0;
+		padding: 15px 0;
+		.cf;
+
+		.input-button {
+			display: block;
+
+			&.save-button {
+				.buttonemphasis;
+			}
+		}
+	}
+
+	dl {
+		padding: 10px 0;
+		margin: 0;
+		border-bottom: 1px solid #eee;
+
+		dt {
+			width: 150px;
+			float: left;
+			padding: 5px 0;
+			font-weight: bold;
+			color: #666;
+		}
+		dd {
+			display: block;
+			height: auto;
+			margin-left: 160px;
+			padding: 5px 0;
+			color: #999;
+
+			&:first-of-type {
+				color: #333;
+			}
+		}
+
+		&:last-of-type {
+			border-bottom: none;
+		}
 	}
 }
 

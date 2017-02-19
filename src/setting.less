@@ -24,55 +24,18 @@ fieldset {
 }
 
 .part {
-	background: #fff;
-	padding: 10px 20px;
-	margin: 10px 0;
-	box-sizing: border-box;
-	border-radius: 2px;
-	border: none;
-	box-shadow: 0px 1px 2px rgba(0,0,0,0.05);
-	
-	.container {
-		margin: 0 0 10px 0;
+	.setting-block;
+}
 
-		legend {
-			margin: 0;
-			width: 100%;
-			padding: 5px 0;
-			font-size: 1.3em;
-			font-weight: bold;
-			border-bottom: 1px solid #ddd;
-			letter-spacing: 1px;
-		}
-	}
+// Override settings page outbox
+#body-setting #pseudo-box #data-outbox {
+	padding-top: 15px;
+	columns: 2;
 
-	.button-box {
-		clear: both;
-		margin: 0 0 20px 0;
-		.cf;
-
-		.input-button {
-			display: block;
-		}
-	}
-
-	dl {
-		margin: 0;
-		border-bottom: 1px solid #eee;
-
-		dt {
-			width: 150px;
-			float: left;
-			padding: 5px 0;
-			font-weight: bold;
-			color: #666;
-		}
-		dd {
-			display: block;
-			height: auto;
-			margin-left: 160px;
-			padding: 5px 0;
-		}
+	.part {
+		display: inline-block;
+		width: 100%;
+		break-inside: avoid;
 	}
 }
 
@@ -80,9 +43,6 @@ fieldset {
 
 /* basic setting */
 #part-setting-basic {
-	float: left;
-	width: ~'calc((100% - 10px)/2)';
-
 	.data-inbox {
 		width: 100%;
 	}
@@ -95,11 +55,9 @@ fieldset {
 }
 
 #multi-form {
-	border-top: 1px solid #DDDDDD;
 	margin-top: 20px;
 	
 	dl dd .input-text {
-		margin: 0 2px;
 		width: 100px !important;
 	}
 }
@@ -127,9 +85,6 @@ fieldset {
 
 /* profile setting */
 #part-setting-profile {
-	float: right;
-	width: ~'calc((100% - 10px)/2)';
-
 	.data-inbox {
 		width: 100%;
 	}
@@ -167,14 +122,6 @@ fieldset {
 #part-setting-frontpage,
 #part-setting-rss {
 	clear: both;
-
-	dl {
-		border-bottom: 1px solid #DDDDDD;
-	}
-
-	dl dd {
-		padding-bottom: 8px;
-	}
 }
 
 #etc-section fieldset {
@@ -185,7 +132,6 @@ fieldset {
 
 /* account management */
 #part-setting-openid {
-	margin-top: 50px;
 }
 
 #part-setting-account,
@@ -203,47 +149,42 @@ fieldset {
 
 /* invite letter */
 #part-setting-invite {
-	margin-top: 20px;
+	#letter {
+
+		label {
+			display: block;
+			margin: 3px 0 1px 0;
+			text-align: left;
+		}
+		
+		#letter-head .line {
+			margin-bottom: 8px;
+			text-align: right;
+		}
+
+		#invitation_receiver,
+		#invitation_sender {
+			font-size: inherit;
+		}
+
+		#invitation_identify {
+			.font-family-monospace;
+			margin-left: 2px;
+			width: 150px;
+		}
+
+		.inter-word {
+			.font-family-monospace;
+		}
+
+		#letter-body textarea {
+			width: 100%;
+			resize: vertical;
+		}
+	}
 }
 
-#letter {
-	width: 550px;
-}
 
-#letter-head label,
-#letter-body label,
-#letter-foot label {
-	display: block;
-	font-family: '돋움', Dotum, sans-serif;
-	font-size: 0.9em;
-	margin: 3px 0 1px 0;
-	text-align: left;
-}
-
-#letter-head .line {
-	margin-bottom: 8px;
-	text-align: right;
-}
-
-#invitation_receiver,
-#invitation_sender {
-	font-size: inherit;
-	width: 550px;
-}
-
-#invitation_identify {
-	font-family: "Courier New", Courier, monospace;
-	margin-left: 2px;
-	width: 150px;
-}
-
-.inter-word {
-	font-family: "Courier New", Courier, monospace;
-}
-
-#letter-body textarea {
-	width: 546px;
-}
 
 /* Data ******************************************************************************************/
 
@@ -557,16 +498,6 @@ div.notification-box {
 }
 
 /* Etc *******************************************************************************************/
-
-#part-setting-resample,
-#part-setting-language,
-#part-setting-editor {
-	.button-box {
-		border-top: 1px solid #DDDDDD;
-		margin: 10px 0 20px 0;
-		padding-top: 15px;
-	}
-}
 
 #part-setting-resample .section dl dd img {
 	margin-top: 8px;
