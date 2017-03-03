@@ -154,7 +154,7 @@ body#body-login,
 }
 #basic-field-box .return-box a {
   display: inline-block;
-  box-sizing: border-box;
+  box-sizing: content-box;
   text-align: center;
   background: none;
   background-color: #6f7983;
@@ -166,9 +166,10 @@ body#body-login,
   cursor: pointer;
   margin: 0 1px;
   text-decoration: none;
-  font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
   transition-properties: background-color, box-shadow;
   transition-duration: 0.2s;
+  font-family: "Lato", "Hiragino Sans GB W3", "Apple SD Gothic Neo", "NanumGothic", sans-serif;
+  font-size: 1em;
   font-weight: bold;
   min-height: 18px;
   line-height: 18px;

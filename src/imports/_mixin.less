@@ -98,7 +98,7 @@
 
 .input-button {
 	display: inline-block;
-	box-sizing: border-box;
+	box-sizing: content-box;
 	text-align: center;
 	background: none;
 	background-color: @gray-l1;
@@ -110,9 +110,10 @@
 	cursor: pointer;
 	margin: 0 1px;
 	text-decoration: none;
-	.font-family-Lato;
 	transition-properties: background-color, box-shadow;
 	transition-duration: 0.2s;
+	.font-family-Lato;
+	font-size: 1em;
 	font-weight: bold;
 	min-height: 18px;
 	line-height: 18px;
